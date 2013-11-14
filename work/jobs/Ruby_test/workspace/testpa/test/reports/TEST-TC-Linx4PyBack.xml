@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TC_Linx4PyBack" tests="4" time="0.005713115" failures="0" errors="0" skipped="0" assertions="5">
+  <testcase name="test_backend_atc" time="0.001763641" assertions="1">
+  </testcase>
+  <testcase name="test_backend_output" time="0.001865675" assertions="1">
+  </testcase>
+  <testcase name="test_backend_signal" time="0.000893299" assertions="2">
+  </testcase>
+  <testcase name="test_backend_type_h" time="0.000666461" assertions="1">
+  </testcase>
+  <system-out>
+  </system-out>
+  <system-err>
+  </system-err>
+</testsuite>

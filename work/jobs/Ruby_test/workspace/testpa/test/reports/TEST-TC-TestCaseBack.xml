@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TC_TestCaseBack" tests="4" time="0.004975623" failures="0" errors="0" skipped="0" assertions="5">
+  <testcase name="test_backend_atc" time="0.001783058" assertions="1">
+  </testcase>
+  <testcase name="test_backend_output" time="0.001164552" assertions="1">
+  </testcase>
+  <testcase name="test_backend_signal" time="0.000870953" assertions="2">
+  </testcase>
+  <testcase name="test_backend_type_h" time="0.000662221" assertions="1">
+  </testcase>
+  <system-out>
+  </system-out>
+  <system-err>
+  </system-err>
+</testsuite>

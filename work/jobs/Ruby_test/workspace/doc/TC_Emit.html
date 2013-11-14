@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: TC_Emit</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./sigpa/test/tc_emit_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/test/tc_emit.rb">sigpa/test/tc_emit.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Test::Unit::TestCase</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-setup">#setup</a></li>
+          
+          <li><a href="#method-i-teardown">#teardown</a></li>
+          
+          <li><a href="#method-i-test_regtally">#test_regtally</a></li>
+          
+          <li><a href="#method-i-test_signalclass_generateattrlist">#test_signalclass_generateattrlist</a></li>
+          
+          <li><a href="#method-i-test_signalclass_generateconstructor">#test_signalclass_generateconstructor</a></li>
+          
+          <li><a href="#method-i-test_signalclass_generateprelude">#test_signalclass_generateprelude</a></li>
+          
+          <li><a href="#method-i-test_signalclass_generatesignalclass">#test_signalclass_generatesignalclass</a></li>
+          
+          <li><a href="#method-i-test_signalclass_guessdynarray_1">#test_signalclass_guessdynarray_1</a></li>
+          
+          <li><a href="#method-i-test_signalclass_guessdynarray_2">#test_signalclass_guessdynarray_2</a></li>
+          
+          <li><a href="#method-i-test_signalclass_ind">#test_signalclass_ind</a></li>
+          
+          <li><a href="#method-i-test_signalclass_initialize">#test_signalclass_initialize</a></li>
+          
+          <li><a href="#method-i-test_signalclass_makehash">#test_signalclass_makehash</a></li>
+          
+          <li><a href="#method-i-test_signalclass_pathfromroot">#test_signalclass_pathfromroot</a></li>
+          
+          <li><a href="#method-i-test_signalclass_s">#test_signalclass_s</a></li>
+          
+          <li><a href="#method-i-test_signalclass_visitarray_1">#test_signalclass_visitarray_1</a></li>
+          
+          <li><a href="#method-i-test_signalclass_visitarray_2">#test_signalclass_visitarray_2</a></li>
+          
+          <li><a href="#method-i-test_signalclass_visitenum">#test_signalclass_visitenum</a></li>
+          
+          <li><a href="#method-i-test_signalclass_visitnode_1">#test_signalclass_visitnode_1</a></li>
+          
+          <li><a href="#method-i-test_signalclass_visitnode_2">#test_signalclass_visitnode_2</a></li>
+          
+          <li><a href="#method-i-test_signalclass_visitnode_3">#test_signalclass_visitnode_3</a></li>
+          
+          <li><a href="#method-i-test_signalclass_visitnode_4">#test_signalclass_visitnode_4</a></li>
+          
+          <li><a href="#method-i-test_signalclass_visitnode_5">#test_signalclass_visitnode_5</a></li>
+          
+          <li><a href="#method-i-test_signalclass_visitnumeric">#test_signalclass_visitnumeric</a></li>
+          
+          <li><a href="#method-i-test_signalclass_visitstruct">#test_signalclass_visitstruct</a></li>
+          
+          <li><a href="#method-i-test_string_up">#test_string_up</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./sigpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./sigpa/test/ref/ref_processed_cppstr_txt.html">ref_processed_cppstr.txt</a></li>
+        
+          <li class="file"><a href="./testpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/abstractTC_template_txt.html">abstractTC_template.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_abstracttestcase_txt.html">ref_abstracttestcase.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_comment_txt.html">ref_comment.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/transistion_template_txt.html">transistion_template.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./ArgumentCheck.html">ArgumentCheck</a></li>
+        
+          <li><a href="./Back.html">Back</a></li>
+        
+          <li><a href="./Consumer.html">Consumer</a></li>
+        
+          <li><a href="./Crubyparse.html">Crubyparse</a></li>
+        
+          <li><a href="./Front.html">Front</a></li>
+        
+          <li><a href="./GetRef.html">GetRef</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./ParseCommandLine.html">ParseCommandLine</a></li>
+        
+          <li><a href="./Printoptions.html">Printoptions</a></li>
+        
+          <li><a href="./ReadFile.html">ReadFile</a></li>
+        
+          <li><a href="./Regtally.html">Regtally</a></li>
+        
+          <li><a href="./SignalClass.html">SignalClass</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+          <li><a href="./SyntaxDescription.html">SyntaxDescription</a></li>
+        
+          <li><a href="./TC_Back.html">TC_Back</a></li>
+        
+          <li><a href="./TC_Emit.html">TC_Emit</a></li>
+        
+          <li><a href="./TC_Front.html">TC_Front</a></li>
+        
+          <li><a href="./TC_Linx4PyBack.html">TC_Linx4PyBack</a></li>
+        
+          <li><a href="./TC_Linx4PyEmit.html">TC_Linx4PyEmit</a></li>
+        
+          <li><a href="./TC_Linx4PySigpaUser.html">TC_Linx4PySigpaUser</a></li>
+        
+          <li><a href="./TC_Linx4PyUser.html">TC_Linx4PyUser</a></li>
+        
+          <li><a href="./TC_SigpaFront.html">TC_SigpaFront</a></li>
+        
+          <li><a href="./TC_SigpaUser.html">TC_SigpaUser</a></li>
+        
+          <li><a href="./TC_TCrubyparse.html">TC_TCrubyparse</a></li>
+        
+          <li><a href="./TC_TestCaseBack.html">TC_TestCaseBack</a></li>
+        
+          <li><a href="./TC_TestUser.html">TC_TestUser</a></li>
+        
+          <li><a href="./TC_Tree.html">TC_Tree</a></li>
+        
+          <li><a href="./TCrubyparse.html">TCrubyparse</a></li>
+        
+          <li><a href="./TestCaseBack.html">TestCaseBack</a></li>
+        
+          <li><a href="./Tree.html">Tree</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">TC_Emit</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="setup-method" class="method-detail ">
+          <a name="method-i-setup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">setup</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="setup-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+    <span class="ruby-comment"># Nothing really</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- setup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- setup-method -->
+
+      
+        <div id="teardown-method" class="method-detail ">
+          <a name="method-i-teardown"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">teardown</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="teardown-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">teardown</span>
+    <span class="ruby-comment"># Nothing really</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- teardown-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- teardown-method -->
+
+      
+        <div id="test_regtally-method" class="method-detail ">
+          <a name="method-i-test_regtally"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_regtally</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_regtally-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_regtally</span>
+    <span class="ruby-identifier">regtally</span> = <span class="ruby-constant">Regtally</span>.<span class="ruby-identifier">instance</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">regtally</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@regtally'</span>), {})
+   
+    <span class="ruby-identifier">dummynode</span> = <span class="ruby-constant">BaiscNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummynode&quot;</span>, <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-string">&quot;numeric&quot;</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">regtally</span>.<span class="ruby-identifier">has?</span>(<span class="ruby-identifier">dummynode</span>), <span class="ruby-keyword">false</span>)
+    <span class="ruby-identifier">regtally</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">dummynode</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">regtally</span>.<span class="ruby-identifier">has?</span>(<span class="ruby-identifier">dummynode</span>), <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_regtally-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_regtally-method -->
+
+      
+        <div id="test_signalclass_generateattrlist-method" class="method-detail ">
+          <a name="method-i-test_signalclass_generateattrlist"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_generateattrlist</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_generateattrlist-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_generateattrlist</span>
+    <span class="ruby-identifier">dummychild</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummychild&quot;</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;numeric&quot;</span>, <span class="ruby-value">1</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummypadding</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummypadding&quot;</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;padding&quot;</span>, <span class="ruby-value">1</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummyroot&quot;</span>, <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-value">0</span>, <span class="ruby-keyword">nil</span>,  [<span class="ruby-identifier">dummychild</span>, <span class="ruby-identifier">dummypadding</span>])
+    <span class="ruby-identifier">dummychild</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummyroot</span>
+    <span class="ruby-identifier">dummypadding</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummyroot</span>
+
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;TEST_SIG&quot;</span>)
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">0</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">generate_attr_list</span>(<span class="ruby-identifier">ref_hash</span>)
+    <span class="ruby-identifier">s</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@s'</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;\n    ATTR_LIST = [\n        'sig_no',\n        'dummychild',\n    ]\n&quot;</span>, <span class="ruby-identifier">s</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_generateattrlist-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_generateattrlist-method -->
+
+      
+        <div id="test_signalclass_generateconstructor-method" class="method-detail ">
+          <a name="method-i-test_signalclass_generateconstructor"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_generateconstructor</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_generateconstructor-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_generateconstructor</span>
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">0</span>)
+    <span class="ruby-identifier">dummy_sig_no</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummy_sig_no&quot;</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;numeric&quot;</span>, <span class="ruby-value">1</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummy_boolean</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummy_boolean&quot;</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;boolean&quot;</span>, <span class="ruby-value">1</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummy_enum</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummy_enum&quot;</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;enum&quot;</span>, <span class="ruby-value">1</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummy_struct</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummy_struct&quot;</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-value">1</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummy_union</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummy_union&quot;</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;union&quot;</span>, <span class="ruby-value">1</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummy_array_1</span> = <span class="ruby-constant">ArrayNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummy_array_1&quot;</span>, <span class="ruby-string">&quot;number_1&quot;</span>, <span class="ruby-string">&quot;array&quot;</span>, <span class="ruby-value">1</span>, <span class="ruby-keyword">nil</span>, [], <span class="ruby-value">5</span>, <span class="ruby-keyword">false</span>)
+    <span class="ruby-identifier">dummy_array_2</span> = <span class="ruby-constant">ArrayNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummy_array_2&quot;</span>, <span class="ruby-string">&quot;number_2&quot;</span>, <span class="ruby-string">&quot;array&quot;</span>, <span class="ruby-value">1</span>, <span class="ruby-keyword">nil</span>, [], <span class="ruby-value">5</span>, <span class="ruby-keyword">true</span>)
+    
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummyroot&quot;</span>, <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-value">0</span>, <span class="ruby-keyword">nil</span>,  
+           [<span class="ruby-identifier">dummy_sig_no</span>, <span class="ruby-identifier">dummy_boolean</span>, <span class="ruby-identifier">dummy_enum</span>, <span class="ruby-identifier">dummy_struct</span>, <span class="ruby-identifier">dummy_union</span>, <span class="ruby-identifier">dummy_array_1</span>, <span class="ruby-identifier">dummy_array_2</span>])
+    <span class="ruby-identifier">signalroot</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signalroot</span>.<span class="ruby-identifier">generate_constructor</span>(<span class="ruby-identifier">ref_hash</span>)
+    <span class="ruby-identifier">signalroot_constructor</span> = <span class="ruby-identifier">signalroot</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@s'</span>)
+    <span class="ruby-identifier">ref_constructor</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getConstructorRef</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_constructor</span>, <span class="ruby-identifier">signalroot_constructor</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_generateconstructor-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_generateconstructor-method -->
+
+      
+        <div id="test_signalclass_generateprelude-method" class="method-detail ">
+          <a name="method-i-test_signalclass_generateprelude"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_generateprelude</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_generateprelude-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_generateprelude</span>
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-string">&quot;testsig.py&quot;</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">generate_unserialize_prelude</span>
+    <span class="ruby-identifier">recstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>)
+    
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">generate_serialize_prelude</span>
+    <span class="ruby-identifier">sendstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>)
+    
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;\n    def unserialize(self, reader, tag=None):\n&quot;</span>, <span class="ruby-identifier">recstr</span>) 
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;\n    def serialize(self, writer, tag=None):\n&quot;</span>, <span class="ruby-identifier">sendstr</span>) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_generateprelude-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_generateprelude-method -->
+
+      
+        <div id="test_signalclass_generatesignalclass-method" class="method-detail ">
+          <a name="method-i-test_signalclass_generatesignalclass"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_generatesignalclass</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_generatesignalclass-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_generatesignalclass</span>
+    <span class="ruby-identifier">dummychild</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;sig_no&quot;</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;numeric&quot;</span>, <span class="ruby-value">1</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummyroot&quot;</span>, <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-value">0</span>, <span class="ruby-keyword">nil</span>,  [<span class="ruby-identifier">dummychild</span>])
+    <span class="ruby-identifier">signalroot</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signalroot</span>.<span class="ruby-identifier">generate_signal_class</span>
+    <span class="ruby-identifier">signalroot_class</span> = <span class="ruby-identifier">signalroot</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@s'</span>)
+    <span class="ruby-identifier">ref_signalroot_class</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getSignalRootClassRef</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_signalroot_class</span>, <span class="ruby-identifier">signalroot_class</span>)
+    
+    <span class="ruby-identifier">signalstruct</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-string">&quot;testsig.py&quot;</span>, <span class="ruby-value">0</span>, <span class="ruby-string">&quot;&quot;</span>)
+    <span class="ruby-identifier">signalstruct</span>.<span class="ruby-identifier">generate_signal_class</span>
+    <span class="ruby-identifier">signalstruct_class</span> = <span class="ruby-identifier">signalstruct</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@s'</span>)
+    <span class="ruby-identifier">ref_signalstruct_class</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getSignalStructClassRef</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_signalstruct_class</span>, <span class="ruby-identifier">signalstruct_class</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_generatesignalclass-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_generatesignalclass-method -->
+
+      
+        <div id="test_signalclass_guessdynarray_1-method" class="method-detail ">
+          <a name="method-i-test_signalclass_guessdynarray_1"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_guessdynarray_1</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_guessdynarray_1-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 249</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_guessdynarray_1</span>
+    <span class="ruby-identifier">hash</span> = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>( <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">2</span>)) )
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">3</span>)
+    <span class="ruby-identifier">dummychild</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummychild&quot;</span>, <span class="ruby-string">&quot;numeric&quot;</span>, <span class="ruby-string">&quot;U32&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">0</span>, 
+                                  <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-keyword">true</span>, <span class="ruby-value">1</span>, <span class="ruby-value">4</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummy_array</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummy_array&quot;</span>, <span class="ruby-string">&quot;array&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">1</span>, 
+                                  <span class="ruby-string">&quot;number&quot;</span>, <span class="ruby-keyword">true</span>, <span class="ruby-value">1</span>, <span class="ruby-value">20</span>, <span class="ruby-value">8</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummyroot&quot;</span>, <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-value">0</span>, <span class="ruby-keyword">nil</span>, [<span class="ruby-identifier">dummychild</span>, <span class="ruby-identifier">dummy_array</span>])
+    <span class="ruby-identifier">dummychild</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummyroot</span>
+    <span class="ruby-identifier">dummy_array</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummyroot</span>
+    
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">guess_dyn_array</span>(<span class="ruby-identifier">hash</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_hash</span>, <span class="ruby-identifier">hash</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_guessdynarray_1-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_guessdynarray_1-method -->
+
+      
+        <div id="test_signalclass_guessdynarray_2-method" class="method-detail ">
+          <a name="method-i-test_signalclass_guessdynarray_2"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_guessdynarray_2</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_guessdynarray_2-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 265</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_guessdynarray_2</span>
+    <span class="ruby-identifier">hash</span> = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>( <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">2</span>)) )
+    <span class="ruby-identifier">dummy_array</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummy_array&quot;</span>, <span class="ruby-string">&quot;array&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">1</span>, 
+                                  <span class="ruby-string">&quot;number&quot;</span>, <span class="ruby-keyword">true</span>, <span class="ruby-value">1</span>, <span class="ruby-value">20</span>, <span class="ruby-value">8</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummyroot&quot;</span>, <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-value">0</span>, <span class="ruby-keyword">nil</span>, [<span class="ruby-identifier">dummy_array</span>])
+    <span class="ruby-identifier">dummy_array</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummyroot</span>
+    
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">out</span>, <span class="ruby-identifier">err</span> = <span class="ruby-identifier">capture_stdout</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">guess_dyn_array</span>(<span class="ruby-identifier">hash</span>)
+    <span class="ruby-keyword">end</span>  
+    <span class="ruby-identifier">ref_out</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getCannotGuessRef</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_out</span>, <span class="ruby-identifier">out</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">err</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_guessdynarray_2-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_guessdynarray_2-method -->
+
+      
+        <div id="test_signalclass_ind-method" class="method-detail ">
+          <a name="method-i-test_signalclass_ind"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_ind</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_ind-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_ind</span>
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">ind</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        &quot;</span>, <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">ind</span>(<span class="ruby-value">2</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_ind-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_ind-method -->
+
+      
+        <div id="test_signalclass_initialize-method" class="method-detail ">
+          <a name="method-i-test_signalclass_initialize"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_initialize</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_initialize-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_initialize</span>
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">BaiscNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummynode&quot;</span>, <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-string">&quot;numeric&quot;</span>)
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@root'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@file'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">13121</span>, <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@signo'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;DUMMY_SIG&quot;</span>, <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@name'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@ind'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@s'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@first_child'</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_initialize-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_initialize-method -->
+
+      
+        <div id="test_signalclass_makehash-method" class="method-detail ">
+          <a name="method-i-test_signalclass_makehash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_makehash</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_makehash-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_makehash</span>
+    <span class="ruby-identifier">ref_arraytable</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getArrayTableRef</span>
+    <span class="ruby-identifier">ahash</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">make_hash</span>(<span class="ruby-identifier">ref_arraytable</span>)
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">0</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_hash</span>, <span class="ruby-identifier">ahash</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_makehash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_makehash-method -->
+
+      
+        <div id="test_signalclass_pathfromroot-method" class="method-detail ">
+          <a name="method-i-test_signalclass_pathfromroot"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_pathfromroot</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_pathfromroot-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_pathfromroot</span>
+    <span class="ruby-identifier">dummygrandchild</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummygrandchild&quot;</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;numeric&quot;</span>, <span class="ruby-value">2</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummychild</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummychild&quot;</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;numeric&quot;</span>, <span class="ruby-value">1</span>, <span class="ruby-keyword">nil</span>, [<span class="ruby-identifier">dummygrandchild</span>])
+    <span class="ruby-identifier">dummynode</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummynode&quot;</span>, <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-value">0</span>, <span class="ruby-keyword">nil</span>, [<span class="ruby-identifier">dummychild</span>])
+    <span class="ruby-identifier">dummygrandchild</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummychild</span>
+    <span class="ruby-identifier">dummychild</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummynode</span>
+    
+    <span class="ruby-identifier">path_dummynode</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">path_from_root</span>(<span class="ruby-identifier">dummynode</span>)
+    <span class="ruby-identifier">path_dummychild</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">path_from_root</span>(<span class="ruby-identifier">dummychild</span>)
+    <span class="ruby-identifier">path_dummygrandchild</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">path_from_root</span>(<span class="ruby-identifier">dummygrandchild</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;dummynode&quot;</span>, <span class="ruby-identifier">path_dummynode</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;dummy_sig.dummychild&quot;</span>, <span class="ruby-identifier">path_dummychild</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;dummy_sig.dummychild.dummygrandchild&quot;</span>, <span class="ruby-identifier">path_dummygrandchild</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_pathfromroot-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_pathfromroot-method -->
+
+      
+        <div id="test_signalclass_s-method" class="method-detail ">
+          <a name="method-i-test_signalclass_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_s</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_s-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 404</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_s</span>
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-string">&quot;testsig.py&quot;</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">s</span>) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_s-method -->
+
+      
+        <div id="test_signalclass_visitarray_1-method" class="method-detail ">
+          <a name="method-i-test_signalclass_visitarray_1"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_visitarray_1</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_visitarray_1-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_visitarray_1</span>
+    <span class="ruby-identifier">ref_recstr</span> = <span class="ruby-string">&quot;        self.dummy_array = reader.int_array(5, 5, reader.read)\n&quot;</span>
+    <span class="ruby-identifier">ref_sendstr</span> = <span class="ruby-string">&quot;        writer.int_array(self.dummy_array, 5, writer.write)\n&quot;</span>
+
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">1</span>)
+    
+    <span class="ruby-identifier">dummy_array</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummy_array&quot;</span>, <span class="ruby-string">&quot;array&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">5</span>, 
+                                  <span class="ruby-string">&quot;number&quot;</span>, <span class="ruby-keyword">true</span>, <span class="ruby-value">1</span>, <span class="ruby-value">20</span>, <span class="ruby-value">8</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummyroot&quot;</span>, <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-value">0</span>, <span class="ruby-keyword">nil</span>, [<span class="ruby-identifier">dummy_array</span>])
+    <span class="ruby-identifier">dummy_array</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummyroot</span>
+    
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">visit_array</span>(<span class="ruby-identifier">ref_hash</span>, <span class="ruby-identifier">dummy_array</span>)
+    <span class="ruby-identifier">recstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>)
+    <span class="ruby-identifier">sendstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_recstr</span>, <span class="ruby-identifier">recstr</span>) 
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_sendstr</span>, <span class="ruby-identifier">sendstr</span>) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_visitarray_1-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_visitarray_1-method -->
+
+      
+        <div id="test_signalclass_visitarray_2-method" class="method-detail ">
+          <a name="method-i-test_signalclass_visitarray_2"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_visitarray_2</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_visitarray_2-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_visitarray_2</span>
+    <span class="ruby-identifier">ref_recstr</span> = <span class="ruby-string">&quot;        self.dummy_array = reader.composite_array(number, 5, 5, reader.struct)\n&quot;</span>
+    <span class="ruby-identifier">ref_sendstr</span> = <span class="ruby-string">&quot;        writer.composite_array(number, self.dummy_array, 5, writer.struct)\n&quot;</span>
+
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">1</span>)
+    
+    <span class="ruby-identifier">dummy_array</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummy_array&quot;</span>, <span class="ruby-string">&quot;array&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">5</span>, 
+                                  <span class="ruby-string">&quot;number&quot;</span>, <span class="ruby-keyword">false</span>, <span class="ruby-value">1</span>, <span class="ruby-value">20</span>, <span class="ruby-value">8</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummyroot&quot;</span>, <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-value">0</span>, <span class="ruby-keyword">nil</span>, [<span class="ruby-identifier">dummy_array</span>])
+    <span class="ruby-identifier">dummy_array</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummyroot</span>
+    
+    <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;test/testsig.py&quot;</span>, <span class="ruby-string">&quot;w&quot;</span>)
+    
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-identifier">file</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">visit_array</span>(<span class="ruby-identifier">ref_hash</span>, <span class="ruby-identifier">dummy_array</span>)
+    <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
+    
+    <span class="ruby-identifier">recstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>)
+    <span class="ruby-identifier">sendstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_recstr</span>, <span class="ruby-identifier">recstr</span>) 
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_sendstr</span>, <span class="ruby-identifier">sendstr</span>) 
+    <span class="ruby-identifier">ref_testsig</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/ref/ref_testsig_array.py&quot;</span>)
+    <span class="ruby-identifier">testsig</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/testsig.py&quot;</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_testsig</span>, <span class="ruby-identifier">testsig</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;test/testsig.py&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;test/testsig.py&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_visitarray_2-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_visitarray_2-method -->
+
+      
+        <div id="test_signalclass_visitenum-method" class="method-detail ">
+          <a name="method-i-test_signalclass_visitenum"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_visitenum</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_visitenum-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 193</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_visitenum</span>
+    <span class="ruby-identifier">dummynode</span> = <span class="ruby-constant">BaiscNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummynode&quot;</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;&quot;</span>)
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummynode</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">visit_enum</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">dummynode</span>)
+    <span class="ruby-identifier">recstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>)
+    <span class="ruby-identifier">sendstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        self.dummynode = reader.readS32()\n&quot;</span>, <span class="ruby-identifier">recstr</span>) 
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        writer.writeS32(self.dummynode)\n&quot;</span>, <span class="ruby-identifier">sendstr</span>) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_visitenum-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_visitenum-method -->
+
+      
+        <div id="test_signalclass_visitnode_1-method" class="method-detail ">
+          <a name="method-i-test_signalclass_visitnode_1"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_visitnode_1</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_visitnode_1-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 304</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_visitnode_1</span>
+    <span class="ruby-identifier">dummychild</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummychild&quot;</span>, <span class="ruby-string">&quot;numeric&quot;</span>, <span class="ruby-string">&quot;U32&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">0</span>, 
+                                  <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-keyword">true</span>, <span class="ruby-value">1</span>, <span class="ruby-value">4</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummyroot&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">0</span>, 
+                                  <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-keyword">false</span>, <span class="ruby-value">0</span>, <span class="ruby-value">4</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, [<span class="ruby-identifier">dummychild</span>])                             
+    <span class="ruby-identifier">dummychild</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummyroot</span>
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">1</span>)
+    
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">visit_nodes</span>(<span class="ruby-identifier">ref_hash</span>)
+    <span class="ruby-identifier">recstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>)
+    <span class="ruby-identifier">sendstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>)
+    <span class="ruby-identifier">ind</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@ind'</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        _dummychild = reader.readU32()\n        pass\n&quot;</span>, <span class="ruby-identifier">recstr</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        writer.writeU32(len(self.data_size))\n        pass\n&quot;</span>, <span class="ruby-identifier">sendstr</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">ind</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_visitnode_1-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_visitnode_1-method -->
+
+      
+        <div id="test_signalclass_visitnode_2-method" class="method-detail ">
+          <a name="method-i-test_signalclass_visitnode_2"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_visitnode_2</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_visitnode_2-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 322</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_visitnode_2</span>
+    <span class="ruby-identifier">dummychild</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummychild&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-string">&quot;U32&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">0</span>, 
+                                  <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-keyword">true</span>, <span class="ruby-value">1</span>, <span class="ruby-value">4</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummyroot&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">0</span>, 
+                                  <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-keyword">false</span>, <span class="ruby-value">0</span>, <span class="ruby-value">4</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, [<span class="ruby-identifier">dummychild</span>])                             
+    <span class="ruby-identifier">dummychild</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummyroot</span>
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">1</span>)
+
+    <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;test/testsig.py&quot;</span>, <span class="ruby-string">&quot;w&quot;</span>)
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-identifier">file</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">visit_nodes</span>(<span class="ruby-identifier">ref_hash</span>)
+    <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-identifier">recstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>)
+    <span class="ruby-identifier">sendstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>)
+    <span class="ruby-identifier">ind</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@ind'</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        self.dummychild.unserialize(reader)\n        pass\n&quot;</span>, <span class="ruby-identifier">recstr</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        self.dummychild.serialize(writer)\n        pass\n&quot;</span>, <span class="ruby-identifier">sendstr</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">ind</span>)
+    <span class="ruby-identifier">ref_testsig</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/ref/ref_testsig_struct.py&quot;</span>)
+    <span class="ruby-identifier">testsig</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/testsig.py&quot;</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_testsig</span>, <span class="ruby-identifier">testsig</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;test/testsig.py&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;test/testsig.py&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_visitnode_2-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_visitnode_2-method -->
+
+      
+        <div id="test_signalclass_visitnode_3-method" class="method-detail ">
+          <a name="method-i-test_signalclass_visitnode_3"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_visitnode_3</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_visitnode_3-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 346</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_visitnode_3</span>
+    <span class="ruby-identifier">dummychild</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummychild&quot;</span>, <span class="ruby-string">&quot;numeric&quot;</span>, <span class="ruby-string">&quot;U32&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">0</span>, 
+                                  <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-keyword">true</span>, <span class="ruby-value">1</span>, <span class="ruby-value">4</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummyroot&quot;</span>, <span class="ruby-string">&quot;union&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">0</span>, 
+                                  <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-keyword">false</span>, <span class="ruby-value">0</span>, <span class="ruby-value">4</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, [<span class="ruby-identifier">dummychild</span>])                             
+    <span class="ruby-identifier">dummychild</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummyroot</span>
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">1</span>)
+    
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">visit_nodes</span>(<span class="ruby-identifier">ref_hash</span>)
+    <span class="ruby-identifier">recstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>)
+    <span class="ruby-identifier">sendstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>)
+    <span class="ruby-identifier">ind</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@ind'</span>)
+    <span class="ruby-identifier">ref_recstr</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getVisitNodeUnionRecstr</span>
+    <span class="ruby-identifier">ref_sendstr</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getVisitNodeUnionSendstr</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_recstr</span>, <span class="ruby-identifier">recstr</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_sendstr</span>, <span class="ruby-identifier">sendstr</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">ind</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_visitnode_3-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_visitnode_3-method -->
+
+      
+        <div id="test_signalclass_visitnode_4-method" class="method-detail ">
+          <a name="method-i-test_signalclass_visitnode_4"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_visitnode_4</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_visitnode_4-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 366</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_visitnode_4</span>
+    <span class="ruby-identifier">dummychild</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummychild&quot;</span>, <span class="ruby-string">&quot;enum&quot;</span>, <span class="ruby-string">&quot;U32&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">0</span>, 
+                                  <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-keyword">true</span>, <span class="ruby-value">1</span>, <span class="ruby-value">4</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummyroot&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">0</span>, 
+                                  <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-keyword">false</span>, <span class="ruby-value">0</span>, <span class="ruby-value">4</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, [<span class="ruby-identifier">dummychild</span>])                             
+    <span class="ruby-identifier">dummychild</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummyroot</span>
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">1</span>)
+    
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">visit_nodes</span>(<span class="ruby-identifier">ref_hash</span>)
+    <span class="ruby-identifier">recstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>)
+    <span class="ruby-identifier">sendstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>)
+    <span class="ruby-identifier">ind</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@ind'</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        self.dummychild = reader.readS32()\n        pass\n&quot;</span>, <span class="ruby-identifier">recstr</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        writer.writeS32(self.dummychild)\n        pass\n&quot;</span>, <span class="ruby-identifier">sendstr</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">ind</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_visitnode_4-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_visitnode_4-method -->
+
+      
+        <div id="test_signalclass_visitnode_5-method" class="method-detail ">
+          <a name="method-i-test_signalclass_visitnode_5"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_visitnode_5</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_visitnode_5-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 384</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_visitnode_5</span>
+    <span class="ruby-identifier">dummychild</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummychild&quot;</span>, <span class="ruby-string">&quot;array&quot;</span>, <span class="ruby-string">&quot;U32&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">0</span>, 
+                                  <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-keyword">true</span>, <span class="ruby-value">1</span>, <span class="ruby-value">4</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, [])
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummyroot&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">0</span>, 
+                                  <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-keyword">false</span>, <span class="ruby-value">0</span>, <span class="ruby-value">4</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, [<span class="ruby-identifier">dummychild</span>])                             
+    <span class="ruby-identifier">dummychild</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummyroot</span>
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">1</span>)
+    
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">visit_nodes</span>(<span class="ruby-identifier">ref_hash</span>)
+    <span class="ruby-identifier">recstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>)
+    <span class="ruby-identifier">sendstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>)
+    <span class="ruby-identifier">ind</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@ind'</span>)
+    <span class="ruby-identifier">ref_recstr</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getVisitNodeUnionRecstr</span>
+    <span class="ruby-identifier">ref_sendstr</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getVisitNodeUnionSendstr</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        self.dummychild = reader.int_array(0, 0, reader.readU32)\n        pass\n&quot;</span>, <span class="ruby-identifier">recstr</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        writer.int_array(self.dummychild, 0, writer.writeU32)\n        pass\n&quot;</span>, <span class="ruby-identifier">sendstr</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">ind</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_visitnode_5-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_visitnode_5-method -->
+
+      
+        <div id="test_signalclass_visitnumeric-method" class="method-detail ">
+          <a name="method-i-test_signalclass_visitnumeric"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_visitnumeric</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_visitnumeric-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_visitnumeric</span>
+    <span class="ruby-identifier">ref_recstr</span> = [<span class="ruby-string">&quot;        self.dummychild = reader.readU32()\n&quot;</span>,
+                  <span class="ruby-string">&quot;        _dummychild = reader.readU32()\n&quot;</span>]
+    <span class="ruby-identifier">ref_sendstr</span> = [<span class="ruby-string">&quot;        writer.writeU32(self.dummychild)\n&quot;</span>,
+                   <span class="ruby-string">&quot;        writer.writeU32(len(self.data_size))\n&quot;</span>]
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">0</span>)
+    <span class="ruby-identifier">dummychild</span> = <span class="ruby-constant">NumericNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummychild&quot;</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;numeric&quot;</span>, <span class="ruby-value">1</span>, <span class="ruby-keyword">nil</span>, [], <span class="ruby-string">&quot;U32&quot;</span>)
+    <span class="ruby-identifier">dummynode</span> = <span class="ruby-constant">TreeNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;dummynode&quot;</span>, <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-value">0</span>, <span class="ruby-keyword">nil</span>, [<span class="ruby-identifier">dummychild</span>])
+    <span class="ruby-identifier">dummychild</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">dummynode</span>
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummynode</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">visit_numeric</span>(<span class="ruby-identifier">ref_hash</span>, <span class="ruby-identifier">dummychild</span>)
+    <span class="ruby-identifier">recstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>)
+    <span class="ruby-identifier">sendstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_recstr</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">recstr</span>) 
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_sendstr</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">sendstr</span>) 
+    
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">1</span>)
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummynode</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">visit_numeric</span>(<span class="ruby-identifier">ref_hash</span>, <span class="ruby-identifier">dummychild</span>)
+    <span class="ruby-identifier">recstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>)
+    <span class="ruby-identifier">sendstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_recstr</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">recstr</span>) 
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_sendstr</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">sendstr</span>) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_visitnumeric-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_visitnumeric-method -->
+
+      
+        <div id="test_signalclass_visitstruct-method" class="method-detail ">
+          <a name="method-i-test_signalclass_visitstruct"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_signalclass_visitstruct</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_signalclass_visitstruct-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 281</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_signalclass_visitstruct</span>
+    <span class="ruby-identifier">dummyroot</span> = <span class="ruby-constant">FullNode</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;dummyroot&quot;</span>, <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">0</span>, 
+                                  <span class="ruby-string">&quot;dummy_sig&quot;</span>, <span class="ruby-keyword">false</span>, <span class="ruby-value">0</span>, <span class="ruby-value">4</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, [])                             
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">0</span>)
+    
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>,  <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">visit_struct</span>(<span class="ruby-identifier">ref_hash</span>, <span class="ruby-identifier">dummyroot</span>)
+    
+    <span class="ruby-identifier">recstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>)
+    <span class="ruby-identifier">sendstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        self.dummyroot.unserialize(reader)\n&quot;</span>, <span class="ruby-identifier">recstr</span>) 
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        self.dummyroot.serialize(writer)\n&quot;</span>, <span class="ruby-identifier">sendstr</span>) 
+    
+    <span class="ruby-identifier">ref_hash</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getHashRef</span>(<span class="ruby-value">1</span>)
+    <span class="ruby-identifier">signal</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">dummyroot</span>,  <span class="ruby-keyword">nil</span>, <span class="ruby-value">13121</span>, <span class="ruby-string">&quot;DUMMY_SIG&quot;</span>)
+    <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">visit_struct</span>(<span class="ruby-identifier">ref_hash</span>, <span class="ruby-identifier">dummyroot</span>)
+    
+    <span class="ruby-identifier">recstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@recstr'</span>)
+    <span class="ruby-identifier">sendstr</span> = <span class="ruby-identifier">signal</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@sendstr'</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        self.dummyroot.unserialize(reader, self.selector_variable)\n&quot;</span>, <span class="ruby-identifier">recstr</span>) 
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;        self.dummyroot.serialize(writer, self.selector_variable)\n&quot;</span>, <span class="ruby-identifier">sendstr</span>) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_signalclass_visitstruct-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_signalclass_visitstruct-method -->
+
+      
+        <div id="test_string_up-method" class="method-detail ">
+          <a name="method-i-test_string_up"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_string_up</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_string_up-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_emit.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_string_up</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;test&quot;</span>.<span class="ruby-identifier">up</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_string_up-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_string_up-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

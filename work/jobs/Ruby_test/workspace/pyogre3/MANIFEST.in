@@ -1,0 +1,8 @@
+include README 
+include test/test*.py test/suite.py test/*.ini test/README test/Makefile
+include test/array_sig.py test/signals.py test/*.h 
+include examples/*.py examples/*.ini
+include sig/*.sig
+include doc/*.html doc/*.css doc/logging.ini doc/test.log
+include doc/api/*.html
+

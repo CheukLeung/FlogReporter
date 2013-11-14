@@ -1,0 +1,201 @@
+[SHORTNAME=ABSFLReq]
+
+State:
+(BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.idle WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=0 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=0 GlobalBrakeController.Rpm=0 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=0 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  BrakeSensor.idle->BrakeSensor.Entry 
+
+
+State:
+( BrakeSensor.Entry BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.idle WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=0 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=0 GlobalBrakeController.Rpm=0 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=0 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  BrakeSensor.Entry->BrakeSensor.Exit { Pos := 0 }
+
+
+State:
+( BrakeSensor.Exit BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.idle WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=0 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=0 GlobalBrakeController.Rpm=0 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=0 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0
+
+
+Transitions:
+  BrakeSensor.Exit->BrakeSensor.idle 
+
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.idle WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=0 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=0 GlobalBrakeController.Rpm=0 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=0 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  BrakeTorqueCalculator.idle->BrakeTorqueCalculator.Entry 
+
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.Entry WheelSensor.idle GlobalBrakeController.idle ABSFL.idle WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=0 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=0 GlobalBrakeController.Rpm=0 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=0 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0
+
+
+Transitions:
+  BrakeTorqueCalculator.Entry->BrakeTorqueCalculator.TorqueComputation1 { maxBr := 2 }
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.TorqueComputation1 WheelSensor.idle GlobalBrakeController.idle ABSFL.idle WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=0 GlobalBrakeController.Rpm=0 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=0 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0
+
+
+Transitions:
+  BrakeTorqueCalculator.TorqueComputation1->BrakeTorqueCalculator.Exit { ReqTorque := maxBr * Pos }
+
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.Exit WheelSensor.idle GlobalBrakeController.idle ABSFL.idle WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=0 GlobalBrakeController.Rpm=0 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=0 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  BrakeTorqueCalculator.Exit->BrakeTorqueCalculator.idle 
+
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.idle WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=0 GlobalBrakeController.Rpm=0 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=0 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0
+
+
+Transitions:
+  WheelSensor.idle->WheelSensor.Entry 
+
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.Entry GlobalBrakeController.idle ABSFL.idle WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=0 GlobalBrakeController.Rpm=0 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=0 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  WheelSensor.Entry->WheelSensor.Exit { Rpm := 1 }
+
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.Exit GlobalBrakeController.idle ABSFL.idle WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=1 GlobalBrakeController.Rpm=0 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=0 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  WheelSensor.Exit->WheelSensor.idle 
+
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.idle WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=1 GlobalBrakeController.Rpm=0 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=0 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  GlobalBrakeController.idle->GlobalBrakeController.Entry 
+
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.Entry ABSFL.idle WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=1 GlobalBrakeController.Rpm=1 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=0 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  GlobalBrakeController.Entry->GlobalBrakeController.Reaction { W := Rpm * 314 / 30, WheelTorque := ReqTorque + 0 }
+
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.Reaction ABSFL.idle WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=1 GlobalBrakeController.Rpm=1 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=10 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  GlobalBrakeController.Reaction->GlobalBrakeController.idle 
+
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.idle WheelActuator.idle)
+
+ BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=1 GlobalBrakeController.Rpm=1 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=10 ABSFL.WABSFL=0 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  ABSFL.idle->ABSFL.Entry 
+
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.Entry WheelActuator.idle)
+
+ BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=1 GlobalBrakeController.Rpm=1 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=10 ABSFL.WABSFL=10 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=0 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  ABSFL.Entry->ABSFL.CheckSpeed { v := 36 * R * WABSFL }
+
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.CheckSpeed WheelActuator.idle)
+
+BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=1 GlobalBrakeController.Rpm=1 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=10 ABSFL.WABSFL=10 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=360 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  ABSFL.CheckSpeed->ABSFL.CalcSlipRate { v > 0, tau, 1 }
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.CalcSlipRate WheelActuator.idle)
+
+ BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=1 GlobalBrakeController.Rpm=1 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=10 ABSFL.WABSFL=10 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=360 ABSFL.s=0 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  ABSFL.CalcSlipRate->ABSFL.AsigT2 { s := (v - WABSFL * R) * 100 / v }
+
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.AsigT2 WheelActuator.idle)
+
+ BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=1 GlobalBrakeController.Rpm=1 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=10 ABSFL.WABSFL=10 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=360 ABSFL.s=97 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  ABSFL.AsigT2->ABSFL.AsigT1
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.AsigT1 WheelActuator.idle)
+
+ BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=1 GlobalBrakeController.Rpm=1 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=10 ABSFL.WABSFL=10 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=360 ABSFL.s=97 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  ABSFL.AsigT1->ABSFL.Exit
+
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.Exit WheelActuator.idle)
+
+ BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=1 GlobalBrakeController.Rpm=1 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=10 ABSFL.WABSFL=10 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=360 ABSFL.s=97 WheelActuator.Torque=0 WheelActuator.brake=0 
+
+
+Transitions:
+  ABSFL.Exit->ABSFL.idle
+  
+State:
+( BrakeSensor.idle BrakeTorqueCalculator.idle WheelSensor.idle GlobalBrakeController.idle ABSFL.idle WheelActuator.idle)
+
+ BrakeSensor.Pos=0 BrakeTorqueCalculator.maxBr=2 BrakeTorqueCalculator.ReqTorque=0 BrakeTorqueCalculator.Pos=0 WheelSensor.Rpm=1 GlobalBrakeController.Rpm=1 GlobalBrakeController.ReqTorque=0 GlobalBrakeController.WheelTorque=0 GlobalBrakeController.W=10 ABSFL.WABSFL=10 ABSFL.WheelTorqueABSFL=0 ABSFL.TorqueABSFL=0 ABSFL.v=360 ABSFL.s=97 WheelActuator.Torque=0 WheelActuator.brake=0 

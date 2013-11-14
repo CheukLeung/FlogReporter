@@ -1,0 +1,1527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Object</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./sigpa/lib/Crubyparse_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/lib/Crubyparse.rb">sigpa/lib/Crubyparse.rb</a></li>
+          
+            <li><a href="./sigpa/python/back_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/python/back.rb">sigpa/python/back.rb</a></li>
+          
+            <li><a href="./sigpa/linx4py/back_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/linx4py/back.rb">sigpa/linx4py/back.rb</a></li>
+          
+            <li><a href="./sigpa/test/tc_emit_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/test/tc_emit.rb">sigpa/test/tc_emit.rb</a></li>
+          
+            <li><a href="./sigpa/test/GetRef_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/test/GetRef.rb">sigpa/test/GetRef.rb</a></li>
+          
+            <li><a href="./sigpa/test/tc_linx4pyemit_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/test/tc_linx4pyemit.rb">sigpa/test/tc_linx4pyemit.rb</a></li>
+          
+            <li><a href="./testpa/lib/TCrubyparse_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="testpa/lib/TCrubyparse.rb">testpa/lib/TCrubyparse.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">BasicObject</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-check_undefined">#check_undefined</a></li>
+          
+          <li><a href="#method-i-copy">#copy</a></li>
+          
+          <li><a href="#method-i-create_enum_hash">#create_enum_hash</a></li>
+          
+          <li><a href="#method-i-declare">#declare</a></li>
+          
+          <li><a href="#method-i-deepcopy">#deepcopy</a></li>
+          
+          <li><a href="#method-i-error_report">#error_report</a></li>
+          
+          <li><a href="#method-i-fixup">#fixup</a></li>
+          
+          <li><a href="#method-i-get_anon_ext">#get_anon_ext</a></li>
+          
+          <li><a href="#method-i-get_table">#get_table</a></li>
+          
+          <li><a href="#method-i-insert_table">#insert_table</a></li>
+          
+          <li><a href="#method-i-link_type">#link_type</a></li>
+          
+          <li><a href="#method-i-merge_hashes">#merge_hashes</a></li>
+          
+          <li><a href="#method-i-pop_all_table_contexts">#pop_all_table_contexts</a></li>
+          
+          <li><a href="#method-i-pop_table_context">#pop_table_context</a></li>
+          
+          <li><a href="#method-i-ps">#ps</a></li>
+          
+          <li><a href="#method-i-pt">#pt</a></li>
+          
+          <li><a href="#method-i-push_all_table_contexts">#push_all_table_contexts</a></li>
+          
+          <li><a href="#method-i-push_table_context">#push_table_context</a></li>
+          
+          <li><a href="#method-i-push_to_tables">#push_to_tables</a></li>
+          
+          <li><a href="#method-i-pv">#pv</a></li>
+          
+          <li><a href="#method-i-save_current_module">#save_current_module</a></li>
+          
+          <li><a href="#method-i-save_input">#save_input</a></li>
+          
+          <li><a href="#method-i-set_current_name">#set_current_name</a></li>
+          
+          <li><a href="#method-i-size_of">#size_of</a></li>
+          
+          <li><a href="#method-i-struct_union_construct">#struct_union_construct</a></li>
+          
+          <li><a href="#method-i-struct_union_declare">#struct_union_declare</a></li>
+          
+          <li><a href="#method-i-to_integer">#to_integer</a></li>
+          
+          <li><a href="#method-i-write_error_report_to_file">#write_error_report_to_file</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./sigpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./sigpa/test/ref/ref_processed_cppstr_txt.html">ref_processed_cppstr.txt</a></li>
+        
+          <li class="file"><a href="./testpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/abstractTC_template_txt.html">abstractTC_template.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_abstracttestcase_txt.html">ref_abstracttestcase.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_comment_txt.html">ref_comment.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/transistion_template_txt.html">transistion_template.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./ArgumentCheck.html">ArgumentCheck</a></li>
+        
+          <li><a href="./Back.html">Back</a></li>
+        
+          <li><a href="./Consumer.html">Consumer</a></li>
+        
+          <li><a href="./Crubyparse.html">Crubyparse</a></li>
+        
+          <li><a href="./Front.html">Front</a></li>
+        
+          <li><a href="./GetRef.html">GetRef</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./ParseCommandLine.html">ParseCommandLine</a></li>
+        
+          <li><a href="./Printoptions.html">Printoptions</a></li>
+        
+          <li><a href="./ReadFile.html">ReadFile</a></li>
+        
+          <li><a href="./Regtally.html">Regtally</a></li>
+        
+          <li><a href="./SignalClass.html">SignalClass</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+          <li><a href="./SyntaxDescription.html">SyntaxDescription</a></li>
+        
+          <li><a href="./TC_Back.html">TC_Back</a></li>
+        
+          <li><a href="./TC_Emit.html">TC_Emit</a></li>
+        
+          <li><a href="./TC_Front.html">TC_Front</a></li>
+        
+          <li><a href="./TC_Linx4PyBack.html">TC_Linx4PyBack</a></li>
+        
+          <li><a href="./TC_Linx4PyEmit.html">TC_Linx4PyEmit</a></li>
+        
+          <li><a href="./TC_Linx4PySigpaUser.html">TC_Linx4PySigpaUser</a></li>
+        
+          <li><a href="./TC_Linx4PyUser.html">TC_Linx4PyUser</a></li>
+        
+          <li><a href="./TC_SigpaFront.html">TC_SigpaFront</a></li>
+        
+          <li><a href="./TC_SigpaUser.html">TC_SigpaUser</a></li>
+        
+          <li><a href="./TC_TCrubyparse.html">TC_TCrubyparse</a></li>
+        
+          <li><a href="./TC_TestCaseBack.html">TC_TestCaseBack</a></li>
+        
+          <li><a href="./TC_TestUser.html">TC_TestUser</a></li>
+        
+          <li><a href="./TC_Tree.html">TC_Tree</a></li>
+        
+          <li><a href="./TCrubyparse.html">TCrubyparse</a></li>
+        
+          <li><a href="./TestCaseBack.html">TestCaseBack</a></li>
+        
+          <li><a href="./Tree.html">Tree</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Object</h1>
+
+    <div id="description" class="description">
+      
+<p>Deepcopy</p>
+<hr style="height: 1px">
+
+<p>Deepcopy</p>
+<hr style="height: 1px">
+
+<p>GetRef.rb</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="ArrayNode">ArrayNode</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="BaiscNode">BaiscNode</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="FullNode">FullNode</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="NumericNode">NumericNode</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="TreeNode">TreeNode</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="check_undefined-method" class="method-detail ">
+          <a name="method-i-check_undefined"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check_undefined</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Forward definitions in typedefs are allowed. Since we cannot distinguish
+between  structs or unions defined in typedefs or defined elsewhere, we
+have to perform a  final check that no incomplete definitions remain when
+parsing finishes. If this is the case it means the struct or union in
+question has not been defined.  We print an error message and terminate.</p>
+            
+
+            
+            <div class="method-source-code" id="check_undefined-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2562</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_undefined</span>()
+  <span class="ruby-identifier">errors</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">@@typedef_table</span>[<span class="ruby-string">'table_data'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.forward_base_name'</span>)
+      <span class="ruby-identifier">etype</span> = <span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.type'</span>) <span class="ruby-operator">?</span> <span class="ruby-node">&quot;#{e[1]['.type']} &quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;&quot;</span>
+      <span class="ruby-identifier">error_report</span>(<span class="ruby-node">&quot;Error (in check_undefined() in Crubyparse): #{etype}\'#{e[1]['.forward_base_name']}\' is undefined&quot;</span>) 
+      <span class="ruby-identifier">errors</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">@@structtag_table</span>[<span class="ruby-string">'table_data'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.members'</span>)
+      <span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>][<span class="ruby-string">'.members'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">g</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">g</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.forward_base_name'</span>)
+          <span class="ruby-identifier">error_report</span>(<span class="ruby-node">&quot;Error (in check_undefined() in Crubyparse): #{g[1]['.forward_type']} &quot;</span> <span class="ruby-operator">+</span>
+            <span class="ruby-node">&quot;\'#{g[1]['.forward_base_name']}\' is undefined&quot;</span>)
+          <span class="ruby-identifier">errors</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">errors</span>
+    <span class="ruby-comment">#puts &quot;Terminating&quot;  # Commented away 2013-07-26, write_to_file instead</span>
+    <span class="ruby-comment">#exit  # Commented away 2013-07-26, write_to_file instead</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check_undefined-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check_undefined-method -->
+
+      
+        <div id="copy-method" class="method-detail ">
+          <a name="method-i-copy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">copy</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="copy-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">copy</span>
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-keyword">self</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- copy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- copy-method -->
+
+      
+        <div id="create_enum_hash-method" class="method-detail ">
+          <a name="method-i-create_enum_hash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create_enum_hash</span><span
+              class="method-args">(enumarray)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns a hash of enum constants, where the key is the identifier and its
+value is the computed value, allowing for user defined enum assignments. A
+new entry is also inserted into the symbol table for each enum constant.</p>
+            
+
+            
+            <div class="method-source-code" id="create_enum_hash-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2360</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_enum_hash</span>(<span class="ruby-identifier">enumarray</span>)
+  <span class="ruby-identifier">enum_value</span> = <span class="ruby-value">-1</span>
+  <span class="ruby-identifier">enumhash</span> = {}
+
+  <span class="ruby-identifier">enumarray</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">elem</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">enumhash</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">elem</span>[<span class="ruby-value">0</span>])
+      <span class="ruby-identifier">error_report</span> <span class="ruby-node">&quot;Error in create_enum_list: Element redefinition: #{elem[0]}&quot;</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ParseError</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">enum_value</span> = (<span class="ruby-identifier">elem</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">enum_value</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">elem</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_i</span>
+    <span class="ruby-identifier">enumhash</span>[<span class="ruby-identifier">elem</span>[<span class="ruby-value">0</span>]] = <span class="ruby-identifier">enum_value</span>
+
+    <span class="ruby-identifier">insert_table</span>(<span class="ruby-identifier">@@symbol_table</span>, <span class="ruby-identifier">elem</span>[<span class="ruby-value">0</span>], {<span class="ruby-string">'.type'</span> =<span class="ruby-operator">&gt;</span><span class="ruby-string">'enum_const'</span>, <span class="ruby-string">'.value'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">enum_value</span>, 
+                 <span class="ruby-string">'.type_or_id_name'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;(Symbol): #{elem[0]}&quot;</span>})
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enumhash</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create_enum_hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create_enum_hash-method -->
+
+      
+        <div id="declare-method" class="method-detail ">
+          <a name="method-i-declare"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">declare</span><span
+              class="method-args">(base_type, declarator_list)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Function called when either a variable or a type is declared. For each
+member in the declarator_list, containing [identifier, hash chain]  pairs,
+the following is done: The base type is inserted at the end of the
+declarator chain, and a new entry is inserted into the appropriate table,
+either the symbol_table or the typedef table.</p>
+            
+
+            
+            <div class="method-source-code" id="declare-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2403</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">declare</span>(<span class="ruby-identifier">base_type</span>, <span class="ruby-identifier">declarator_list</span>)
+  <span class="ruby-identifier">basetype</span> = <span class="ruby-identifier">base_type</span>.<span class="ruby-identifier">clone</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">basetype</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.storage'</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">basetype</span>[<span class="ruby-string">'.storage'</span>].<span class="ruby-identifier">eql?</span><span class="ruby-string">'typedef'</span>
+    <span class="ruby-identifier">target_table</span> = <span class="ruby-identifier">@@typedef_table</span>
+    <span class="ruby-identifier">target_type</span> = <span class="ruby-string">'Type'</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">basetype</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.forward_type'</span>)
+      <span class="ruby-identifier">basetype</span>[<span class="ruby-string">'.type'</span>] = <span class="ruby-identifier">basetype</span>[<span class="ruby-string">'.forward_type'</span>]
+      <span class="ruby-identifier">basetype</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">'.forward_type'</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">target_table</span> = <span class="ruby-identifier">@@symbol_table</span>
+    <span class="ruby-identifier">target_type</span> = <span class="ruby-string">'Symbol'</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">basetype</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">'.storage'</span>)
+
+  <span class="ruby-identifier">declarator_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">elem</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">current</span> = <span class="ruby-identifier">elem</span>[<span class="ruby-value">1</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">current</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword">while</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.subtype'</span>) 
+        <span class="ruby-identifier">current</span> = <span class="ruby-identifier">current</span>[<span class="ruby-string">'.subtype'</span>]
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">current</span>[<span class="ruby-string">'.subtype'</span>] = <span class="ruby-identifier">basetype</span>
+      <span class="ruby-identifier">data</span> = <span class="ruby-identifier">elem</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">clone</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">data</span> = <span class="ruby-identifier">basetype</span>.<span class="ruby-identifier">clone</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">identifier</span> = <span class="ruby-identifier">elem</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">clone</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.type_or_id_name'</span>)
+      <span class="ruby-identifier">data</span>[<span class="ruby-string">'.base_ref_name'</span>] = <span class="ruby-identifier">data</span>[<span class="ruby-string">'.type_or_id_name'</span>]
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">data</span>[<span class="ruby-string">'.type_or_id_name'</span>] = <span class="ruby-node">&quot;(#{target_type}): #{identifier}&quot;</span>
+    <span class="ruby-identifier">insert_table</span>(<span class="ruby-identifier">target_table</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">data</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- declare-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- declare-method -->
+
+      
+        <div id="deepcopy-method" class="method-detail ">
+          <a name="method-i-deepcopy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">deepcopy</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="deepcopy-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/back.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">deepcopy</span>
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-keyword">self</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- deepcopy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- deepcopy-method -->
+
+      
+        <div id="error_report-method" class="method-detail ">
+          <a name="method-i-error_report"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">error_report</span><span
+              class="method-args">(text="")</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Error report gets displayed on screen. If the parameter is omitted, will
+report a Syntax Error and cite the offending line. Otherwise, the text
+given in the parameter will be cited verbatim.</p>
+            
+
+            
+            <div class="method-source-code" id="error_report-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2275</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">error_report</span>(<span class="ruby-identifier">text</span>=<span class="ruby-string">&quot;&quot;</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">eql?</span><span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Syntax Error: \&quot;#{@@inputarr[@@line_number-1]}\&quot;&quot;</span>
+    <span class="ruby-comment">#if @@options.debug</span>
+      <span class="ruby-identifier">write_error_report_to_file</span> <span class="ruby-node">&quot;Syntax Error: \&quot;#{@@inputarr[@@line_number-1]}\&quot;&quot;</span>
+    <span class="ruby-comment">#end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{text}&quot;</span>
+    <span class="ruby-comment">#if @@options.debug</span>
+      <span class="ruby-identifier">write_error_report_to_file</span> <span class="ruby-node">&quot;#{text}&quot;</span>
+    <span class="ruby-comment">#end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- error_report-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- error_report-method -->
+
+      
+        <div id="fixup-method" class="method-detail ">
+          <a name="method-i-fixup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fixup</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>If a forward declared struct/union in a typedef has been previously
+declared,  and the referenced struct/union is encountered, this routine
+will complete the  incomplete entry in the typedef table.</p>
+            
+
+            
+            <div class="method-source-code" id="fixup-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2541</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fixup</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">@@typedef_table</span>[<span class="ruby-string">'table_data'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.forward_base_name'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>][<span class="ruby-string">'.forward_base_name'</span>].<span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">name</span>)
+      <span class="ruby-identifier">table</span> = (<span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>][<span class="ruby-string">'.type'</span>].<span class="ruby-identifier">eql?</span><span class="ruby-string">'union'</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">@@uniontag_table</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">@@structtag_table</span>
+      <span class="ruby-identifier">table</span>[<span class="ruby-string">'table_data'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">g</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">g</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">name</span>)
+          <span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>][<span class="ruby-string">'.members'</span>] = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">g</span>[<span class="ruby-value">1</span>][<span class="ruby-string">'.members'</span>]))
+          <span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-string">'.forward_base_name'</span>)
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fixup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fixup-method -->
+
+      
+        <div id="get_anon_ext-method" class="method-detail ">
+          <a name="method-i-get_anon_ext"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_anon_ext</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_anon_ext-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/back.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_anon_ext</span>
+  (<span class="ruby-identifier">@@anonext</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_anon_ext-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_anon_ext-method -->
+
+      
+        <div id="get_table-method" class="method-detail ">
+          <a name="method-i-get_table"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_table</span><span
+              class="method-args">(table, identifier)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checks if an identifier is found in a table. Returns the value of the 
+identifier if found, else nil. The table is searched in reverse order to
+allow later entries to override previous entries.</p>
+            
+
+            
+            <div class="method-source-code" id="get_table-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2303</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_table</span>(<span class="ruby-identifier">table</span>, <span class="ruby-identifier">identifier</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">table</span>[<span class="ruby-string">'quick_look'</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">identifier</span>)
+    <span class="ruby-identifier">table</span>[<span class="ruby-string">'table_data'</span>].<span class="ruby-identifier">reverse_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">elem</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">elem</span>[<span class="ruby-value">1</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">elem</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">eql?</span><span class="ruby-identifier">identifier</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_table-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_table-method -->
+
+      
+        <div id="insert_table-method" class="method-detail ">
+          <a name="method-i-insert_table"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">insert_table</span><span
+              class="method-args">(table, identifier, data)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Inserts a new entry in the given table.  If the identifier already exists
+in the table, but its data is empty,  assigns the new data to it. If it
+already has data, this is seen as a redefinition and an error report is
+written, unless the previous definition was a forward declaration.</p>
+            
+
+            
+            <div class="method-source-code" id="insert_table-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2319</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">insert_table</span>(<span class="ruby-identifier">table</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">data</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">existing_data</span> = <span class="ruby-identifier">get_table</span>(<span class="ruby-identifier">table</span>, <span class="ruby-identifier">identifier</span>)
+     <span class="ruby-keyword">if</span> <span class="ruby-identifier">existing_data</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">existing_data</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.members'</span>)
+      <span class="ruby-identifier">data</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">existing_data</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">value</span> }
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">data</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">error_report</span> <span class="ruby-node">&quot;Error in insert_table: Redefinition of #{identifier}&quot;</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ParseError</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">table</span>[<span class="ruby-string">'table_data'</span>].<span class="ruby-identifier">push</span>([<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">data</span>])
+  <span class="ruby-identifier">table</span>[<span class="ruby-string">'quick_look'</span>][<span class="ruby-identifier">identifier</span>] = <span class="ruby-value">1</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">data</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- insert_table-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- insert_table-method -->
+
+      
+        <div id="link_type-method" class="method-detail ">
+          <a name="method-i-link_type"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">link_type</span><span
+              class="method-args">(hash1, hash2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Follows the nested chain of hashes given in hash1 until it finds the last 
+(innermost) entry (which will not have a ‘.subtype’ key). It creates such a
+key for this entry, and inserts the contents of hash2 as its value, thereby
+creating a new link in the chain, nested one level deeper. Returns the
+modified hash1.</p>
+            
+
+            
+            <div class="method-source-code" id="link_type-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2342</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">link_type</span>(<span class="ruby-identifier">hash1</span>, <span class="ruby-identifier">hash2</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">hash1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash2</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">hash2</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash1</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-identifier">current</span> = <span class="ruby-identifier">hash1</span>
+
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.subtype'</span>)
+    <span class="ruby-identifier">current</span> = <span class="ruby-identifier">current</span>[<span class="ruby-string">'.subtype'</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">current</span>[<span class="ruby-string">'.subtype'</span>] = <span class="ruby-identifier">hash2</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">hash1</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- link_type-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- link_type-method -->
+
+      
+        <div id="merge_hashes-method" class="method-detail ">
+          <a name="method-i-merge_hashes"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">merge_hashes</span><span
+              class="method-args">(hash1, hash2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns a new hash consisting of hash2 merged to hash1. If key-value pairs
+with identical keys but different values exist in both hash1 and hash2, the
+former value will be overwritten by the latter. For type qualifiers this
+mechanism has been modified so the values are merged instead, allowing
+several type qualifiers to coexist.</p>
+            
+
+            
+            <div class="method-source-code" id="merge_hashes-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2385</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">merge_hashes</span>(<span class="ruby-identifier">hash1</span>, <span class="ruby-identifier">hash2</span>)
+  <span class="ruby-identifier">merged_hash</span> = <span class="ruby-identifier">hash1</span>.<span class="ruby-identifier">clone</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">merged_hash</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash2</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">hash2</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">merged_hash</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.type_qualifier'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">hash2</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.type_qualifier'</span>)
+    <span class="ruby-identifier">hash2</span>[<span class="ruby-string">'.type_qualifier'</span>] = <span class="ruby-node">&quot;#{merged_hash['.type_qualifier']} #{hash2['.type_qualifier']}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">merged_hash</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">hash2</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- merge_hashes-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- merge_hashes-method -->
+
+      
+        <div id="pop_all_table_contexts-method" class="method-detail ">
+          <a name="method-i-pop_all_table_contexts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pop_all_table_contexts</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Pops the contexts of all tables from their stacks</p>
+            
+
+            
+            <div class="method-source-code" id="pop_all_table_contexts-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2529</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pop_all_table_contexts</span>()
+  [<span class="ruby-identifier">@@symbol_table</span>, <span class="ruby-identifier">@@structtag_table</span>, <span class="ruby-identifier">@@uniontag_table</span>, <span class="ruby-identifier">@@enumtag_table</span>, <span class="ruby-identifier">@@typedef_table</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">table</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">pop_table_context</span>(<span class="ruby-identifier">table</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pop_all_table_contexts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pop_all_table_contexts-method -->
+
+      
+        <div id="pop_table_context-method" class="method-detail ">
+          <a name="method-i-pop_table_context"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pop_table_context</span><span
+              class="method-args">(table)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Pops the context back from “stack” when leaving a function.  The number of
+entries formerly present in “table_data” is popped off “stack”, and this
+number of elements are then removed from the beginning of “table_data”,
+leaving the rest unchanged. Since the removed elements are also present in
+the “quick_look” hash, these have to be removed also.</p>
+            
+
+            
+            <div class="method-source-code" id="pop_table_context-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2517</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pop_table_context</span>(<span class="ruby-identifier">table</span>)
+  <span class="ruby-identifier">num_elem</span> = <span class="ruby-identifier">table</span>[<span class="ruby-string">'stack'</span>].<span class="ruby-identifier">pop</span>
+  <span class="ruby-identifier">removed</span> = <span class="ruby-identifier">table</span>[<span class="ruby-string">'table_data'</span>].<span class="ruby-identifier">slice!</span>(<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">num_elem</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)
+
+  <span class="ruby-identifier">removed</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">elem</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">table</span>[<span class="ruby-string">'quick_look'</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">elem</span>[<span class="ruby-value">0</span>])
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pop_table_context-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pop_table_context-method -->
+
+      
+        <div id="ps-method" class="method-detail ">
+          <a name="method-i-ps"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ps</span><span
+              class="method-args">(_values)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Prints the contents of the _values stack</p>
+            
+
+            
+            <div class="method-source-code" id="ps-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2615</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ps</span>(<span class="ruby-identifier">_values</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n*** _VALUES: *****************************************************&quot;</span>
+  <span class="ruby-identifier">_values</span>.<span class="ruby-identifier">each_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot; _values[#{index}]=&quot;</span>
+    <span class="ruby-identifier">pp</span> <span class="ruby-identifier">_values</span>[<span class="ruby-identifier">index</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;******************************************************************&quot;</span>
+  <span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ps-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ps-method -->
+
+      
+        <div id="pt-method" class="method-detail ">
+          <a name="method-i-pt"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pt</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Prints the contents of the tables</p>
+            
+
+            
+            <div class="method-source-code" id="pt-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2605</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pt</span>()
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n*** TABLES: ******************************************************&quot;</span>
+  [<span class="ruby-identifier">@@symbol_table</span>, <span class="ruby-identifier">@@structtag_table</span>, <span class="ruby-identifier">@@uniontag_table</span>, <span class="ruby-identifier">@@enumtag_table</span>, <span class="ruby-identifier">@@typedef_table</span>].<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">pp</span> <span class="ruby-identifier">t</span>; <span class="ruby-identifier">puts</span>}
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;******************************************************************&quot;</span>
+  <span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pt-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pt-method -->
+
+      
+        <div id="push_all_table_contexts-method" class="method-detail ">
+          <a name="method-i-push_all_table_contexts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">push_all_table_contexts</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Pushes the contexts of all tables onto their stacks</p>
+            
+
+            
+            <div class="method-source-code" id="push_all_table_contexts-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2503</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">push_all_table_contexts</span>()
+  [<span class="ruby-identifier">@@symbol_table</span>, <span class="ruby-identifier">@@structtag_table</span>, <span class="ruby-identifier">@@uniontag_table</span>, <span class="ruby-identifier">@@enumtag_table</span>, <span class="ruby-identifier">@@typedef_table</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">table</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">push_table_context</span>(<span class="ruby-identifier">table</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- push_all_table_contexts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- push_all_table_contexts-method -->
+
+      
+        <div id="push_table_context-method" class="method-detail ">
+          <a name="method-i-push_table_context"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">push_table_context</span><span
+              class="method-args">(table)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Pushes the context of a table onto the array “stack” when entering a
+function. What gets stored is not the actual contents of “table_data” but
+rather the number of elements currently present in “table_data”. The
+contents of “table_data” is left unchanged.</p>
+            
+
+            
+            <div class="method-source-code" id="push_table_context-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2496</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">push_table_context</span>(<span class="ruby-identifier">table</span>)
+  <span class="ruby-identifier">table</span>[<span class="ruby-string">'stack'</span>].<span class="ruby-identifier">push</span>(<span class="ruby-identifier">table</span>[<span class="ruby-string">'table_data'</span>].<span class="ruby-identifier">length</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- push_table_context-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- push_table_context-method -->
+
+      
+        <div id="push_to_tables-method" class="method-detail ">
+          <a name="method-i-push_to_tables"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">push_to_tables</span><span
+              class="method-args">(current_state, current_input_list, current_transitions)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Save state, input and transition into separate arrays</p>
+            
+
+            
+            <div class="method-source-code" id="push_to_tables-source">
+<pre>
+<span class="ruby-comment"># File testpa/lib/TCrubyparse.rb, line 579</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">push_to_tables</span>(<span class="ruby-identifier">current_state</span>, <span class="ruby-identifier">current_input_list</span>, <span class="ruby-identifier">current_transitions</span>)
+   <span class="ruby-identifier">@@state_list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">current_state</span>)
+   <span class="ruby-identifier">@@input_list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">current_input_list</span>)
+   <span class="ruby-identifier">@@transitions_list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">current_transitions</span>)   
+   <span class="ruby-identifier">@@name_list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-node">&quot;#{@@current_name}&quot;</span>)
+   
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- push_to_tables-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- push_to_tables-method -->
+
+      
+        <div id="pv-method" class="method-detail ">
+          <a name="method-i-pv"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pv</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Prints the contents of the val array</p>
+            
+
+            
+            <div class="method-source-code" id="pv-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2592</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pv</span>(<span class="ruby-identifier">val</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n*** VAL: *********************************************************&quot;</span>
+  <span class="ruby-identifier">val</span>.<span class="ruby-identifier">each_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot; val[#{index}]=&quot;</span>
+    <span class="ruby-identifier">pp</span> <span class="ruby-identifier">val</span>[<span class="ruby-identifier">index</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;******************************************************************&quot;</span>
+  <span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pv-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pv-method -->
+
+      
+        <div id="save_current_module-method" class="method-detail ">
+          <a name="method-i-save_current_module"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">save_current_module</span><span
+              class="method-args">(state_module)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Keeps track of current module</p>
+            
+
+            
+            <div class="method-source-code" id="save_current_module-source">
+<pre>
+<span class="ruby-comment"># File testpa/lib/TCrubyparse.rb, line 605</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_current_module</span>(<span class="ruby-identifier">state_module</span>)
+   <span class="ruby-identifier">@@current_module</span> = <span class="ruby-identifier">state_module</span>[<span class="ruby-string">'.module'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- save_current_module-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- save_current_module-method -->
+
+      
+        <div id="save_input-method" class="method-detail ">
+          <a name="method-i-save_input"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">save_input</span><span
+              class="method-args">(input_item)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Save current input variables and their corresponding value</p>
+            
+
+            
+            <div class="method-source-code" id="save_input-source">
+<pre>
+<span class="ruby-comment"># File testpa/lib/TCrubyparse.rb, line 594</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_input</span>(<span class="ruby-identifier">input_item</span>)
+   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">@@temp_input_list</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-node">&quot;#{input_item['.module']}&quot;</span>)
+      <span class="ruby-identifier">@@temp_input_list</span>[<span class="ruby-node">&quot;#{input_item['.module']}&quot;</span>] = { <span class="ruby-node">&quot;#{input_item['.parameter']}&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">input_item</span>[<span class="ruby-string">'.value'</span>] }
+   <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">@@temp_input_list</span>[<span class="ruby-node">&quot;#{input_item['.module']}&quot;</span>][<span class="ruby-node">&quot;#{input_item['.parameter']}&quot;</span>] = <span class="ruby-identifier">input_item</span>[<span class="ruby-string">'.value'</span>]
+   <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- save_input-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- save_input-method -->
+
+      
+        <div id="set_current_name-method" class="method-detail ">
+          <a name="method-i-set_current_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_current_name</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="set_current_name-source">
+<pre>
+<span class="ruby-comment"># File testpa/lib/TCrubyparse.rb, line 587</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_current_name</span>(<span class="ruby-identifier">name</span>)
+   <span class="ruby-identifier">@@current_name</span> = <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_current_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_current_name-method -->
+
+      
+        <div id="size_of-method" class="method-detail ">
+          <a name="method-i-size_of"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">size_of</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns number of bytes of the specified data type</p>
+            
+
+            
+            <div class="method-source-code" id="size_of-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2249</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">size_of</span>(<span class="ruby-identifier">val</span>)
+   <span class="ruby-keyword">case</span> <span class="ruby-identifier">val</span> 
+   <span class="ruby-keyword">when</span> (<span class="ruby-identifier">val</span> <span class="ruby-operator">==</span> <span class="ruby-string">'long'</span> )
+      <span class="ruby-keyword">return</span>(<span class="ruby-value">4</span>)
+   <span class="ruby-keyword">when</span> (<span class="ruby-identifier">val</span> <span class="ruby-operator">==</span> <span class="ruby-string">'longlong'</span> )
+      <span class="ruby-keyword">return</span>(<span class="ruby-value">8</span>)
+   <span class="ruby-keyword">when</span> (<span class="ruby-identifier">val</span> <span class="ruby-operator">==</span> <span class="ruby-string">'char'</span> )
+      <span class="ruby-keyword">return</span>(<span class="ruby-value">1</span>)
+   <span class="ruby-keyword">when</span> (<span class="ruby-identifier">val</span> <span class="ruby-operator">==</span> <span class="ruby-string">'double'</span> )
+      <span class="ruby-keyword">return</span>(<span class="ruby-value">8</span>)
+   <span class="ruby-keyword">when</span> (<span class="ruby-identifier">val</span> <span class="ruby-operator">==</span> <span class="ruby-string">'float'</span> )
+      <span class="ruby-keyword">return</span>(<span class="ruby-value">4</span>)
+   <span class="ruby-keyword">when</span> (<span class="ruby-identifier">val</span> <span class="ruby-operator">==</span> <span class="ruby-string">'int'</span> )
+      <span class="ruby-keyword">return</span>(<span class="ruby-value">4</span>)
+   <span class="ruby-keyword">when</span> (<span class="ruby-identifier">val</span> <span class="ruby-operator">==</span> <span class="ruby-string">'short'</span> )
+      <span class="ruby-keyword">return</span>(<span class="ruby-value">2</span>)
+   <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">return</span>(<span class="ruby-value">1</span>)
+   <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- size_of-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- size_of-method -->
+
+      
+        <div id="struct_union_construct-method" class="method-detail ">
+          <a name="method-i-struct_union_construct"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">struct_union_construct</span><span
+              class="method-args">(base_type, member_list)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns a hash containing each member of a struct or union. Each member is
+represented as a name-type pair. The type is a chained hash describing a
+nested construct.</p>
+            
+
+            
+            <div class="method-source-code" id="struct_union_construct-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2476</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">struct_union_construct</span>(<span class="ruby-identifier">base_type</span>, <span class="ruby-identifier">member_list</span>)
+  <span class="ruby-identifier">con_hash</span> = {<span class="ruby-string">'.type'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">base_type</span>[<span class="ruby-string">'.type'</span>].<span class="ruby-identifier">clone</span>}  <span class="ruby-comment"># struct or union </span>
+  <span class="ruby-identifier">con_hash</span>[<span class="ruby-string">'.members'</span>] = []
+
+  <span class="ruby-identifier">member_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">member</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">member_name</span> = <span class="ruby-identifier">member</span>[<span class="ruby-value">0</span>]  <span class="ruby-comment"># identifier</span>
+    <span class="ruby-identifier">member_type</span> = <span class="ruby-identifier">member</span>[<span class="ruby-value">1</span>]  <span class="ruby-comment"># chained hash</span>
+
+    <span class="ruby-identifier">con_hash</span>[<span class="ruby-string">'.members'</span>].<span class="ruby-identifier">push</span>([<span class="ruby-identifier">member_name</span>, <span class="ruby-identifier">member_type</span>])
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">con_hash</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- struct_union_construct-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- struct_union_construct-method -->
+
+      
+        <div id="struct_union_declare-method" class="method-detail ">
+          <a name="method-i-struct_union_declare"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">struct_union_declare</span><span
+              class="method-args">(base_type, declarator_list)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Function called when a variable is declared inside a struct or union. For
+each member in the declarator_list, containing [identifier, hash chain] 
+pairs, the following is done: The base type is inserted at the end of the
+declarator chain, and a new entry is inserted into the array declare_array.
+This array is returned when the function finishes.</p>
+            
+
+            
+            <div class="method-source-code" id="struct_union_declare-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2448</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">struct_union_declare</span>(<span class="ruby-identifier">base_type</span>, <span class="ruby-identifier">declarator_list</span>)
+  <span class="ruby-identifier">basetype</span> = <span class="ruby-identifier">base_type</span>.<span class="ruby-identifier">clone</span>
+  <span class="ruby-identifier">declare_array</span> = []
+  
+  <span class="ruby-identifier">declarator_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">elem</span><span class="ruby-operator">|</span> 
+    <span class="ruby-identifier">current</span> = <span class="ruby-identifier">elem</span>[<span class="ruby-value">1</span>]
+
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">current</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword">while</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'.subtype'</span>) 
+        <span class="ruby-identifier">current</span> = <span class="ruby-identifier">current</span>[<span class="ruby-string">'.subtype'</span>]
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">current</span>[<span class="ruby-string">'.subtype'</span>] = <span class="ruby-identifier">basetype</span>
+      <span class="ruby-identifier">data</span> = <span class="ruby-identifier">elem</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">clone</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">data</span> = <span class="ruby-identifier">basetype</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">identifier</span> = <span class="ruby-identifier">elem</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">clone</span>
+    <span class="ruby-identifier">declare_array</span>.<span class="ruby-identifier">push</span>([<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">data</span>])
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">declare_array</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- struct_union_declare-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- struct_union_declare-method -->
+
+      
+        <div id="to_integer-method" class="method-detail ">
+          <a name="method-i-to_integer"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_integer</span><span
+              class="method-args">(i, j)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Find corresponding value to a parameter</p>
+            
+
+            
+            <div class="method-source-code" id="to_integer-source">
+<pre>
+<span class="ruby-comment"># File testpa/lib/TCrubyparse.rb, line 612</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_integer</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>)
+   <span class="ruby-keyword">if</span> ((<span class="ruby-identifier">i</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>))
+      <span class="ruby-keyword">if</span> ((<span class="ruby-identifier">i_to_integer</span> = <span class="ruby-identifier">@@temp_input_list</span>[<span class="ruby-node">&quot;#{@@current_module}&quot;</span>][<span class="ruby-node">&quot;#{i}&quot;</span>]) <span class="ruby-operator">==</span> <span class="ruby-constant">NIL</span>)
+         <span class="ruby-identifier">i_to_integer</span> = <span class="ruby-identifier">i</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">==</span> <span class="ruby-string">'R'</span> <span class="ruby-comment"># hårdkodning</span>
+         <span class="ruby-identifier">i_to_integer</span> = <span class="ruby-value">1</span>
+      <span class="ruby-keyword">end</span>
+   <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">i_to_integer</span> = <span class="ruby-identifier">i</span>
+   <span class="ruby-keyword">end</span>
+   <span class="ruby-keyword">if</span> ((<span class="ruby-identifier">j</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">j</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>))
+      <span class="ruby-keyword">if</span> ((<span class="ruby-identifier">j_to_integer</span> = <span class="ruby-identifier">@@temp_input_list</span>[<span class="ruby-node">&quot;#{@@current_module}&quot;</span>][<span class="ruby-node">&quot;#{j}&quot;</span>]) <span class="ruby-operator">==</span> <span class="ruby-constant">NIL</span>)
+         <span class="ruby-identifier">j_to_integer</span> = <span class="ruby-identifier">j</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">==</span> <span class="ruby-string">'R'</span> <span class="ruby-comment"># hårdkodning</span>
+         <span class="ruby-identifier">j_to_integer</span> = <span class="ruby-value">1</span>
+      <span class="ruby-keyword">end</span>
+   <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">j_to_integer</span> = <span class="ruby-identifier">j</span>
+   <span class="ruby-keyword">end</span>  
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">i_to_integer</span>, <span class="ruby-identifier">j_to_integer</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_integer-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_integer-method -->
+
+      
+        <div id="write_error_report_to_file-method" class="method-detail ">
+          <a name="method-i-write_error_report_to_file"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">write_error_report_to_file</span><span
+              class="method-args">(text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Write all parsing errors to an error file 2013-07-26</p>
+            
+
+            
+            <div class="method-source-code" id="write_error_report_to_file-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/Crubyparse.rb, line 2292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write_error_report_to_file</span>(<span class="ruby-identifier">text</span>)
+   <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;errorfile&quot;</span>, <span class="ruby-string">&quot;a&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">er</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">er</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;#{text}&quot;</span>
+   <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- write_error_report_to_file-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- write_error_report_to_file-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

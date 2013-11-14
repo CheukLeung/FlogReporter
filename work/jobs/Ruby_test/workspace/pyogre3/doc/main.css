@@ -1,0 +1,26 @@
+
+
+.p {
+    padding-bottom: 12px; 
+    font-family: Verdana; 
+    font-size: 60%;
+    padding-right: 7px; 
+    padding-left: 12px;
+}
+
+pre {
+    color: maroon;
+    margin-left: 1.5em;
+}
+
+div.note {
+    color: green;
+    margin-left: 0.5em;
+}
+
+div.example {
+    width: 100%;
+    border: none;
+    background-color: #eee;
+}
+

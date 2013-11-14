@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<?jelly escape-by-default='true'?>
+<!-- TODO add taglibs such as: xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" -->
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:i="jelly:fmt" xmlns:l="/lib/layout">
+    <l:layout norefresh="true">
+        <st:include it="${it.owner}" page="sidepanel.jelly"/>
+        <l:main-panel>
+            <h1>${it.fileName}</h1>
+            <h2>${%Trend}</h2>
+            <img src="graph" width="500px" height="200px" />
+            <j:if test="${it.lines.size() == 0}">
+                <div>
+                The source file is not found and therefore cannot be displayed. 
+                Please make sure the relative path in the Flog analysis report 
+                is the same as the path of the file relative to the workspace.
+                </div>
+            </j:if>
+            <j:if test="${it.lines.size() > 0}">
+                <table class="pane sortable">
+                    <tr>
+                        <td class="pane-header"></td>  
+                        <td class="pane-header"></td>              
+                    </tr>
+                    <tbody>
+                        <j:forEach var="elt" items="${it.lines}">
+                            <tr>
+                                <j:set var="color" value="#FFFFFF"/>
+                                <j:set var="warning" value=""/>
+                                <j:if test="${elt.reports.size() > 0}">
+                                    <j:set var="color" value="#CCFFCC"/>
+                                </j:if>
+
+                                <td style="background-color: ${color}; cursor:pointer;">
+                                    <a name="${elt.lineNo+1}">
+                                        ${elt.lineNo}
+                                    </a>
+                                </td>
+                                <td style="background-color: ${color}; cursor:pointer;">
+                                    <div class='healthReport' onmouseover="turnHover()" onmouseout="turnOffHover()">
+                                    <pre>
+                                        <code class="ruby">
+                                        ${elt.content}
+                                        </code>
+                                    </pre>
+                                    <j:if test="${elt.reports.size() > 0}">
+                                        <div class='healthReportDetails' style="background-color: #f0f0f0">
+                                            <table class='pane sortable' border="1" >
+                                                <thead>
+                                                    <tr>
+                                                        <th align="left"> Class</th>
+                                                        <th align="left"> Subclass</th>
+                                                        <th align="left"> Message</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                   <j:forEach var="item" items="${elt.reports}">
+                                                       <tr>
+                                                       <td align="left">${item.smellClass}</td>
+                                                       <td align="left">
+                                                            <a href= "http://rdoc.info/github/troessner/flog/Flog/Smells/${item.subClass}" target="_blank">
+                                                                ${item.subClass}
+                                                            </a>
+                                                       </td>
+                                                       <td align="left" width='100%' class='message'>${item.message}</td>
+                                                       </tr>
+                                                   </j:forEach> 
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </j:if>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                        </j:forEach>
+
+                    </tbody>
+                </table>
+            </j:if>
+        </l:main-panel>
+    </l:layout>
+        
+    <script>
+    function turnHover()
+    {
+        this.className='healthReport hover';return true;
+    }
+    function turnOffHover()
+    {
+        this.className='healthReport';return true;
+    }
+    </script>
+</j:jelly>

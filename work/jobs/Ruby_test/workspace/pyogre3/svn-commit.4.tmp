@@ -1,0 +1,46 @@
+Updated Farkle with Testbench related stuff
+/dadi
+--This line, and those below, will be ignored--
+
+AM   src/DiscoverTests.py
+A    src/metricsProxy
+A    src/metricsProxy/__init__.py
+AM   src/metricsProxy/metrics.py
+M    src/ogre/linx.py
+A    gsp
+A    gsp/python
+AM   gsp/python/emit.rb
+AM   gsp/python/user.rb
+AM   gsp/python/back.rb
+AM   gsp/python/sigpa.rb
+A    gsp/java
+AM   gsp/java/emit.rb
+A    gsp/java/user.rb
+AM   gsp/java/back.rb
+AM   gsp/java/sigpa.rb
+AM   gsp/java/yaml_reader.rb
+A    gsp/ruby
+AM   gsp/ruby/emit.rb
+AM   gsp/ruby/user.rb
+AM   gsp/ruby/back.rb
+AM   gsp/ruby/sigpa.rb
+A    gsp/perl
+AM   gsp/perl/emit.rb
+AM   gsp/perl/user.rb
+AM   gsp/perl/back.rb
+AM   gsp/perl/sigpa.rb
+A    gsp/lib
+A    gsp/lib/tree.rb
+AM   gsp/lib/Crubyparse.rb
+A    gsp/lib/Crubyparse.y
+AM   gsp/lib/front.rb
+A    gsp/erlang
+A    gsp/erlang/emit.rb
+A    gsp/erlang/user.rb
+A    gsp/erlang/back.rb
+A    gsp/erlang/sigpa.rb
+A    gsp/cfunc
+AM   gsp/cfunc/emit.rb
+AM   gsp/cfunc/user.rb
+AM   gsp/cfunc/back.rb
+AM   gsp/cfunc/sigpa.rb

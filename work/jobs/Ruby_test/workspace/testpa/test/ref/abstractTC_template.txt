@@ -1,0 +1,31 @@
+[SHORTNAME=abstractTC_template]
+
+State:
+(module1.someState module2.someState module3.someState)
+
+module1.input_for_next_state1=0 module1.input_for_next_state2=0 
+module2.input_for_next_state1=0 module3.input_for_next_state1=0
+module3.input_for_next_state2=0 module3.input_for_next_state3=0
+
+Transitions:
+module1.someState -> module1.nextState 
+
+State:
+(module1.nextState module2.someState module3.someState)
+
+module1.input_for_next_state1=0 module1.input_for_next_state2=0
+module2.input_for_next_state1=0 module3.input_for_next_state1=0
+module3.input_for_next_state2=0 module3.input_for_next_state3=0
+
+Transitions:
+module1.nextState -> module1.someOtherState { input_for_next_state1 := 6 }
+
+State:
+(module1.someOtherState module2.someState module3.someState)
+
+module1.input_for_next_state1=6 module1.input_for_next_state2=0 
+module2.input_for_next_state1=0 module3.input_for_next_state1=0
+module3.input_for_next_state2=0 module3.input_for_next_state3=0
+
+Transitions:
+module1.nextState -> module1.someOtherState 

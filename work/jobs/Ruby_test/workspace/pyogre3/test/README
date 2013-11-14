@@ -1,0 +1,14 @@
+DESCRIPTION
+
+This directory containts test cases for testing the pyogre package.
+
+None of these files are required for using OSE Gateway. Instead they 
+are included here as an example on how to use its features.
+
+
+RUNNING TEST CASES
+
+  setenv PYTHONPATH /home/<user>/lib/python
+  setenv OSEGWD_URL tcp://172.17.226.207:22001
+  make
+

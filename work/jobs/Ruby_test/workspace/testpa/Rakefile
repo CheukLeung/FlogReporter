@@ -1,0 +1,10 @@
+require 'ci/reporter/rake/test_unit'
+
+task :test do
+  ruby "test/tc_tcrubyparse.rb"
+  ruby "test/tc_testcaseback.rb"
+  ruby "test/tc_front.rb"
+  ruby "test/tc_testuser.rb"
+  ruby "test/tc_linx4pyuser.rb"
+  ruby "test/tc_linx4pyback.rb"
+end

@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: TC_Tree</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./sigpa/test/tc_tree_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/test/tc_tree.rb">sigpa/test/tc_tree.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Test::Unit::TestCase</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-setup">#setup</a></li>
+          
+          <li><a href="#method-i-teardown">#teardown</a></li>
+          
+          <li><a href="#method-i-test_tree_createchild">#test_tree_createchild</a></li>
+          
+          <li><a href="#method-i-test_tree_getchild">#test_tree_getchild</a></li>
+          
+          <li><a href="#method-i-test_tree_getpath">#test_tree_getpath</a></li>
+          
+          <li><a href="#method-i-test_tree_haschild">#test_tree_haschild</a></li>
+          
+          <li><a href="#method-i-test_tree_height">#test_tree_height</a></li>
+          
+          <li><a href="#method-i-test_tree_initialize">#test_tree_initialize</a></li>
+          
+          <li><a href="#method-i-test_tree_isleaf">#test_tree_isleaf</a></li>
+          
+          <li><a href="#method-i-test_tree_issigno">#test_tree_issigno</a></li>
+          
+          <li><a href="#method-i-test_tree_levelorder">#test_tree_levelorder</a></li>
+          
+          <li><a href="#method-i-test_tree_levelorderaux">#test_tree_levelorderaux</a></li>
+          
+          <li><a href="#method-i-test_tree_levelprint">#test_tree_levelprint</a></li>
+          
+          <li><a href="#method-i-test_tree_outputtier">#test_tree_outputtier</a></li>
+          
+          <li><a href="#method-i-test_tree_postorder">#test_tree_postorder</a></li>
+          
+          <li><a href="#method-i-test_tree_preorder">#test_tree_preorder</a></li>
+          
+          <li><a href="#method-i-test_tree_printout">#test_tree_printout</a></li>
+          
+          <li><a href="#method-i-test_tree_size">#test_tree_size</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./sigpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./sigpa/test/ref/ref_processed_cppstr_txt.html">ref_processed_cppstr.txt</a></li>
+        
+          <li class="file"><a href="./testpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/abstractTC_template_txt.html">abstractTC_template.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_abstracttestcase_txt.html">ref_abstracttestcase.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_comment_txt.html">ref_comment.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/transistion_template_txt.html">transistion_template.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./ArgumentCheck.html">ArgumentCheck</a></li>
+        
+          <li><a href="./Back.html">Back</a></li>
+        
+          <li><a href="./Consumer.html">Consumer</a></li>
+        
+          <li><a href="./Crubyparse.html">Crubyparse</a></li>
+        
+          <li><a href="./Front.html">Front</a></li>
+        
+          <li><a href="./GetRef.html">GetRef</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./ParseCommandLine.html">ParseCommandLine</a></li>
+        
+          <li><a href="./Printoptions.html">Printoptions</a></li>
+        
+          <li><a href="./ReadFile.html">ReadFile</a></li>
+        
+          <li><a href="./Regtally.html">Regtally</a></li>
+        
+          <li><a href="./SignalClass.html">SignalClass</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+          <li><a href="./SyntaxDescription.html">SyntaxDescription</a></li>
+        
+          <li><a href="./TC_Back.html">TC_Back</a></li>
+        
+          <li><a href="./TC_Emit.html">TC_Emit</a></li>
+        
+          <li><a href="./TC_Front.html">TC_Front</a></li>
+        
+          <li><a href="./TC_Linx4PyBack.html">TC_Linx4PyBack</a></li>
+        
+          <li><a href="./TC_Linx4PyEmit.html">TC_Linx4PyEmit</a></li>
+        
+          <li><a href="./TC_Linx4PySigpaUser.html">TC_Linx4PySigpaUser</a></li>
+        
+          <li><a href="./TC_Linx4PyUser.html">TC_Linx4PyUser</a></li>
+        
+          <li><a href="./TC_SigpaFront.html">TC_SigpaFront</a></li>
+        
+          <li><a href="./TC_SigpaUser.html">TC_SigpaUser</a></li>
+        
+          <li><a href="./TC_TCrubyparse.html">TC_TCrubyparse</a></li>
+        
+          <li><a href="./TC_TestCaseBack.html">TC_TestCaseBack</a></li>
+        
+          <li><a href="./TC_TestUser.html">TC_TestUser</a></li>
+        
+          <li><a href="./TC_Tree.html">TC_Tree</a></li>
+        
+          <li><a href="./TCrubyparse.html">TCrubyparse</a></li>
+        
+          <li><a href="./TestCaseBack.html">TestCaseBack</a></li>
+        
+          <li><a href="./Tree.html">Tree</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">TC_Tree</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="setup-method" class="method-detail ">
+          <a name="method-i-setup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">setup</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="setup-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+    <span class="ruby-comment"># Nothing really</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- setup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- setup-method -->
+
+      
+        <div id="teardown-method" class="method-detail ">
+          <a name="method-i-teardown"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">teardown</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="teardown-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">teardown</span>
+    <span class="ruby-comment"># Nothing really</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- teardown-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- teardown-method -->
+
+      
+        <div id="test_tree_createchild-method" class="method-detail ">
+          <a name="method-i-test_tree_createchild"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_createchild</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_createchild-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_createchild</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child</span>)
+    <span class="ruby-identifier">assert_equal</span>([<span class="ruby-identifier">child</span>], <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@children'</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_createchild-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_createchild-method -->
+
+      
+        <div id="test_tree_getchild-method" class="method-detail ">
+          <a name="method-i-test_tree_getchild"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_getchild</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_getchild-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_getchild</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child_1&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">child</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">get_child</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-string">&quot;Child_1&quot;</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">get_child</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-string">&quot;Child_2&quot;</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_getchild-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_getchild-method -->
+
+      
+        <div id="test_tree_getpath-method" class="method-detail ">
+          <a name="method-i-test_tree_getpath"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_getpath</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_getpath-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_getpath</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child_1</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child_1&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-identifier">tree</span>)
+    <span class="ruby-identifier">child_2</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child_2&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-identifier">tree</span>)
+    <span class="ruby-identifier">grandchild_1</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Grandchild_1&quot;</span>, <span class="ruby-string">&quot;grandchild&quot;</span>, <span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">grandchild_2</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Grandchild_2&quot;</span>, <span class="ruby-string">&quot;grandchild&quot;</span>, <span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child_2</span>)
+    <span class="ruby-identifier">child_1</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">grandchild_1</span>)
+    <span class="ruby-identifier">child_1</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">grandchild_2</span>)
+    
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;Child_1&quot;</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">get_path</span>(<span class="ruby-identifier">child_1</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;Child_2&quot;</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">get_path</span>(<span class="ruby-identifier">child_2</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;Child_1.Grandchild_1&quot;</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">get_path</span>(<span class="ruby-identifier">grandchild_1</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;Child_1.Grandchild_2&quot;</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">get_path</span>(<span class="ruby-identifier">grandchild_2</span>)) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_getpath-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_getpath-method -->
+
+      
+        <div id="test_tree_haschild-method" class="method-detail ">
+          <a name="method-i-test_tree_haschild"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_haschild</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_haschild-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_haschild</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child_1&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child</span>)
+    <span class="ruby-identifier">assert</span>(<span class="ruby-constant">Tree</span>.<span class="ruby-identifier">has_child?</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-string">&quot;Child_1&quot;</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword">false</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">has_child?</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-string">&quot;Child_2&quot;</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_haschild-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_haschild-method -->
+
+      
+        <div id="test_tree_height-method" class="method-detail ">
+          <a name="method-i-test_tree_height"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_height</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_height-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_height</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child_1</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child_1&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-identifier">tree</span>)
+    <span class="ruby-identifier">child_2</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child_2&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-identifier">tree</span>)
+    <span class="ruby-identifier">grandchild_1</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Grandchild_1&quot;</span>, <span class="ruby-string">&quot;grandchild&quot;</span>, <span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">grandchild_2</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Grandchild_2&quot;</span>, <span class="ruby-string">&quot;grandchild&quot;</span>, <span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child_2</span>)
+    <span class="ruby-identifier">child_1</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">grandchild_1</span>)
+    <span class="ruby-identifier">child_1</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">grandchild_2</span>)
+           
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">0</span>;
+    <span class="ruby-identifier">child_1</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">1</span>;
+    <span class="ruby-identifier">child_2</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">1</span>;
+    <span class="ruby-identifier">grandchild_1</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">2</span>;
+    <span class="ruby-identifier">grandchild_2</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">2</span>;
+          
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">2</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">height</span>(<span class="ruby-identifier">tree</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">height</span>(<span class="ruby-identifier">child_1</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">height</span>(<span class="ruby-identifier">child_2</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">height</span>(<span class="ruby-identifier">grandchild_1</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">height</span>(<span class="ruby-identifier">grandchild_2</span>)) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_height-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_height-method -->
+
+      
+        <div id="test_tree_initialize-method" class="method-detail ">
+          <a name="method-i-test_tree_initialize"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_initialize</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_initialize-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_initialize</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;TestType&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">5</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@name'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;TestType&quot;</span>, <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@kind'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@basetype'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">5</span>, <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@arrsize'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@s_u_name'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword">false</span>, <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@leaf'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@level'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@size'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@align'</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@parent'</span>))
+    <span class="ruby-identifier">assert_equal</span>([], <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">instance_eval</span>(<span class="ruby-string">'@children'</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_initialize-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_initialize-method -->
+
+      
+        <div id="test_tree_isleaf-method" class="method-detail ">
+          <a name="method-i-test_tree_isleaf"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_isleaf</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_isleaf-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_isleaf</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword">false</span>, <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">is_leaf?</span>())
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">child</span>.<span class="ruby-identifier">is_leaf?</span>())
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_isleaf-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_isleaf-method -->
+
+      
+        <div id="test_tree_issigno-method" class="method-detail ">
+          <a name="method-i-test_tree_issigno"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_issigno</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_issigno-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_issigno</span>
+    <span class="ruby-identifier">root</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;test_sig&quot;</span>, <span class="ruby-string">&quot;sig_no&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">sig_no</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;test_sig&quot;</span>, <span class="ruby-string">&quot;sig_no&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child_1&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">root</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">sig_no</span>)
+    <span class="ruby-identifier">assert</span>(<span class="ruby-constant">Tree</span>.<span class="ruby-identifier">is_signo?</span>(<span class="ruby-identifier">root</span>, <span class="ruby-identifier">sig_no</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword">false</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">is_signo?</span>(<span class="ruby-identifier">root</span>, <span class="ruby-identifier">child</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_issigno-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_issigno-method -->
+
+      
+        <div id="test_tree_levelorder-method" class="method-detail ">
+          <a name="method-i-test_tree_levelorder"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_levelorder</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_levelorder-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 245</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_levelorder</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child</span>)
+           
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">0</span>;
+    <span class="ruby-identifier">child</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">1</span>;
+    
+    <span class="ruby-identifier">out</span>, <span class="ruby-identifier">err</span> = <span class="ruby-identifier">capture_stdout</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">levelorder</span>(<span class="ruby-identifier">child</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getTreePrintOutRef</span>(<span class="ruby-value">3</span>),<span class="ruby-identifier">out</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_levelorder-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_levelorder-method -->
+
+      
+        <div id="test_tree_levelorderaux-method" class="method-detail ">
+          <a name="method-i-test_tree_levelorderaux"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_levelorderaux</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_levelorderaux-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_levelorderaux</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child</span>)
+           
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">0</span>;
+    <span class="ruby-identifier">child</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">1</span>;
+    
+    <span class="ruby-identifier">out</span>, <span class="ruby-identifier">err</span> = <span class="ruby-identifier">capture_stdout</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">levelorder_aux</span>(<span class="ruby-identifier">child</span>, <span class="ruby-value">1</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getTreePrintOutRef</span>(<span class="ruby-value">3</span>),<span class="ruby-identifier">out</span>)
+    
+    <span class="ruby-identifier">out</span>, <span class="ruby-identifier">err</span> = <span class="ruby-identifier">capture_stdout</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">levelorder_aux</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-value">2</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getTreePrintOutRef</span>(<span class="ruby-value">3</span>),<span class="ruby-identifier">out</span>)
+    
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_levelorderaux-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_levelorderaux-method -->
+
+      
+        <div id="test_tree_levelprint-method" class="method-detail ">
+          <a name="method-i-test_tree_levelprint"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_levelprint</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_levelprint-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_levelprint</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child_1</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child_1&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-identifier">tree</span>)
+    <span class="ruby-identifier">child_2</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child_2&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-identifier">tree</span>)
+    <span class="ruby-identifier">grandchild_1</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Grandchild_1&quot;</span>, <span class="ruby-string">&quot;grandchild&quot;</span>, <span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">grandchild_2</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Grandchild_2&quot;</span>, <span class="ruby-string">&quot;grandchild&quot;</span>, <span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child_2</span>)
+    <span class="ruby-identifier">child_1</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">grandchild_1</span>)
+    <span class="ruby-identifier">child_1</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">grandchild_2</span>)
+    
+    <span class="ruby-identifier">out</span>, <span class="ruby-identifier">err</span> = <span class="ruby-identifier">capture_stdout</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">level_print</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-value">10</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getTreePrintOutRef</span>(<span class="ruby-value">2</span>), <span class="ruby-identifier">out</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_levelprint-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_levelprint-method -->
+
+      
+        <div id="test_tree_outputtier-method" class="method-detail ">
+          <a name="method-i-test_tree_outputtier"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_outputtier</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_outputtier-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_outputtier</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child_1</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child_1&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-identifier">tree</span>)
+    <span class="ruby-identifier">child_2</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child_2&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-identifier">tree</span>)
+    <span class="ruby-identifier">grandchild_1</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Grandchild_1&quot;</span>, <span class="ruby-string">&quot;grandchild&quot;</span>, <span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">grandchild_2</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Grandchild_2&quot;</span>, <span class="ruby-string">&quot;grandchild&quot;</span>, <span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child_2</span>)
+    <span class="ruby-identifier">child_1</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">grandchild_1</span>)
+    <span class="ruby-identifier">child_1</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">grandchild_2</span>)
+    
+    <span class="ruby-identifier">out</span>, <span class="ruby-identifier">err</span> = <span class="ruby-identifier">capture_stdout</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">output_tier</span>([<span class="ruby-identifier">tree</span>], <span class="ruby-value">10</span>)
+    <span class="ruby-keyword">end</span>  
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getTreePrintOutRef</span>(<span class="ruby-value">1</span>), <span class="ruby-identifier">out</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_outputtier-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_outputtier-method -->
+
+      
+        <div id="test_tree_postorder-method" class="method-detail ">
+          <a name="method-i-test_tree_postorder"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_postorder</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_postorder-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 211</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_postorder</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child</span>)
+           
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">0</span>;
+    <span class="ruby-identifier">child</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">1</span>;
+    
+    <span class="ruby-identifier">out</span>, <span class="ruby-identifier">err</span> = <span class="ruby-identifier">capture_stdout</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">postorder</span>(<span class="ruby-identifier">child</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getTreePrintOutRef</span>(<span class="ruby-value">3</span>),<span class="ruby-identifier">out</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_postorder-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_postorder-method -->
+
+      
+        <div id="test_tree_preorder-method" class="method-detail ">
+          <a name="method-i-test_tree_preorder"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_preorder</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_preorder-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_preorder</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child</span>)
+           
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">0</span>;
+    <span class="ruby-identifier">child</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">1</span>;
+    
+    <span class="ruby-identifier">out</span>, <span class="ruby-identifier">err</span> = <span class="ruby-identifier">capture_stdout</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">preorder</span>(<span class="ruby-identifier">child</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getTreePrintOutRef</span>(<span class="ruby-value">3</span>),<span class="ruby-identifier">out</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_preorder-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_preorder-method -->
+
+      
+        <div id="test_tree_printout-method" class="method-detail ">
+          <a name="method-i-test_tree_printout"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_printout</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_printout-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_printout</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;TestType&quot;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">5</span>)
+    <span class="ruby-identifier">out</span>, <span class="ruby-identifier">err</span> = <span class="ruby-identifier">capture_stdout</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">printout</span>(<span class="ruby-identifier">tree</span>)
+    <span class="ruby-keyword">end</span>  
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getTreePrintOutRef</span>(<span class="ruby-value">0</span>), <span class="ruby-identifier">out</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_printout-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_printout-method -->
+
+      
+        <div id="test_tree_size-method" class="method-detail ">
+          <a name="method-i-test_tree_size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_tree_size</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_tree_size-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_tree.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tree_size</span>  
+    <span class="ruby-identifier">tree</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Test&quot;</span>, <span class="ruby-string">&quot;parent&quot;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">child_1</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child_1&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-identifier">tree</span>)
+    <span class="ruby-identifier">child_2</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Child_2&quot;</span>, <span class="ruby-string">&quot;child&quot;</span>, <span class="ruby-identifier">tree</span>)
+    <span class="ruby-identifier">grandchild_1</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Grandchild_1&quot;</span>, <span class="ruby-string">&quot;grandchild&quot;</span>, <span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">grandchild_2</span> = <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Grandchild_2&quot;</span>, <span class="ruby-string">&quot;grandchild&quot;</span>, <span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child_1</span>)
+    <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">child_2</span>)
+    <span class="ruby-identifier">child_1</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">grandchild_1</span>)
+    <span class="ruby-identifier">child_1</span>.<span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">grandchild_2</span>)
+    
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">5</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">size</span>(<span class="ruby-identifier">tree</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">size</span>(<span class="ruby-identifier">child_1</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">size</span>(<span class="ruby-identifier">child_2</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">size</span>(<span class="ruby-identifier">grandchild_1</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>, <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">size</span>(<span class="ruby-identifier">grandchild_2</span>)) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_tree_size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_tree_size-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

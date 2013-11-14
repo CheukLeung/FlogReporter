@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TC_Tree" tests="16" time="0.01274461" failures="0" errors="0" skipped="0" assertions="42">
+  <testcase name="test_tree_createchild" time="0.00056828" assertions="1">
+  </testcase>
+  <testcase name="test_tree_getchild" time="0.000513365" assertions="2">
+  </testcase>
+  <testcase name="test_tree_getpath" time="0.002710643" assertions="4">
+  </testcase>
+  <testcase name="test_tree_haschild" time="0.000537829" assertions="2">
+  </testcase>
+  <testcase name="test_tree_height" time="0.0006336" assertions="5">
+  </testcase>
+  <testcase name="test_tree_initialize" time="0.000903193" assertions="11">
+  </testcase>
+  <testcase name="test_tree_isleaf" time="0.000563081" assertions="2">
+  </testcase>
+  <testcase name="test_tree_issigno" time="0.00056311" assertions="2">
+  </testcase>
+  <testcase name="test_tree_levelorder" time="0.000590328" assertions="1">
+  </testcase>
+  <testcase name="test_tree_levelorderaux" time="0.000645523" assertions="2">
+  </testcase>
+  <testcase name="test_tree_levelprint" time="0.000714164" assertions="1">
+  </testcase>
+  <testcase name="test_tree_outputtier" time="0.000610127" assertions="1">
+  </testcase>
+  <testcase name="test_tree_postorder" time="0.000551898" assertions="1">
+  </testcase>
+  <testcase name="test_tree_preorder" time="0.000523967" assertions="1">
+  </testcase>
+  <testcase name="test_tree_printout" time="0.000549141" assertions="1">
+  </testcase>
+  <testcase name="test_tree_size" time="0.000637662" assertions="5">
+  </testcase>
+  <system-out>
+  </system-out>
+  <system-err>
+  </system-err>
+</testsuite>

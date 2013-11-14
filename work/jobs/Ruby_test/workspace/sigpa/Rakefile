@@ -1,0 +1,13 @@
+require 'ci/reporter/rake/test_unit'
+
+task :test do
+  ruby "test/tc_back.rb"
+  ruby "test/tc_front.rb"
+  ruby "test/tc_user.rb"
+  ruby "test/tc_emit.rb"
+  ruby "test/tc_tree.rb"
+  
+  ruby "test/tc_linx4pyback.rb"
+  ruby "test/tc_linx4pyuser.rb"
+  ruby "test/tc_linx4pyemit.rb"
+end

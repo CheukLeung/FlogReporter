@@ -1,0 +1,20 @@
+State: (ABSFL.idle)
+ABSFL.w=0 ABSFL.wheelABS=0 ABSFL.torqueABS=0 ABSFL.v=0 ABSFL.R=1 
+
+Transitions: ABSFL.idle-> ABSFL.Entry 
+
+State: (ABSFL.Entry)
+ABSFL.w=8 ABSFL.wheelABS=0 ABSFL.torqueABS=0 ABSFL.v=12 ABSFL.R=1 
+
+Transitions: ABSFL.Entry-> ABSFL.CalcSlipRate {v > 0}
+
+State: (ABSFL.CalcSlipRate)
+ABSFL.w=8 ABSFL.wheelABS=0 ABSFL.torqueABS=0 ABSFL.v=12 ABSFL.R=1
+
+Transitions: ABSFL.CalcSlipRate-> ABSFL.Exit {v < 5 * (v - R * w), torqueABS:= 0}
+
+State: (ABSFL.Exit)
+ABSFL.w=8 ABSFL.wheelABS=0 ABSFL.torqueABS=0 ABSFL.v=12 ABSFL.R=1
+
+Transitions:  ABSFL.Exit-> ABSFL.idle 
+

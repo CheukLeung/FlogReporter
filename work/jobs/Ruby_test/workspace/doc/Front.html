@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Front</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./sigpa/lib/front_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/lib/front.rb">sigpa/lib/front.rb</a></li>
+          
+            <li><a href="./testpa/lib/front_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="testpa/lib/front.rb">testpa/lib/front.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-cparse">::cparse</a></li>
+          
+          <li><a href="#method-c-process_files">::process_files</a></li>
+          
+          <li><a href="#method-c-process_header_files">::process_header_files</a></li>
+          
+          <li><a href="#method-c-sanity_test">::sanity_test</a></li>
+          
+          <li><a href="#method-c-sigpa_5_tables">::sigpa_5_tables</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./sigpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./sigpa/test/ref/ref_processed_cppstr_txt.html">ref_processed_cppstr.txt</a></li>
+        
+          <li class="file"><a href="./testpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/abstractTC_template_txt.html">abstractTC_template.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_abstracttestcase_txt.html">ref_abstracttestcase.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_comment_txt.html">ref_comment.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/transistion_template_txt.html">transistion_template.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./ArgumentCheck.html">ArgumentCheck</a></li>
+        
+          <li><a href="./Back.html">Back</a></li>
+        
+          <li><a href="./Consumer.html">Consumer</a></li>
+        
+          <li><a href="./Crubyparse.html">Crubyparse</a></li>
+        
+          <li><a href="./Front.html">Front</a></li>
+        
+          <li><a href="./GetRef.html">GetRef</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./ParseCommandLine.html">ParseCommandLine</a></li>
+        
+          <li><a href="./Printoptions.html">Printoptions</a></li>
+        
+          <li><a href="./ReadFile.html">ReadFile</a></li>
+        
+          <li><a href="./Regtally.html">Regtally</a></li>
+        
+          <li><a href="./SignalClass.html">SignalClass</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+          <li><a href="./SyntaxDescription.html">SyntaxDescription</a></li>
+        
+          <li><a href="./TC_Back.html">TC_Back</a></li>
+        
+          <li><a href="./TC_Emit.html">TC_Emit</a></li>
+        
+          <li><a href="./TC_Front.html">TC_Front</a></li>
+        
+          <li><a href="./TC_Linx4PyBack.html">TC_Linx4PyBack</a></li>
+        
+          <li><a href="./TC_Linx4PyEmit.html">TC_Linx4PyEmit</a></li>
+        
+          <li><a href="./TC_Linx4PySigpaUser.html">TC_Linx4PySigpaUser</a></li>
+        
+          <li><a href="./TC_Linx4PyUser.html">TC_Linx4PyUser</a></li>
+        
+          <li><a href="./TC_SigpaFront.html">TC_SigpaFront</a></li>
+        
+          <li><a href="./TC_SigpaUser.html">TC_SigpaUser</a></li>
+        
+          <li><a href="./TC_TCrubyparse.html">TC_TCrubyparse</a></li>
+        
+          <li><a href="./TC_TestCaseBack.html">TC_TestCaseBack</a></li>
+        
+          <li><a href="./TC_TestUser.html">TC_TestUser</a></li>
+        
+          <li><a href="./TC_Tree.html">TC_Tree</a></li>
+        
+          <li><a href="./TCrubyparse.html">TCrubyparse</a></li>
+        
+          <li><a href="./TestCaseBack.html">TestCaseBack</a></li>
+        
+          <li><a href="./Tree.html">Tree</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Front</h1>
+
+    <div id="description" class="description">
+      
+<p>Extended by jf2508 For more information, see readme front.rb.txt</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="cparse-method" class="method-detail ">
+          <a name="method-c-cparse"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cparse</span><span
+              class="method-args">(preprocessed_header_files)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Parse the C header files. The parser in the module <a
+href="Crubyparse.html">Crubyparse</a> is called. It will  return the
+results in the form of 5 tables:  symbol_table, structtag_table,
+uniontag_table, enumtag_table, typedef_table.</p>
+            
+
+            
+            <div class="method-source-code" id="cparse-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/front.rb, line 324</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cparse</span>(<span class="ruby-identifier">preprocessed_header_files</span>)
+  <span class="ruby-identifier">parser</span> = <span class="ruby-constant">Crubyparse</span>.<span class="ruby-identifier">new</span>
+  
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">tables</span> = <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">preprocessed_header_files</span>, <span class="ruby-identifier">@@options</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;trimmedcppfile&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;trimmedcppfile&quot;</span>)
+    <span class="ruby-comment">#if @@options.debug</span>
+       <span class="ruby-comment"># Errorfile containing found (if any) parse errors, extended by jf2508</span>
+      <span class="ruby-identifier">system</span>(<span class="ruby-string">&quot;zip -q -j debug_files errorfile&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;errorfile&quot;</span>)
+    <span class="ruby-comment">#end</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Parsing OK&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;errorfile&quot;</span>) <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Parsing done but contains error(s)&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;errorfile&quot;</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;errorfile&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;errorfile&quot;</span>)
+    <span class="ruby-constant">Front</span>.<span class="ruby-identifier">sanity_test</span>(<span class="ruby-identifier">tables</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ParseError</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">$!</span>
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">tables</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cparse-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- cparse-method -->
+
+      
+        <div id="process_files-method" class="method-detail ">
+          <a name="method-c-process_files"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_files</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Concatenate and read all files.</p>
+
+<p>The files are concatenated and preprocessed to generate an array used in
+phase 2.</p>
+            
+
+            
+            <div class="method-source-code" id="process_files-source">
+<pre>
+<span class="ruby-comment"># File testpa/lib/front.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">process_files</span>        
+       <span class="ruby-identifier">str</span> = <span class="ruby-string">&quot;&quot;</span>
+       <span class="ruby-identifier">comment</span> = []
+       <span class="ruby-identifier">comment_list</span> = []
+       <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">files</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> 
+           <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>, <span class="ruby-string">&quot;r&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">infile</span><span class="ruby-operator">|</span>
+                   <span class="ruby-keyword">while</span> (<span class="ruby-identifier">line</span> = <span class="ruby-identifier">infile</span>.<span class="ruby-identifier">gets</span>)
+                           <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">eql?</span>(<span class="ruby-node">&quot;#&quot;</span>)
+                               <span class="ruby-identifier">comment</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">line</span>)
+                           <span class="ruby-keyword">else</span>
+                                 <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>
+                             <span class="ruby-keyword">end</span>
+                 <span class="ruby-keyword">end</span>
+             <span class="ruby-keyword">end</span>
+       <span class="ruby-keyword">end</span>   
+  
+  <span class="ruby-identifier">current_comment</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">comment</span>.<span class="ruby-identifier">length</span> <span class="ruby-keyword">do</span> 
+      <span class="ruby-identifier">current_comment</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">comment</span>[<span class="ruby-identifier">i</span>]
+      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">comment</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-node">&quot;#############################################&quot;</span>)
+         <span class="ruby-identifier">current_comment</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">comment</span>[<span class="ruby-identifier">i</span>]
+         <span class="ruby-identifier">comment_list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">current_comment</span>)
+         <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/^[ \t\f\r]+/</span>, <span class="ruby-string">''</span>)  <span class="ruby-comment"># Suppress spaces</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/^[ \t\f\r]*\n[ \t\f\r]*/</span>, <span class="ruby-string">''</span>)  <span class="ruby-comment"># Next line        </span>
+    <span class="ruby-keyword">break</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">return_set</span> = <span class="ruby-identifier">str</span>, <span class="ruby-identifier">comment_list</span>
+  <span class="ruby-identifier">return_set</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_files-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_files-method -->
+
+      
+        <div id="process_header_files-method" class="method-detail ">
+          <a name="method-c-process_header_files"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_header_files</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_header_files-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/front.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">process_header_files</span>
+  <span class="ruby-ivar">@atable</span> = {<span class="ruby-string">&quot;ARRAY_SIZE&quot;</span>=<span class="ruby-operator">&gt;</span>[], <span class="ruby-string">&quot;UNION_SELECTOR&quot;</span>=<span class="ruby-operator">&gt;</span>[], <span class="ruby-string">&quot;SELECTOR_MAPPING&quot;</span>=<span class="ruby-operator">&gt;</span>[], <span class="ruby-string">&quot;DENSE_UNION&quot;</span>=<span class="ruby-operator">&gt;</span>[]}
+  <span class="ruby-ivar">@ctable</span> = {}
+  <span class="ruby-identifier">augmented_file</span> = <span class="ruby-string">&quot;tmp.augmented_file&quot;</span>
+  <span class="ruby-identifier">header_files</span> = <span class="ruby-string">&quot;&quot;</span>
+  
+  <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">header_files</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">hname</span><span class="ruby-operator">|</span> <span class="ruby-identifier">header_files</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{hname} &quot;</span>}
+  <span class="ruby-identifier">pipe</span> = <span class="ruby-constant">IO</span>.<span class="ruby-identifier">popen</span>(<span class="ruby-node">&quot;cat #{header_files}&quot;</span>)
+  
+  <span class="ruby-identifier">rowack</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-identifier">pat</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-regexp">/\\s*$/</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-node">&quot;#{augmented_file}&quot;</span>, <span class="ruby-string">&quot;w+&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">auger</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">pipe</span>.<span class="ruby-identifier">readlines</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">pat</span>
+        <span class="ruby-identifier">rowack</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">row</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-identifier">pat</span>,<span class="ruby-string">''</span>).<span class="ruby-identifier">strip</span> <span class="ruby-operator">+</span> <span class="ruby-string">' '</span>
+        <span class="ruby-keyword">next</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">unless</span> <span class="ruby-identifier">rowack</span>.<span class="ruby-identifier">empty?</span> 
+        <span class="ruby-identifier">row</span> = <span class="ruby-identifier">rowack</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">row</span> 
+        <span class="ruby-identifier">rowack</span> = <span class="ruby-string">&quot;&quot;</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">auger</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">row</span>
+      <span class="ruby-identifier">supp</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-comment"># match '#define A' but not '#define A(...)'</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">=~</span> (<span class="ruby-regexp">/^\s*\# \s* define \s+ (\w+) [^\(]/</span>)
+        <span class="ruby-identifier">constant_name</span> = <span class="ruby-node">$1</span>
+        <span class="ruby-ivar">@ctable</span>[<span class="ruby-identifier">constant_name</span>] = {<span class="ruby-string">&quot;value&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>} <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@ctable</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">constant_name</span>)
+        
+        <span class="ruby-comment"># Extract any supplemental information from end part of the #define</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">=~</span> (<span class="ruby-regexp">/\/\* *!- *SIGNO\s*\(\s*struct\s*(\w+)\s*\) *-! *\*\/\s*$/</span>)
+          <span class="ruby-identifier">elem_type</span> = <span class="ruby-string">'struct'</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">=~</span> (<span class="ruby-regexp">/\/\* *!- *SIGNO\s*\(\s*union\s*(\w+)\s*\) *-! *\*\/\s*$/</span>)
+          <span class="ruby-identifier">elem_type</span> = <span class="ruby-string">'union'</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">=~</span> (<span class="ruby-regexp">/\/\* *!- *SIGNO\s*\(\s*enum\s*(\w+)\s*\) *-! *\*\/\s*$/</span>)
+          <span class="ruby-identifier">elem_type</span> = <span class="ruby-string">'enum'</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">=~</span> (<span class="ruby-regexp">/\/\* *!- *SIGNO\s*\(\s*(\w+)\s*\) *-! *\*\/\s*$/</span>)
+          <span class="ruby-identifier">elem_type</span> = <span class="ruby-string">'type'</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">supp</span> = <span class="ruby-keyword">false</span>
+        <span class="ruby-keyword">end</span>
+ 
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">supp</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ctable</span>[<span class="ruby-identifier">constant_name</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-node">&quot;#{elem_type}&quot;</span>)
+            <span class="ruby-ivar">@ctable</span>[<span class="ruby-identifier">constant_name</span>][<span class="ruby-node">&quot;#{elem_type}&quot;</span>].<span class="ruby-identifier">push</span>(<span class="ruby-node">$1</span>)
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-ivar">@ctable</span>[<span class="ruby-identifier">constant_name</span>][<span class="ruby-node">&quot;#{elem_type}&quot;</span>] = [<span class="ruby-node">$1</span>] 
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-identifier">auger</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;struct dummy1_sigpa_#{elem_type}_#{$1} \{int dummy2_sigpa_#{elem_type}_#{constant_name};\};&quot;</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-comment"># Extract information concerning dynamic array and union handling</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">=~</span> (<span class="ruby-regexp">/\/\* *!- *ARRAY_SIZE\s*\(\s*([\w.]+)\s*,\s*(\w+)\s*\) *-! *\*\/\s*$/</span>)
+        <span class="ruby-ivar">@atable</span>[<span class="ruby-string">&quot;ARRAY_SIZE&quot;</span>] <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-node">$1</span>, <span class="ruby-node">$2</span>]
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">=~</span> (<span class="ruby-regexp">/\/\* *!- *UNION_SELECTOR\s*\(\s*([\w.]+)\s*,\s*(\w+)\s*\) *-! *\*\/\s*$/</span>)
+        <span class="ruby-ivar">@atable</span>[<span class="ruby-string">&quot;UNION_SELECTOR&quot;</span>] <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-node">$1</span>, <span class="ruby-node">$2</span>]
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">=~</span> (<span class="ruby-regexp">/\/\* *!- *SELECTOR_MAPPING\s*\(\s*([\w.]+)\s*,\s*(\w+)\s*,\s*(\w+)\s*\) *-! *\*\/\s*$/</span>)
+        <span class="ruby-ivar">@atable</span>[<span class="ruby-string">&quot;SELECTOR_MAPPING&quot;</span>] <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-node">$1</span>, <span class="ruby-node">$2</span>, <span class="ruby-node">$3</span>]
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">=~</span> (<span class="ruby-regexp">/\/\* *!- *DENSE_UNION\s*\(\s*([\w.]+)\s*,\s*(\w+)\s*,\s*(\w+)\s*\) *-! *\*\/\s*$/</span>)
+        <span class="ruby-ivar">@atable</span>[<span class="ruby-string">&quot;DENSE_UNION&quot;</span>] <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-node">$1</span>, <span class="ruby-node">$2</span>, <span class="ruby-node">$3</span>]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">debug</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;debug_files.zip&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-string">&quot;debug_files.zip&quot;</span>)
+    <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">header_files</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">hname</span><span class="ruby-operator">|</span> <span class="ruby-identifier">system</span>(<span class="ruby-node">&quot;zip -q -j debug_files #{hname}&quot;</span>) }
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;command_line_file&quot;</span>, <span class="ruby-string">&quot;w+&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">clf</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">args</span> = (<span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">args</span>.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span> <span class="ruby-identifier">arg</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; &quot;</span>}).<span class="ruby-identifier">join</span>
+      <span class="ruby-identifier">clf</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\# #{$0} #{args}&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">system</span>(<span class="ruby-string">&quot;zip -q -j debug_files command_line_file&quot;</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;command_line_file&quot;</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;location_file&quot;</span>, <span class="ruby-string">&quot;w+&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">lof</span><span class="ruby-operator">|</span> 
+      <span class="ruby-identifier">lof</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{File.expand_path(`pwd`[0..-2])}&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">system</span>(<span class="ruby-string">&quot;zip -q -j debug_files location_file&quot;</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;location_file&quot;</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span> <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">codefile</span>
+      <span class="ruby-keyword">unless</span> <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">codefile</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">system</span>(<span class="ruby-node">&quot;zip -q -j debug_files #{@@options.codefile}&quot;</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Create a file to be included when calling cpp</span>
+  <span class="ruby-identifier">tempfile</span> = <span class="ruby-node">&quot;tmp.#{$$}&quot;</span>
+  <span class="ruby-identifier">special_line</span> = <span class="ruby-string">&quot;!!!---\&quot;SIGNAL PARSER EXTRA DATA FOR CPP BEGINS HERE\&quot;!!!---\n&quot;</span>
+  
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">tempfile</span>, <span class="ruby-string">&quot;w+&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tmpf</span><span class="ruby-operator">|</span>
+    (<span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">include_files</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">includefile</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">tmpf</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#include \&quot;#{includefile}\&quot;\n&quot;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">augmented_file</span>, <span class="ruby-string">&quot;r&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">auger</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">auger</span>.<span class="ruby-identifier">readlines</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tmpf</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">r</span>}     
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">augmented_file</span>)
+
+    <span class="ruby-identifier">tmpf</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n\n&quot;</span>, <span class="ruby-identifier">special_line</span>
+    <span class="ruby-ivar">@ctable</span>.<span class="ruby-identifier">each_key</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tmpf</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\&quot;#{key}\&quot;=#{key}\n&quot;</span> }
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Build the command line for invoking CPP</span>
+  <span class="ruby-comment"># cpp -I &lt;include dir&gt; -I &lt;include dir&gt;... &lt;header_files&gt; &lt;tmp.$$&gt;:</span>
+  
+  <span class="ruby-identifier">cpp_command</span> = <span class="ruby-string">&quot; &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">cpp</span> <span class="ruby-operator">+</span>  (<span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">include_paths</span>.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot; -I#{x}&quot;</span>}).<span class="ruby-identifier">join</span> <span class="ruby-operator">+</span>
+    (<span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">macros</span>.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot; -D#{x}&quot;</span>}).<span class="ruby-identifier">join</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot; #{tempfile}&quot;</span>
+
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Now running #{cpp_command}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">verbose</span>
+
+  <span class="ruby-comment"># Collect the output from cpp up to special line</span>
+  <span class="ruby-identifier">cpp_output</span> = []
+
+  <span class="ruby-identifier">pipe</span> = <span class="ruby-constant">IO</span>.<span class="ruby-identifier">popen</span>(<span class="ruby-node">&quot;#{cpp_command}&quot;</span>)
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">line</span> = <span class="ruby-identifier">pipe</span>.<span class="ruby-identifier">gets</span>
+    <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">special_line</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> (<span class="ruby-regexp">/struct dummy1_sigpa_(\w+?)_(\w+) \{int dummy2_sigpa_(\w+?)_(\w+);\};/</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ctable</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-node">$4</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@ctable</span>[<span class="ruby-node">$4</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-node">$1</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ctable</span>[<span class="ruby-node">$4</span>][<span class="ruby-node">$1</span>].<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+          <span class="ruby-ivar">@ctable</span>[<span class="ruby-node">$4</span>][<span class="ruby-node">$1</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">elem</span><span class="ruby-operator">|</span>
+            <span class="ruby-ivar">@ctable</span>[<span class="ruby-node">$4</span>][<span class="ruby-node">$1</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">elem</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">elem</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-node">$2</span>)
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>  
+      <span class="ruby-keyword">end</span>      
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">cpp_output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">debug</span>
+    <span class="ruby-identifier">rcf</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;rawcppfile&quot;</span>, <span class="ruby-string">&quot;w+&quot;</span>)
+    <span class="ruby-identifier">rcf</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">cpp_output</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Collect the output from cpp containing the extra data</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">line</span> = <span class="ruby-identifier">pipe</span>.<span class="ruby-identifier">gets</span>
+    <span class="ruby-identifier">rcf</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">line</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">debug</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/&quot;(\w+)&quot;=(.*)/</span>) 
+      <span class="ruby-keyword">if</span> <span class="ruby-node">$1</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-node">$2</span>)         <span class="ruby-comment"># Out-commented constant</span>
+        <span class="ruby-ivar">@ctable</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-node">$1</span>)
+      <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@ctable</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-node">&quot;#{$1}&quot;</span>)
+        <span class="ruby-ivar">@ctable</span>[<span class="ruby-node">$1</span>][<span class="ruby-string">&quot;value&quot;</span>] = <span class="ruby-node">$2</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">RegexpError</span>, <span class="ruby-node">&quot;Unexpected format in cpp output for extra data:\n#{line}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">debug</span>
+    <span class="ruby-identifier">rcf</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-identifier">system</span>(<span class="ruby-string">&quot;zip -q -j debug_files rawcppfile&quot;</span>)    
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;rawcppfile&quot;</span>)
+
+    <span class="ruby-identifier">headset</span> = <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">cpp_output</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">rr</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">rr</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/^#\s+\d+\s+\&quot;(.+)\&quot;/</span>
+        <span class="ruby-identifier">t</span> = <span class="ruby-node">$1</span>
+        <span class="ruby-identifier">headset</span>.<span class="ruby-identifier">add</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">t</span>)) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^tmp\./</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">headset</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">incfile</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">system</span>(<span class="ruby-node">&quot;zip -q debug_files #{incfile}&quot;</span>)        
+    <span class="ruby-keyword">end</span>       
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment"># Filter the raw output from cpp: Remove leading blanks, new line, CPP position indication,</span>
+  <span class="ruby-comment"># and possible other cpp things </span>
+  <span class="ruby-identifier">cpp_str</span> = <span class="ruby-identifier">cpp_output</span>.<span class="ruby-identifier">join</span>
+  
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">cpp_str</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/^[ \t\f\r]+/</span>, <span class="ruby-string">''</span>)  <span class="ruby-comment"># Suppress spaces</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">cpp_str</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/^[ \t\f\r]*\n[ \t\f\r]*/</span>, <span class="ruby-string">''</span>)  <span class="ruby-comment"># Next line</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">cpp_str</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-node">/^#.*/</span>, <span class="ruby-string">''</span>)        <span class="ruby-comment"># Remove all lines starting with a '#'</span>
+    <span class="ruby-comment"># Remove c99 keywords from parser input, extended by jf2508</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">cpp_str</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/^__extension__/</span>, <span class="ruby-string">''</span>)              
+    <span class="ruby-comment">#next if cpp_str.sub!(/^__attribute__.*/, '')           </span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">cpp_str</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/__attribute__.*/</span>, <span class="ruby-string">';'</span>)            
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">cpp_str</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/__restrict/</span>, <span class="ruby-string">''</span>)             
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">cpp_str</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/__asm__.*/</span>, <span class="ruby-string">''</span>)                 
+    <span class="ruby-keyword">break</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;trimmedcppfile&quot;</span>, <span class="ruby-string">&quot;w+&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tcf</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">tcf</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">cpp_str</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">debug</span>
+    <span class="ruby-identifier">system</span>(<span class="ruby-string">&quot;zip -q -j debug_files trimmedcppfile&quot;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">tempfile</span>)
+  
+  <span class="ruby-comment"># Run through hash of constant values, deleting any suspect entries. </span>
+  <span class="ruby-comment"># Perform eval on expressions to compute any arithmetic expressions.</span>
+
+  <span class="ruby-ivar">@ctable</span>.<span class="ruby-identifier">each_key</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-string">&quot;SIGPA_5_TABLES&quot;</span>)
+      <span class="ruby-identifier">@@sigpa_5_tables</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Processing constant: #{key} = #{@ctable[key][&quot;value&quot;]}\n&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">verbose</span>
+    <span class="ruby-identifier">val</span> = <span class="ruby-ivar">@ctable</span>[<span class="ruby-identifier">key</span>][<span class="ruby-string">&quot;value&quot;</span>].<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/^\s+(.*?)\s+$/</span>, <span class="ruby-string">'\1'</span>)
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-string">&quot;&quot;</span>)  <span class="ruby-comment">## Delete constants with no value (or empty string)</span>
+      <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Constant: #{key} has no value (ignored)\n&quot;</span>
+      <span class="ruby-ivar">@ctable</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>)
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\s*&quot;(\\&quot;|[^&quot;])*&quot;\s*$/</span>  <span class="ruby-comment">## Value is a string</span>
+      <span class="ruby-comment"># leave it unchanged</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\s*'(\\'|[^'])*'\s*$/</span>  <span class="ruby-comment">## Value is a character (accept more than 1)</span>
+      <span class="ruby-comment"># leave it unchanged</span>
+    <span class="ruby-keyword">else</span>  <span class="ruby-comment">## Value is probably an expression. If it can be eval'ed, substitute it with the computed value</span>
+      <span class="ruby-identifier">val</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/[uU][lL]|[lLuU]/</span>, <span class="ruby-string">''</span>)   <span class="ruby-comment">## Remove suffixes (suffix F is left for hex!)</span>
+      
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/(\(\s*[A-Za-z_][^\)]*\))/</span>  <span class="ruby-comment">## Remove casts</span>
+        <span class="ruby-identifier">match</span> = <span class="ruby-node">$&amp;</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">match</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp">/\+/</span>
+          <span class="ruby-identifier">val</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-identifier">match</span>, <span class="ruby-string">''</span>)
+          <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Constant: #{key} value: #{@ctable[key][&quot;value&quot;]} dropping \&quot;#{match}\&quot; (cast?)&quot;</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">computed_val</span> = <span class="ruby-identifier">eval</span> <span class="ruby-identifier">val</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-identifier">computed_val</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">computed_val</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>)
+          <span class="ruby-ivar">@ctable</span>[<span class="ruby-identifier">key</span>][<span class="ruby-string">&quot;value&quot;</span>] = <span class="ruby-identifier">computed_val</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">rescue</span>
+      <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># returns the association table and constant table (both for phase 3), and preprocessed_header_files</span>
+  <span class="ruby-comment"># (for phase 2)</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@atable</span>, <span class="ruby-ivar">@ctable</span>, <span class="ruby-identifier">cpp_str</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_header_files-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_header_files-method -->
+
+      
+        <div id="sanity_test-method" class="method-detail ">
+          <a name="method-c-sanity_test"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sanity_test</span><span
+              class="method-args">(tables)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sanity check.  Checks if the signal struct pointed out in the define
+linking signal name with signal number and  signal struct actually refers
+to a known struct. Also checks if a signal number has been duplicated.</p>
+            
+
+            
+            <div class="method-source-code" id="sanity_test-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/front.rb, line 288</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sanity_test</span>(<span class="ruby-identifier">tables</span>)
+  <span class="ruby-identifier">symbol_table</span>, <span class="ruby-identifier">structtag_table</span>, <span class="ruby-identifier">uniontag_table</span>, <span class="ruby-identifier">enumtag_table</span>, <span class="ruby-identifier">typedef_table</span> = <span class="ruby-identifier">tables</span>
+  <span class="ruby-identifier">signotab</span> = []
+
+  <span class="ruby-ivar">@ctable</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;struct&quot;</span>)
+      <span class="ruby-identifier">etab</span> = <span class="ruby-string">&quot;struct&quot;</span>
+      <span class="ruby-identifier">name</span> = <span class="ruby-identifier">b</span>[<span class="ruby-string">&quot;struct&quot;</span>][<span class="ruby-value">0</span>]
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;type&quot;</span>)
+      <span class="ruby-identifier">etab</span> = <span class="ruby-string">&quot;type&quot;</span>
+      <span class="ruby-identifier">name</span> = <span class="ruby-identifier">b</span>[<span class="ruby-string">&quot;type&quot;</span>][<span class="ruby-value">0</span>]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">etab</span> = <span class="ruby-string">&quot;none&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">etab</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/struct|type/</span>
+      <span class="ruby-keyword">unless</span> (<span class="ruby-identifier">etab</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-string">&quot;struct&quot;</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">structtag_table</span>[<span class="ruby-string">&quot;quick_look&quot;</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">name</span>)) <span class="ruby-operator">||</span>
+        (<span class="ruby-identifier">etab</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-string">&quot;type&quot;</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">typedef_table</span>[<span class="ruby-string">&quot;quick_look&quot;</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">name</span>))
+        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;The signal #{a} is not associated with any known struct. Check your signal file.&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@ctable</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">signotab</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">b</span>[<span class="ruby-string">&quot;value&quot;</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&quot;struct&quot;</span>)}
+  <span class="ruby-identifier">signotab</span>.<span class="ruby-identifier">sort!</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">signotab</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">signotab</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">signotab</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>]
+      <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Signal number #{signotab[i]} duplicated. Check your signal file.&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sanity_test-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sanity_test-method -->
+
+      
+        <div id="sigpa_5_tables-method" class="method-detail ">
+          <a name="method-c-sigpa_5_tables"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sigpa_5_tables</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns true if ‘define SIGPA_5_TABLES’ is encountered in the input</p>
+            
+
+            
+            <div class="method-source-code" id="sigpa_5_tables-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/front.rb, line 279</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sigpa_5_tables</span>
+  <span class="ruby-identifier">@@sigpa_5_tables</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sigpa_5_tables-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sigpa_5_tables-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

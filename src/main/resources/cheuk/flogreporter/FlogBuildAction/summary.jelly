@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<?jelly escape-by-default='true'?>
+<!-- TODO add taglibs such as: xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" -->
+<j:jelly xmlns:j="jelly:core"  xmlns:d="jelly:define" xmlns:i="jelly:fmt" xmlns:l="/lib/layout" xmlns:t="/lib/hudson">
+    <t:summary icon="clipboard.png">
+        <div><a href="FlogResult/">${%Flog Results}</a></div>
+        <j:set var="flogReports" value="${it.target.flogReports}" />
+        ${flogReports.size()} warning(s) are found.
+    </t:summary>
+</j:jelly>

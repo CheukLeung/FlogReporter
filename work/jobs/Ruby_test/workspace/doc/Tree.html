@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Tree</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./sigpa/lib/tree_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/lib/tree.rb">sigpa/lib/tree.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-get_child">::get_child</a></li>
+          
+          <li><a href="#method-c-get_path">::get_path</a></li>
+          
+          <li><a href="#method-c-has_child-3F">::has_child?</a></li>
+          
+          <li><a href="#method-c-height">::height</a></li>
+          
+          <li><a href="#method-c-is_signo-3F">::is_signo?</a></li>
+          
+          <li><a href="#method-c-level_print">::level_print</a></li>
+          
+          <li><a href="#method-c-levelorder">::levelorder</a></li>
+          
+          <li><a href="#method-c-levelorder_aux">::levelorder_aux</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-output_tier">::output_tier</a></li>
+          
+          <li><a href="#method-c-postorder">::postorder</a></li>
+          
+          <li><a href="#method-c-preorder">::preorder</a></li>
+          
+          <li><a href="#method-c-printout">::printout</a></li>
+          
+          <li><a href="#method-c-size">::size</a></li>
+          
+          <li><a href="#method-i-create_child">#create_child</a></li>
+          
+          <li><a href="#method-i-is_leaf-3F">#is_leaf?</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./sigpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./sigpa/test/ref/ref_processed_cppstr_txt.html">ref_processed_cppstr.txt</a></li>
+        
+          <li class="file"><a href="./testpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/abstractTC_template_txt.html">abstractTC_template.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_abstracttestcase_txt.html">ref_abstracttestcase.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_comment_txt.html">ref_comment.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/transistion_template_txt.html">transistion_template.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./ArgumentCheck.html">ArgumentCheck</a></li>
+        
+          <li><a href="./Back.html">Back</a></li>
+        
+          <li><a href="./Consumer.html">Consumer</a></li>
+        
+          <li><a href="./Crubyparse.html">Crubyparse</a></li>
+        
+          <li><a href="./Front.html">Front</a></li>
+        
+          <li><a href="./GetRef.html">GetRef</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./ParseCommandLine.html">ParseCommandLine</a></li>
+        
+          <li><a href="./Printoptions.html">Printoptions</a></li>
+        
+          <li><a href="./ReadFile.html">ReadFile</a></li>
+        
+          <li><a href="./Regtally.html">Regtally</a></li>
+        
+          <li><a href="./SignalClass.html">SignalClass</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+          <li><a href="./SyntaxDescription.html">SyntaxDescription</a></li>
+        
+          <li><a href="./TC_Back.html">TC_Back</a></li>
+        
+          <li><a href="./TC_Emit.html">TC_Emit</a></li>
+        
+          <li><a href="./TC_Front.html">TC_Front</a></li>
+        
+          <li><a href="./TC_Linx4PyBack.html">TC_Linx4PyBack</a></li>
+        
+          <li><a href="./TC_Linx4PyEmit.html">TC_Linx4PyEmit</a></li>
+        
+          <li><a href="./TC_Linx4PySigpaUser.html">TC_Linx4PySigpaUser</a></li>
+        
+          <li><a href="./TC_Linx4PyUser.html">TC_Linx4PyUser</a></li>
+        
+          <li><a href="./TC_SigpaFront.html">TC_SigpaFront</a></li>
+        
+          <li><a href="./TC_SigpaUser.html">TC_SigpaUser</a></li>
+        
+          <li><a href="./TC_TCrubyparse.html">TC_TCrubyparse</a></li>
+        
+          <li><a href="./TC_TestCaseBack.html">TC_TestCaseBack</a></li>
+        
+          <li><a href="./TC_TestUser.html">TC_TestUser</a></li>
+        
+          <li><a href="./TC_Tree.html">TC_Tree</a></li>
+        
+          <li><a href="./TCrubyparse.html">TCrubyparse</a></li>
+        
+          <li><a href="./TestCaseBack.html">TestCaseBack</a></li>
+        
+          <li><a href="./Tree.html">Tree</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Tree</h1>
+
+    <div id="description" class="description">
+      
+<p><a href="Tree.html">Tree</a> class. Contains methods for the following:</p>
+
+<pre>Generating a tree where each node may have an arbitrary number
+of children. 
+Traversing the tree.
+Printing out the contents of tree nodes.</pre>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="align-attribute-method" class="method-detail">
+          <a name="align"></a>
+          
+          <a name="align="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">align</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="arrsize-attribute-method" class="method-detail">
+          <a name="arrsize"></a>
+          
+          <a name="arrsize="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">arrsize</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="basetype-attribute-method" class="method-detail">
+          <a name="basetype"></a>
+          
+          <a name="basetype="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">basetype</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="children-attribute-method" class="method-detail">
+          <a name="children"></a>
+          
+          <a name="children="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">children</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="data-attribute-method" class="method-detail">
+          <a name="data"></a>
+          
+          <a name="data="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">data</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="kind-attribute-method" class="method-detail">
+          <a name="kind"></a>
+          
+          <a name="kind="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">kind</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="leaf-attribute-method" class="method-detail">
+          <a name="leaf"></a>
+          
+          <a name="leaf="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">leaf</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="level-attribute-method" class="method-detail">
+          <a name="level"></a>
+          
+          <a name="level="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">level</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="name-attribute-method" class="method-detail">
+          <a name="name"></a>
+          
+          <a name="name="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">name</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="parent-attribute-method" class="method-detail">
+          <a name="parent"></a>
+          
+          <a name="parent="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">parent</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="s_u_name-attribute-method" class="method-detail">
+          <a name="s_u_name"></a>
+          
+          <a name="s_u_name="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">s_u_name</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="size-attribute-method" class="method-detail">
+          <a name="size"></a>
+          
+          <a name="size="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">size</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="get_child-method" class="method-detail ">
+          <a name="method-c-get_child"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_child</span><span
+              class="method-args">(node, name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_child-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-keyword">return</span> <span class="ruby-identifier">c</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">name</span>)}
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_child-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_child-method -->
+
+      
+        <div id="get_path-method" class="method-detail ">
+          <a name="method-c-get_path"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_path</span><span
+              class="method-args">(node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_path-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_path</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">s</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">clone</span>
+  <span class="ruby-identifier">p</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">parent</span>
+  <span class="ruby-keyword">until</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">s</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">0</span>, <span class="ruby-node">&quot;#{p.name}.&quot;</span>)
+    <span class="ruby-identifier">p</span> = <span class="ruby-identifier">p</span>.<span class="ruby-identifier">parent</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">s</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_path-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_path-method -->
+
+      
+        <div id="has_child-3F-method" class="method-detail ">
+          <a name="method-c-has_child-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">has_child?</span><span
+              class="method-args">(node, name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="has_child-3F-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">has_child?</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">any?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">name</span>)}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- has_child-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- has_child-3F-method -->
+
+      
+        <div id="height-method" class="method-detail ">
+          <a name="method-c-height"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">height</span><span
+              class="method-args">(node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="height-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">height</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">startlevel</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">level</span>
+  <span class="ruby-identifier">height</span> = <span class="ruby-value">0</span>
+  <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">preorder</span>(<span class="ruby-identifier">node</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> 
+    <span class="ruby-identifier">diff</span> = <span class="ruby-identifier">n</span>.<span class="ruby-identifier">level</span><span class="ruby-operator">-</span><span class="ruby-identifier">startlevel</span>;
+    <span class="ruby-identifier">height</span> = <span class="ruby-identifier">diff</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">diff</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">height</span>  
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">height</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- height-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- height-method -->
+
+      
+        <div id="is_signo-3F-method" class="method-detail ">
+          <a name="method-c-is_signo-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">is_signo?</span><span
+              class="method-args">(root, node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="is_signo-3F-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">is_signo?</span>(<span class="ruby-identifier">root</span>, <span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">node</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">root</span>.<span class="ruby-identifier">children</span>[<span class="ruby-value">0</span>] 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- is_signo-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- is_signo-3F-method -->
+
+      
+        <div id="level_print-method" class="method-detail ">
+          <a name="method-c-level_print"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">level_print</span><span
+              class="method-args">(node, width=16)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="level_print-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">level_print</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">width</span>=<span class="ruby-value">16</span>)
+  <span class="ruby-identifier">arr</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Tree</span>.<span class="ruby-identifier">height</span>(<span class="ruby-identifier">node</span>)<span class="ruby-operator">+</span><span class="ruby-value">1</span>) {[]}
+  <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">levelorder</span>(<span class="ruby-identifier">node</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">arr</span>[<span class="ruby-identifier">n</span>.<span class="ruby-identifier">level</span>].<span class="ruby-identifier">push</span>(<span class="ruby-identifier">n</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">puts</span>
+  <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">output_tier</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">width</span>)} 
+  <span class="ruby-identifier">puts</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;*&quot;</span>*<span class="ruby-value">60</span>
+  <span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- level_print-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- level_print-method -->
+
+      
+        <div id="levelorder-method" class="method-detail ">
+          <a name="method-c-levelorder"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">levelorder</span><span
+              class="method-args">(node, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="levelorder-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">levelorder</span>(<span class="ruby-identifier">node</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">d</span> <span class="ruby-keyword">in</span> <span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-constant">Tree</span>.<span class="ruby-identifier">height</span>(<span class="ruby-identifier">node</span>)<span class="ruby-operator">+</span><span class="ruby-value">1</span>
+    <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">levelorder_aux</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">d</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- levelorder-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- levelorder-method -->
+
+      
+        <div id="levelorder_aux-method" class="method-detail ">
+          <a name="method-c-levelorder_aux"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">levelorder_aux</span><span
+              class="method-args">(node, level, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="levelorder_aux-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">levelorder_aux</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">level</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">level</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">node</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">printout</span>(<span class="ruby-identifier">node</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">level</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">levelorder_aux</span>(<span class="ruby-identifier">c</span>, <span class="ruby-identifier">level</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>, &amp;<span class="ruby-identifier">block</span>)}
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- levelorder_aux-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- levelorder_aux-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(name, kind, parent, arrsize=0)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">kind</span>, <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">arrsize</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@kind</span> = <span class="ruby-identifier">kind</span>
+  <span class="ruby-ivar">@basetype</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@data</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@arrsize</span> = <span class="ruby-identifier">arrsize</span>
+  <span class="ruby-ivar">@s_u_name</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-ivar">@leaf</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@level</span> = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@size</span> = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@align</span> = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@parent</span> = <span class="ruby-identifier">parent</span>
+  <span class="ruby-ivar">@children</span> = []
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="output_tier-method" class="method-detail ">
+          <a name="method-c-output_tier"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">output_tier</span><span
+              class="method-args">(arr, width)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="output_tier-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">output_tier</span>(<span class="ruby-identifier">arr</span>, <span class="ruby-identifier">width</span>) 
+  <span class="ruby-identifier">format</span> = <span class="ruby-node">&quot;%-#{width}s&quot;</span>
+  <span class="ruby-identifier">strarr</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">11</span>) {<span class="ruby-string">&quot;&quot;</span>}
+  <span class="ruby-identifier">cmax</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">lmax</span> = <span class="ruby-identifier">a</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">length</span>; <span class="ruby-identifier">cmax</span> = <span class="ruby-identifier">lmax</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">lmax</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cmax</span>}
+  <span class="ruby-value">1</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">cmax</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">strarr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;&quot;</span>} <span class="ruby-keyword">if</span> <span class="ruby-identifier">cmax</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">strarr</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-node">&quot;name= #{a.name}&quot;</span>
+    <span class="ruby-identifier">strarr</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-node">&quot;kind= #{a.kind}&quot;</span>
+    <span class="ruby-identifier">strarr</span>[<span class="ruby-value">2</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-node">&quot;btyp= #{a.basetype}&quot;</span>
+    <span class="ruby-identifier">strarr</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-node">&quot;arsz= #{a.arrsize}&quot;</span>
+    <span class="ruby-identifier">strarr</span>[<span class="ruby-value">4</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-node">&quot;suna= #{a.s_u_name}&quot;</span>
+    <span class="ruby-identifier">strarr</span>[<span class="ruby-value">5</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-node">&quot;leaf= #{a.leaf}&quot;</span>
+    <span class="ruby-identifier">strarr</span>[<span class="ruby-value">6</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-node">&quot;levl= #{a.level}&quot;</span>
+    <span class="ruby-identifier">strarr</span>[<span class="ruby-value">7</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-node">&quot;size= #{a.size}&quot;</span>
+    <span class="ruby-identifier">strarr</span>[<span class="ruby-value">8</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-node">&quot;alig= #{a.align}&quot;</span>
+    <span class="ruby-identifier">strarr</span>[<span class="ruby-value">9</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-node">&quot;prnt= #{a.parent.nil? ? &quot;&quot; : a.parent.name}&quot;</span>
+    <span class="ruby-identifier">strarr</span>[<span class="ruby-value">10</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-node">&quot;chld= #{a.children.empty? ? &quot;&quot; : a.children[0].name}&quot;</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">cmax</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+      <span class="ruby-value">1</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">cmax</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">strarr</span>[<span class="ruby-value">10</span><span class="ruby-operator">+</span><span class="ruby-identifier">i</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-node">&quot;      #{a.children.length &gt; i ? a.children[i].name : &quot;&quot;}&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">strarr</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">puts</span> <span class="ruby-identifier">x</span>}
+  <span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- output_tier-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- output_tier-method -->
+
+      
+        <div id="postorder-method" class="method-detail ">
+          <a name="method-c-postorder"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">postorder</span><span
+              class="method-args">(node, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="postorder-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">postorder</span>(<span class="ruby-identifier">node</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">postorder</span>(<span class="ruby-identifier">n</span>, &amp;<span class="ruby-identifier">block</span>)}
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">printout</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- postorder-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- postorder-method -->
+
+      
+        <div id="preorder-method" class="method-detail ">
+          <a name="method-c-preorder"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">preorder</span><span
+              class="method-args">(node, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="preorder-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">preorder</span>(<span class="ruby-identifier">node</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">printout</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">preorder</span>(<span class="ruby-identifier">n</span>, &amp;<span class="ruby-identifier">block</span>)}
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- preorder-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- preorder-method -->
+
+      
+        <div id="printout-method" class="method-detail ">
+          <a name="method-c-printout"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">printout</span><span
+              class="method-args">(node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="printout-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">printout</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;name= #{node.name}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;kind= #{node.kind}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;basetype= #{node.basetype}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;arrsize= #{node.arrsize}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;s_u_name= #{node.s_u_name}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;leaf= #{node.leaf}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;level= #{node.level}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;size= #{node.size}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;align= #{node.align}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;parent= #{node.parent}&quot;</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;children= &quot;</span>
+  <span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">print</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">name</span>, <span class="ruby-string">&quot; &quot;</span>}
+  <span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- printout-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- printout-method -->
+
+      
+        <div id="size-method" class="method-detail ">
+          <a name="method-c-size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">size</span><span
+              class="method-args">(node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="size-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">size</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">esize</span> = <span class="ruby-value">0</span>
+  <span class="ruby-constant">Tree</span>.<span class="ruby-identifier">preorder</span>(<span class="ruby-identifier">node</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">esize</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>} 
+  <span class="ruby-identifier">esize</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- size-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="create_child-method" class="method-detail ">
+          <a name="method-i-create_child"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create_child</span><span
+              class="method-args">(a)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="create_child-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_child</span>(<span class="ruby-identifier">a</span>)
+  <span class="ruby-ivar">@children</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">a</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create_child-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create_child-method -->
+
+      
+        <div id="is_leaf-3F-method" class="method-detail ">
+          <a name="method-i-is_leaf-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">is_leaf?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="is_leaf-3F-source">
+<pre>
+<span class="ruby-comment"># File sigpa/lib/tree.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">is_leaf?</span>
+  <span class="ruby-ivar">@children</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- is_leaf-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- is_leaf-3F-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

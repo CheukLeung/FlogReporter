@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TC_Linx4PyBack" tests="9" time="0.040149205" failures="0" errors="0" skipped="0" assertions="19">
+  <testcase name="test_back_atcsignals" time="0.033559883" assertions="1">
+  </testcase>
+  <testcase name="test_back_baserefname" time="0.000519158" assertions="1">
+  </testcase>
+  <testcase name="test_back_deepcopy" time="0.000493955" assertions="2">
+  </testcase>
+  <testcase name="test_back_generatesignaldescription" time="0.001800788" assertions="1">
+  </testcase>
+  <testcase name="test_back_getanonext" time="0.000561597" assertions="3">
+  </testcase>
+  <testcase name="test_back_isnumeric" time="0.000715358" assertions="6">
+  </testcase>
+  <testcase name="test_back_itembasetype" time="0.000524692" assertions="2">
+  </testcase>
+  <testcase name="test_back_itemname" time="0.000542758" assertions="2">
+  </testcase>
+  <testcase name="test_back_itemtype" time="0.000479807" assertions="1">
+  </testcase>
+  <system-out>
+  </system-out>
+  <system-err>
+  </system-err>
+</testsuite>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TC_Back" tests="9" time="0.032933252" failures="0" errors="0" skipped="0" assertions="19">
+  <testcase name="test_back_atcsignals" time="0.019956494" assertions="1">
+  </testcase>
+  <testcase name="test_back_baserefname" time="0.000592096" assertions="1">
+  </testcase>
+  <testcase name="test_back_deepcopy" time="0.004687106" assertions="2">
+  </testcase>
+  <testcase name="test_back_generatesignaldescription" time="0.002616925" assertions="1">
+  </testcase>
+  <testcase name="test_back_getanonext" time="0.000709213" assertions="3">
+  </testcase>
+  <testcase name="test_back_isnumeric" time="0.00080276" assertions="6">
+  </testcase>
+  <testcase name="test_back_itembasetype" time="0.000688248" assertions="2">
+  </testcase>
+  <testcase name="test_back_itemname" time="0.000934431" assertions="2">
+  </testcase>
+  <testcase name="test_back_itemtype" time="0.000869199" assertions="1">
+  </testcase>
+  <system-out>
+  </system-out>
+  <system-err>
+  </system-err>
+</testsuite>

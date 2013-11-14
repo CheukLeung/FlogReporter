@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TC_Front" tests="3" time="0.031897811" failures="0" errors="0" skipped="0" assertions="8">
+  <testcase name="test_front_comment" time="0.000858117" assertions="2">
+  </testcase>
+  <testcase name="test_front_cparse" time="0.028114888" assertions="4">
+  </testcase>
+  <testcase name="test_front_process_files" time="0.001660098" assertions="2">
+  </testcase>
+  <system-out>
+Parsing OK
+  </system-out>
+  <system-err>
+  </system-err>
+</testsuite>

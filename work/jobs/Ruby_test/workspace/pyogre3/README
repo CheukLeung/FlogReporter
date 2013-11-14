@@ -1,0 +1,19 @@
+DESCRIPTION
+
+Pyogre is a Python package that makes it possible for Python
+scripts to communication with OSE programs.
+
+For documentation see doc/index.html
+
+INSTALLATION
+
+If you are installing pyogre in a local Python library directory
+run the following command:
+
+  python setup.py install --home=/path-to-home/
+
+After successful installation modify your PYTHONPATH environment
+variable to point out the Python library directory:
+
+  setenv PYTHONPATH /path-to-home/lib/python
+

@@ -1,0 +1,16 @@
+enum testenum {ENUM1, ENUM2, ENUM3};
+typedef unsigned char byte;
+struct struct_type { int a, b; } ;
+struct output_sig {
+int sig_no;
+int output;
+int array_val[10];
+int array_size;
+byte byte_val;
+enum testenum enum_val;
+struct struct_type struct_val;
+};
+union LINX_SIGNAL {
+int sig_no;
+struct output_sig output;
+};

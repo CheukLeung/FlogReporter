@@ -1,0 +1,1194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: SignalClass</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./sigpa/python/emit_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/python/emit.rb">sigpa/python/emit.rb</a></li>
+          
+            <li><a href="./sigpa/linx4py/emit_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/linx4py/emit.rb">sigpa/linx4py/emit.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-make_hash">::make_hash</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-path_from_root">::path_from_root</a></li>
+          
+          <li><a href="#method-i-generate">#generate</a></li>
+          
+          <li><a href="#method-i-generate_attr_list">#generate_attr_list</a></li>
+          
+          <li><a href="#method-i-generate_constructor">#generate_constructor</a></li>
+          
+          <li><a href="#method-i-generate_fields_list">#generate_fields_list</a></li>
+          
+          <li><a href="#method-i-generate_init">#generate_init</a></li>
+          
+          <li><a href="#method-i-generate_serialize_prelude">#generate_serialize_prelude</a></li>
+          
+          <li><a href="#method-i-generate_signal_class">#generate_signal_class</a></li>
+          
+          <li><a href="#method-i-generate_unserialize_prelude">#generate_unserialize_prelude</a></li>
+          
+          <li><a href="#method-i-guess_dyn_array">#guess_dyn_array</a></li>
+          
+          <li><a href="#method-i-ind">#ind</a></li>
+          
+          <li><a href="#method-i-s">#s</a></li>
+          
+          <li><a href="#method-i-visit_array">#visit_array</a></li>
+          
+          <li><a href="#method-i-visit_enum">#visit_enum</a></li>
+          
+          <li><a href="#method-i-visit_nodes">#visit_nodes</a></li>
+          
+          <li><a href="#method-i-visit_numeric">#visit_numeric</a></li>
+          
+          <li><a href="#method-i-visit_struct">#visit_struct</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./sigpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./sigpa/test/ref/ref_processed_cppstr_txt.html">ref_processed_cppstr.txt</a></li>
+        
+          <li class="file"><a href="./testpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/abstractTC_template_txt.html">abstractTC_template.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_abstracttestcase_txt.html">ref_abstracttestcase.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_comment_txt.html">ref_comment.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/transistion_template_txt.html">transistion_template.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./ArgumentCheck.html">ArgumentCheck</a></li>
+        
+          <li><a href="./Back.html">Back</a></li>
+        
+          <li><a href="./Consumer.html">Consumer</a></li>
+        
+          <li><a href="./Crubyparse.html">Crubyparse</a></li>
+        
+          <li><a href="./Front.html">Front</a></li>
+        
+          <li><a href="./GetRef.html">GetRef</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./ParseCommandLine.html">ParseCommandLine</a></li>
+        
+          <li><a href="./Printoptions.html">Printoptions</a></li>
+        
+          <li><a href="./ReadFile.html">ReadFile</a></li>
+        
+          <li><a href="./Regtally.html">Regtally</a></li>
+        
+          <li><a href="./SignalClass.html">SignalClass</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+          <li><a href="./SyntaxDescription.html">SyntaxDescription</a></li>
+        
+          <li><a href="./TC_Back.html">TC_Back</a></li>
+        
+          <li><a href="./TC_Emit.html">TC_Emit</a></li>
+        
+          <li><a href="./TC_Front.html">TC_Front</a></li>
+        
+          <li><a href="./TC_Linx4PyBack.html">TC_Linx4PyBack</a></li>
+        
+          <li><a href="./TC_Linx4PyEmit.html">TC_Linx4PyEmit</a></li>
+        
+          <li><a href="./TC_Linx4PySigpaUser.html">TC_Linx4PySigpaUser</a></li>
+        
+          <li><a href="./TC_Linx4PyUser.html">TC_Linx4PyUser</a></li>
+        
+          <li><a href="./TC_SigpaFront.html">TC_SigpaFront</a></li>
+        
+          <li><a href="./TC_SigpaUser.html">TC_SigpaUser</a></li>
+        
+          <li><a href="./TC_TCrubyparse.html">TC_TCrubyparse</a></li>
+        
+          <li><a href="./TC_TestCaseBack.html">TC_TestCaseBack</a></li>
+        
+          <li><a href="./TC_TestUser.html">TC_TestUser</a></li>
+        
+          <li><a href="./TC_Tree.html">TC_Tree</a></li>
+        
+          <li><a href="./TCrubyparse.html">TCrubyparse</a></li>
+        
+          <li><a href="./TestCaseBack.html">TestCaseBack</a></li>
+        
+          <li><a href="./Tree.html">Tree</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">SignalClass</h1>
+
+    <div id="description" class="description">
+      
+<p>Signal class. Traverses the signal tree in preorder, assembling the Python
+class description in the process.</p>
+<hr style="height: 1px">
+
+<p>Signal class. Traverses the signal tree in preorder, assembling the Python
+class description in the process.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="name-attribute-method" class="method-detail">
+          <a name="name"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">name</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="signo-attribute-method" class="method-detail">
+          <a name="signo"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">signo</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="make_hash-method" class="method-detail ">
+          <a name="method-c-make_hash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">make_hash</span><span
+              class="method-args">(atable)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="make_hash-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">make_hash</span>(<span class="ruby-identifier">atable</span>)
+  <span class="ruby-identifier">ahash</span> = {<span class="ruby-string">&quot;UNION&quot;</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-string">&quot;ARRAY_ARR&quot;</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-string">&quot;ARRAY_SIZ&quot;</span> =<span class="ruby-operator">&gt;</span> {}}
+
+  <span class="ruby-identifier">atable</span>[<span class="ruby-string">&quot;ARRAY_SIZE&quot;</span>].<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> 
+    <span class="ruby-identifier">container</span> = <span class="ruby-identifier">e</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">'.'</span>)[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-2</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'.'</span>)
+    <span class="ruby-identifier">array</span> = <span class="ruby-identifier">e</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">'.'</span>)[<span class="ruby-value">-1</span>]
+    <span class="ruby-identifier">arr</span> = <span class="ruby-identifier">container</span> <span class="ruby-operator">+</span> <span class="ruby-string">'.'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">array</span>
+    <span class="ruby-identifier">siz</span> = <span class="ruby-identifier">container</span> <span class="ruby-operator">+</span> <span class="ruby-string">'.'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>]
+    <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;ARRAY_ARR&quot;</span>][<span class="ruby-identifier">siz</span>] = <span class="ruby-identifier">array</span>
+    <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;ARRAY_SIZ&quot;</span>][<span class="ruby-identifier">arr</span>] = <span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>]
+  }
+
+  <span class="ruby-identifier">atable</span>[<span class="ruby-string">&quot;UNION_SELECTOR&quot;</span>].<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> 
+    <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;UNION&quot;</span>][<span class="ruby-identifier">e</span>[<span class="ruby-value">0</span>]] = {<span class="ruby-string">&quot;sel&quot;</span> =<span class="ruby-operator">&gt;</span><span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>]}
+  }
+
+  <span class="ruby-identifier">atable</span>[<span class="ruby-string">&quot;SELECTOR_MAPPING&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;UNION&quot;</span>][<span class="ruby-identifier">e</span>[<span class="ruby-value">0</span>]][<span class="ruby-identifier">e</span>[<span class="ruby-value">2</span>]] = <span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;UNION&quot;</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">e</span>[<span class="ruby-value">0</span>])
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">ahash</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- make_hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- make_hash-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(root, file, signo, name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">root</span>, <span class="ruby-identifier">file</span>, <span class="ruby-identifier">signo</span>, <span class="ruby-identifier">name</span>)
+  <span class="ruby-ivar">@root</span> = <span class="ruby-identifier">root</span>
+  <span class="ruby-ivar">@file</span> = <span class="ruby-identifier">file</span>
+  <span class="ruby-ivar">@signo</span> = <span class="ruby-identifier">signo</span>
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@recstr</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-ivar">@sendstr</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-ivar">@ind</span> = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@s</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-ivar">@regtally</span> = <span class="ruby-constant">Regtally</span>.<span class="ruby-identifier">instance</span>
+  <span class="ruby-ivar">@first_child</span> = <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="path_from_root-method" class="method-detail ">
+          <a name="method-c-path_from_root"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">path_from_root</span><span
+              class="method-args">(node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="path_from_root-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">path_from_root</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">s</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">clone</span>
+  <span class="ruby-identifier">p</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">parent</span>
+  <span class="ruby-keyword">until</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">kind</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-string">&quot;struct&quot;</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">level</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+      <span class="ruby-identifier">s</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">0</span>, <span class="ruby-node">&quot;#{p.s_u_name}.&quot;</span>)
+      <span class="ruby-identifier">p</span> = <span class="ruby-identifier">p</span>.<span class="ruby-identifier">parent</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">s</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">0</span>, <span class="ruby-node">&quot;#{p.name}.&quot;</span>)
+      <span class="ruby-identifier">p</span> = <span class="ruby-identifier">p</span>.<span class="ruby-identifier">parent</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">s</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- path_from_root-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- path_from_root-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="generate-method" class="method-detail ">
+          <a name="method-i-generate"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate</span><span
+              class="method-args">(ahash)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="generate-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 334</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate</span>(<span class="ruby-identifier">ahash</span>)
+  <span class="ruby-identifier">guess_dyn_array</span>(<span class="ruby-identifier">ahash</span>)
+  <span class="ruby-identifier">generate_signal_class</span>
+  <span class="ruby-identifier">generate_attr_list</span>(<span class="ruby-identifier">ahash</span>)
+  <span class="ruby-identifier">generate_constructor</span>(<span class="ruby-identifier">ahash</span>)
+  <span class="ruby-identifier">generate_unserialize_prelude</span>
+  <span class="ruby-identifier">generate_serialize_prelude</span>
+  <span class="ruby-identifier">visit_nodes</span>(<span class="ruby-identifier">ahash</span>)
+  <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@recstr</span>
+  <span class="ruby-ivar">@file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-ivar">@s</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate-method -->
+
+      
+        <div id="generate_attr_list-method" class="method-detail ">
+          <a name="method-i-generate_attr_list"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_attr_list</span><span
+              class="method-args">(ahash)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="generate_attr_list-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_attr_list</span>(<span class="ruby-identifier">ahash</span>)
+  <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;\n#{ind(1)}ATTR_LIST = [\n&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@signo</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+      <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}'sig_no',\n&quot;</span> 
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">children</span>[<span class="ruby-ivar">@first_child</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span> 
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;padding&quot;</span>
+    <span class="ruby-identifier">path</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">path_from_root</span>(<span class="ruby-identifier">node</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;ARRAY_ARR&quot;</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}'#{node.name}',\n&quot;</span> 
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(1)}]\n&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_attr_list-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_attr_list-method -->
+
+      
+        <div id="generate_constructor-method" class="method-detail ">
+          <a name="method-i-generate_constructor"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_constructor</span><span
+              class="method-args">(ahash)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="generate_constructor-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_constructor</span>(<span class="ruby-identifier">ahash</span>)
+  <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(1)}\n&quot;</span>
+  <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(1)}def __init__(self):\n&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@first_child</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+    <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}ogre.Signal.__init__(self, self.SIGNO)\n&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}ogre.Struct.__init__(self)\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">children</span>[<span class="ruby-ivar">@first_child</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">path</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">path_from_root</span>(<span class="ruby-identifier">c</span>)
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">kind</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;numeric&quot;</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;ARRAY_ARR&quot;</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">path</span>)
+        <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}# self.#{c.name} = 0\n&quot;</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{c.name} = 0\n&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;boolean&quot;</span>
+      <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{c.name} = False\n&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;enum&quot;</span>
+      <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{c.name} = 0\n&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-string">&quot;union&quot;</span>
+      <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{c.name} = #{c.s_u_name}()\n&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;array&quot;</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">leaf</span>
+        <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{c.name} = ogre.Array([ 0 for i in range(#{c.arrsize}) ])\n&quot;</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">c</span>.<span class="ruby-identifier">s_u_name</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{c.name} = ogre.Array([ #{c.s_u_name}() for i in range(#{c.arrsize}) ])\n&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_constructor-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_constructor-method -->
+
+      
+        <div id="generate_fields_list-method" class="method-detail ">
+          <a name="method-i-generate_fields_list"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_fields_list</span><span
+              class="method-args">(ahash)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="generate_fields_list-source">
+<pre>
+<span class="ruby-comment"># File sigpa/linx4py/emit.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_fields_list</span>(<span class="ruby-identifier">ahash</span>)
+  <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;\n#{ind(1)}_fields_ = [\n&quot;</span>
+  <span class="ruby-comment">#if @signo != 0</span>
+  <span class="ruby-comment">#    @s &lt;&lt; &quot;#{ind(2)}'sig_no',\n&quot; </span>
+  <span class="ruby-comment">#end</span>
+  <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">children</span>[<span class="ruby-ivar">@first_child</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span> 
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;padding&quot;</span>
+    <span class="ruby-identifier">path</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">path_from_root</span>(<span class="ruby-identifier">node</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;ARRAY_ARR&quot;</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">kind</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">'numeric'</span>
+          <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}('#{node.name}', #{node.basetype}),\n&quot;</span> 
+      <span class="ruby-keyword">when</span> <span class="ruby-string">'struct'</span>
+          <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}('#{node.name}', #{node.s_u_name}),\n&quot;</span> 
+      <span class="ruby-keyword">when</span> <span class="ruby-string">'array'</span>
+          <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}('#{node.name}', #{node.s_u_name} * #{node.arrsize}),\n&quot;</span> 
+
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(1)}]\n&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_fields_list-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_fields_list-method -->
+
+      
+        <div id="generate_init-method" class="method-detail ">
+          <a name="method-i-generate_init"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_init</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="generate_init-source">
+<pre>
+<span class="ruby-comment"># File sigpa/linx4py/emit.rb, line 196</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_init</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@signo</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">children</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">kind</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-string">&quot;numeric&quot;</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">children</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">name</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-string">&quot;sig_no&quot;</span>)
+            <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(1)}def __init__(self):\n&quot;</span>
+            <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}super(Structure, self).__init__()\n&quot;</span>
+            <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.sig_no = #{@signo}\n&quot;</span>
+            
+            <span class="ruby-ivar">@first_child</span> = <span class="ruby-value">1</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_init-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_init-method -->
+
+      
+        <div id="generate_serialize_prelude-method" class="method-detail ">
+          <a name="method-i-generate_serialize_prelude"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_serialize_prelude</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="generate_serialize_prelude-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 174</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_serialize_prelude</span>
+  <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;\n#{ind(1)}def serialize(self, writer, tag=None):\n&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_serialize_prelude-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_serialize_prelude-method -->
+
+      
+        <div id="generate_signal_class-method" class="method-detail ">
+          <a name="method-i-generate_signal_class"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_signal_class</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="generate_signal_class-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_signal_class</span>
+  <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind}\n&quot;</span>
+  <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind}# ----\n&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@signo</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+    <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind}class #{@name}(ogre.Signal):\n&quot;</span>
+    <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(1)}\&quot;\&quot;\&quot;Signal description for signal #{@name}\&quot;\&quot;\&quot;\n&quot;</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">children</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">kind</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-string">&quot;numeric&quot;</span>) <span class="ruby-operator">&amp;&amp;</span> 
+        <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">children</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">name</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-string">&quot;sig_no&quot;</span>)
+      <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;\n#{ind(1)}SIGNO = #{@signo}\n&quot;</span>
+      <span class="ruby-ivar">@first_child</span> = <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind}class #{@root.s_u_name}(ogre.Struct):\n&quot;</span>
+    <span class="ruby-ivar">@s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(1)}\&quot;\&quot;\&quot;Signal description for #{@root.kind} #{@root.s_u_name}\&quot;\&quot;\&quot;\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_signal_class-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_signal_class-method -->
+
+      
+        <div id="generate_unserialize_prelude-method" class="method-detail ">
+          <a name="method-i-generate_unserialize_prelude"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_unserialize_prelude</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="generate_unserialize_prelude-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_unserialize_prelude</span>
+  <span class="ruby-ivar">@recstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;\n#{ind(1)}def unserialize(self, reader, tag=None):\n&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_unserialize_prelude-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_unserialize_prelude-method -->
+
+      
+        <div id="guess_dyn_array-method" class="method-detail ">
+          <a name="method-i-guess_dyn_array"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">guess_dyn_array</span><span
+              class="method-args">(ahash)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Guess the size variable for one elements arrays.</p>
+            
+
+            
+            <div class="method-source-code" id="guess_dyn_array-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 239</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">guess_dyn_array</span>(<span class="ruby-identifier">ahash</span>)
+  <span class="ruby-identifier">prev_node</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">children</span>[<span class="ruby-ivar">@first_child</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;padding&quot;</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;array&quot;</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">arrsize</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+      <span class="ruby-identifier">arr_path</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">path_from_root</span>(<span class="ruby-identifier">node</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">prev_node</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">prev_node</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;numeric&quot;</span>
+        <span class="ruby-identifier">siz_path</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">path_from_root</span>(<span class="ruby-identifier">prev_node</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;ARRAY_SIZ&quot;</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">arr_path</span>)
+          <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;ARRAY_SIZ&quot;</span>][<span class="ruby-identifier">arr_path</span>] = <span class="ruby-identifier">prev_node</span>.<span class="ruby-identifier">name</span>
+          <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;ARRAY_ARR&quot;</span>][<span class="ruby-identifier">siz_path</span>] = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">name</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;ARRAY_SIZ&quot;</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">arr_path</span>)
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Can't guess the size variable for the dynamic array '#{node.name}'. Please,&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;specify the size variable with the following comment in the sig file:&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;/* !-ARRAY_SIZE(#{arr_path}, &lt;size_variable&gt;)-! */&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">prev_node</span> = <span class="ruby-identifier">node</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- guess_dyn_array-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- guess_dyn_array-method -->
+
+      
+        <div id="ind-method" class="method-detail ">
+          <a name="method-i-ind"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ind</span><span
+              class="method-args">(offset = 0)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ind-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ind</span>(<span class="ruby-identifier">offset</span> = <span class="ruby-value">0</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;    &quot;</span>*(<span class="ruby-ivar">@ind</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">offset</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ind-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ind-method -->
+
+      
+        <div id="s-method" class="method-detail ">
+          <a name="method-i-s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">s</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="s-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 330</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">s</span>
+  <span class="ruby-ivar">@s</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- s-method -->
+
+      
+        <div id="visit_array-method" class="method-detail ">
+          <a name="method-i-visit_array"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">visit_array</span><span
+              class="method-args">(ahash, node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="visit_array-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">visit_array</span>(<span class="ruby-identifier">ahash</span>, <span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">path</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">path_from_root</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">arrsize</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">arrsize</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;ARRAY_SIZ&quot;</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">path</span>)
+    <span class="ruby-identifier">dyn_size</span> = <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;ARRAY_SIZ&quot;</span>][<span class="ruby-identifier">path</span>]
+    <span class="ruby-identifier">arrsize</span> = <span class="ruby-string">'_'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dyn_size</span> 
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">leaf</span>
+    <span class="ruby-ivar">@recstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{node.name} = reader.int_array(#{arrsize}, #{node.arrsize}, reader.read#{node.basetype})\n&quot;</span>
+    <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}writer.int_array(self.#{node.name}, #{node.arrsize}, writer.write#{node.basetype})\n&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@regtally</span>.<span class="ruby-identifier">has?</span>(<span class="ruby-identifier">node</span>)
+      <span class="ruby-identifier">regstruct</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">node</span>, <span class="ruby-ivar">@file</span>, <span class="ruby-value">0</span>, <span class="ruby-string">&quot;&quot;</span>)
+      <span class="ruby-identifier">regstruct</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">ahash</span>)
+      <span class="ruby-ivar">@regtally</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">node</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@recstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{node.name} = reader.composite_array(#{node.s_u_name}, #{arrsize}, #{node.arrsize}, reader.struct)\n&quot;</span>
+    <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}writer.composite_array(#{node.s_u_name}, self.#{node.name}, #{node.arrsize}, writer.struct)\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- visit_array-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- visit_array-method -->
+
+      
+        <div id="visit_enum-method" class="method-detail ">
+          <a name="method-i-visit_enum"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">visit_enum</span><span
+              class="method-args">(ahash, node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="visit_enum-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">visit_enum</span>(<span class="ruby-identifier">ahash</span>, <span class="ruby-identifier">node</span>)
+  <span class="ruby-ivar">@recstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{node.name} = reader.readS32()\n&quot;</span>
+  <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}writer.writeS32(self.#{node.name})\n&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- visit_enum-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- visit_enum-method -->
+
+      
+        <div id="visit_nodes-method" class="method-detail ">
+          <a name="method-i-visit_nodes"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">visit_nodes</span><span
+              class="method-args">(ahash)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <hr style="height: 1px">
+            
+
+            
+            <div class="method-source-code" id="visit_nodes-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 266</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">visit_nodes</span>(<span class="ruby-identifier">ahash</span>)
+  <span class="ruby-identifier">if_</span> = <span class="ruby-string">&quot;if&quot;</span>
+  <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-ivar">@recstr</span>  <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}reader.align(#{@root.align})\n&quot;</span>
+    <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}writer.align(#{@root.align})\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">children</span>[<span class="ruby-ivar">@first_child</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment">#puts &quot;CHILD: #{node}, #{node.kind}, #{@root.kind}&quot;</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;padding&quot;</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">'union'</span>
+      <span class="ruby-identifier">tag</span> = <span class="ruby-identifier">i</span>
+      <span class="ruby-identifier">path</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">path_from_root</span>(<span class="ruby-ivar">@root</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;UNION&quot;</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">path</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;UNION&quot;</span>][<span class="ruby-identifier">path</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">name</span>)
+          <span class="ruby-identifier">tag</span> = <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;UNION&quot;</span>][<span class="ruby-identifier">path</span>][<span class="ruby-identifier">node</span>.<span class="ruby-identifier">name</span>]
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-ivar">@recstr</span>  <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}#{if_} tag is #{tag}:\n&quot;</span>
+      <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}#{if_} tag is #{tag}:\n&quot;</span>
+      <span class="ruby-identifier">if_</span> = <span class="ruby-string">&quot;elif&quot;</span>
+      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-ivar">@ind</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">kind</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;numeric&quot;</span>, <span class="ruby-string">&quot;boolean&quot;</span>
+      <span class="ruby-identifier">visit_numeric</span>(<span class="ruby-identifier">ahash</span>, <span class="ruby-identifier">node</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;enum&quot;</span>
+      <span class="ruby-identifier">visit_enum</span>(<span class="ruby-identifier">ahash</span>, <span class="ruby-identifier">node</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;array&quot;</span>
+      <span class="ruby-identifier">visit_array</span>(<span class="ruby-identifier">ahash</span>, <span class="ruby-identifier">node</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;struct&quot;</span>, <span class="ruby-string">&quot;union&quot;</span>
+      <span class="ruby-identifier">visit_struct</span>(<span class="ruby-identifier">ahash</span>, <span class="ruby-identifier">node</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">'union'</span>
+      <span class="ruby-identifier">pad</span> = <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">size</span>
+      <span class="ruby-ivar">@recstr</span>  <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}reader.pad(#{pad})\n&quot;</span>
+      <span class="ruby-ivar">@sendstr</span>  <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}writer.pad(#{pad})\n&quot;</span>
+      <span class="ruby-ivar">@ind</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-string">'union'</span>
+    <span class="ruby-ivar">@recstr</span>  <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}else:\n&quot;</span>
+    <span class="ruby-ivar">@recstr</span>  <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(3)}raise Exception('unknown union selector')\n&quot;</span>
+    <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}else:\n&quot;</span>
+    <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(3)}raise Exception('unknown union selector')\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@root</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-ivar">@recstr</span>  <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}pass\n&quot;</span>
+    <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}pass\n&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@recstr</span>  <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}reader.align(#{@root.align})\n&quot;</span>
+    <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}writer.align(#{@root.align})\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- visit_nodes-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- visit_nodes-method -->
+
+      
+        <div id="visit_numeric-method" class="method-detail ">
+          <a name="method-i-visit_numeric"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">visit_numeric</span><span
+              class="method-args">(ahash, node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>— generate classes</p>
+            
+
+            
+            <div class="method-source-code" id="visit_numeric-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">visit_numeric</span>(<span class="ruby-identifier">ahash</span>, <span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">path</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">path_from_root</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;ARRAY_ARR&quot;</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">path</span>)
+    <span class="ruby-identifier">dyn_arr</span> = <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;ARRAY_ARR&quot;</span>][<span class="ruby-identifier">path</span>]
+    <span class="ruby-ivar">@recstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}_#{node.name} = reader.read#{node.basetype}()\n&quot;</span>
+    <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}writer.write#{node.basetype}(len(self.#{dyn_arr}))\n&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@recstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{node.name} = reader.read#{node.basetype}()\n&quot;</span>
+    <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}writer.write#{node.basetype}(self.#{node.name})\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- visit_numeric-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- visit_numeric-method -->
+
+      
+        <div id="visit_struct-method" class="method-detail ">
+          <a name="method-i-visit_struct"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">visit_struct</span><span
+              class="method-args">(ahash, node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="visit_struct-source">
+<pre>
+<span class="ruby-comment"># File sigpa/python/emit.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">visit_struct</span>(<span class="ruby-identifier">ahash</span>, <span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">path</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">path_from_root</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@regtally</span>.<span class="ruby-identifier">has?</span>(<span class="ruby-identifier">node</span>)
+    <span class="ruby-identifier">regstruct</span> = <span class="ruby-constant">SignalClass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">node</span>, <span class="ruby-ivar">@file</span>, <span class="ruby-value">0</span>, <span class="ruby-string">&quot;&quot;</span>)
+    <span class="ruby-identifier">regstruct</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">ahash</span>)
+    <span class="ruby-ivar">@regtally</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;UNION&quot;</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">path</span>)
+    <span class="ruby-identifier">sel</span> = <span class="ruby-identifier">ahash</span>[<span class="ruby-string">&quot;UNION&quot;</span>][<span class="ruby-identifier">path</span>][<span class="ruby-string">'sel'</span>]
+    <span class="ruby-ivar">@recstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{node.name}.unserialize(reader, self.#{sel})\n&quot;</span>
+    <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{node.name}.serialize(writer, self.#{sel})\n&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@recstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{node.name}.unserialize(reader)\n&quot;</span>
+    <span class="ruby-ivar">@sendstr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{ind(2)}self.#{node.name}.serialize(writer)\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- visit_struct-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- visit_struct-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

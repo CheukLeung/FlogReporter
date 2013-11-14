@@ -1,0 +1,1040 @@
+#
+# C to Ruby parser
+#
+
+class Crubyparse
+
+token IDENTIFIER CONSTANT STRING_LITERAL SIZEOF
+token PTR_OP INC_OP DEC_OP LEFT_OP RIGHT_OP LE_OP GE_OP EQ_OP NE_OP
+token AND_OP OR_OP MUL_ASSIGN DIV_ASSIGN MOD_ASSIGN ADD_ASSIGN
+token SUB_ASSIGN LEFT_ASSIGN RIGHT_ASSIGN AND_ASSIGN
+token XOR_ASSIGN OR_ASSIGN TYPE_NAME
+token TYPEDEF EXTERN STATIC AUTO REGISTER
+token CHAR SHORT INT LONG SIGNED UNSIGNED FLOAT DOUBLE CONST VOLATILE VOID
+token STRUCT UNION ENUM ELLIPSIS
+token CASE DEFAULT IF ELSE SWITCH WHILE DO FOR GOTO CONTINUE BREAK RETURN  
+
+start translation_unit
+
+expect 6
+
+rule
+  primary_expression:  #returns a scalar (the value) ...
+    IDENTIFIER             
+  | CONSTANT               { return((val[0] =~ /^0[^\.]/) ? val[0].oct : val[0]) } #hex, octal, bin conversion
+  | STRING_LITERAL         { return(val[0]) }
+  | '(' expression ')'     { return(val[1]) }
+     
+  postfix_expression:  #returns a scalar (the value) ... TBD
+    primary_expression				{ return(val[0]) }
+  | postfix_expression '[' expression ']'
+  | postfix_expression '(' ')'
+  | postfix_expression '(' argument_expression_list ')'
+  | postfix_expression '.' IDENTIFIER
+  | postfix_expression PTR_OP IDENTIFIER
+  | postfix_expression INC_OP
+  | postfix_expression DEC_OP
+
+  argument_expression_list:  #returns a scalar (the value) ... TBD
+    assignment_expression		        { return(val[0]) }
+  | argument_expression_list ',' assignment_expression
+
+  unary_expression:   #returns a scalar (the value) ... TBD
+    postfix_expression				{ return(val[0]) }
+  | INC_OP unary_expression			{ return(val[1].to_i + 1) }
+  | DEC_OP unary_expression			{ return(val[1].to_i - 1) }
+  | unary_operator cast_expression		{ if val[0].eql?'-'
+                                                    return(-val[1].to_i)
+                                                  elsif val[0].eql?'+'
+                                                    return( val[1].to_i) 
+                                                  elsif val[0].eql?'~'
+                                                    return(~(val[1].to_i)) 
+                                                  elsif val[0].eql?'!'
+                                                    return(val[1].to_i > 0 ? 0 : 1)
+                                                  else
+                                                    return(val[1].to_i) 
+                                                  end }
+  | SIZEOF unary_expression			# TBD TBD TBD TBD TBD 
+  | SIZEOF '(' type_name ')'			{ return( size_of(val[2][".type"]) ) }   # Not really possible to do - ADDED return statement and size_of func. 2013-07-25
+  
+unary_operator: 
+    '&'
+  | '*'
+  | '+'
+  | '-'
+  | '~'
+  | '!'
+  
+cast_expression:      #returns a scalar (the value) ... TBD cast ignored!
+    unary_expression	 			{ return(val[0]) }
+  | '(' type_name ')' cast_expression		{ return(val[1]) }  #TBD
+
+multiplicative_expression:    #returns a scalar (the value)
+    cast_expression				    { return(val[0])          }
+  | multiplicative_expression '*' cast_expression   { return(val[0].to_i * 1) } # { return(val[0].to_i * val[2].to_i) } # Removed trying to transform hash (val[2]) to integer and put a 1 there instead 2013-07-25
+  | multiplicative_expression '/' cast_expression   { return(val[0].to_i / val[2].to_i) }
+  | multiplicative_expression '%' cast_expression   { return(val[0].to_i % val[2].to_i) }
+
+additive_expression:          #returns a scalar (the value)
+    multiplicative_expression			        { return(val[0])        }
+  | additive_expression '+' multiplicative_expression   { return(val[0].to_i + val[2].to_i) }
+  | additive_expression '-' multiplicative_expression   { return(val[0].to_i - val[2].to_i) }
+
+shift_expression:             #returns a scalar (the value)
+    additive_expression				    { return(val[0])                     }
+  | shift_expression LEFT_OP additive_expression    { return(val[0].to_i << val[2].to_i) }
+  | shift_expression RIGHT_OP additive_expression   { return(val[0].to_i >> val[2].to_i) }
+
+relational_expression:        #returns a scalar (the value)
+    shift_expression				    { return(val[0])                               }
+  | relational_expression '<' shift_expression	    { return((val[0].to_i <  val[2].to_i) ? 1 : 0) }
+  | relational_expression '>' shift_expression      { return((val[0].to_i >  val[2].to_i) ? 1 : 0) }
+  | relational_expression LE_OP shift_expression    { return((val[0].to_i <= val[2].to_i) ? 1 : 0) }
+  | relational_expression GE_OP shift_expression    { return((val[0].to_i >= val[2].to_i) ? 1 : 0) }
+
+equality_expression:          #returns a scalar (the value)
+    relational_expression			    { return(val[0])                               }
+  | equality_expression EQ_OP relational_expression { return((val[0].to_i == val[2].to_i) ? 1 : 0) }
+  | equality_expression NE_OP relational_expression { return((val[0].to_i != val[2].to_i) ? 1 : 0) }
+
+and_expression:               #returns a scalar (the value)
+    equality_expression				{ return(val[0])                    }
+  | and_expression '&' equality_expression	{ return(val[0].to_i & val[2].to_i) }
+
+exclusive_or_expression:      #returns a scalar (the value)
+    and_expression				{ return(val[0])                    }
+  | exclusive_or_expression '^' and_expression	{ return(val[0].to_i ^ val[2].to_i) }
+
+inclusive_or_expression:      #returns a scalar (the value)
+    exclusive_or_expression		 	         { return(val[0])                    }
+  | inclusive_or_expression '|' exclusive_or_expression  { return(val[0].to_i | val[2].to_i) }
+
+logical_and_expression:       #returns a scalar (the value)
+    inclusive_or_expression			           { return(val[0])                     }
+  | logical_and_expression AND_OP inclusive_or_expression  { return(((val[0].to_i > 0) && (val[2].to_i > 0)) ? 1 : 0) }
+
+logical_or_expression:        #returns a scalar (the value)
+    logical_and_expression			           { return(val[0])          }
+  | logical_or_expression OR_OP logical_and_expression     { return(((val[0].to_i > 0) || (val[2].to_i > 0)) ? 1 : 0) }
+
+conditional_expression:       #returns a scalar (the value)
+    logical_or_expression			           { return(val[0])          }
+  | logical_or_expression '?' expression ':' conditional_expression  { return((val[0].to_i > 0) ? val[2] : val[4]) }
+
+assignment_expression:
+    conditional_expression
+  | unary_expression assignment_operator assignment_expression
+
+assignment_operator:
+    '='
+  | MUL_ASSIGN
+  | DIV_ASSIGN
+  | MOD_ASSIGN
+  | ADD_ASSIGN
+  | SUB_ASSIGN
+  | LEFT_ASSIGN
+  | RIGHT_ASSIGN
+  | AND_ASSIGN
+  | XOR_ASSIGN
+  | OR_ASSIGN
+
+expression:
+    assignment_expression
+  | expression ',' assignment_expression
+
+constant_expression:            # Returns a scalar (the value)
+    conditional_expression	{ return(val[0]) }
+
+declaration:
+    declaration_specifiers ';'	        # we have this e.g. in "struct st {int a};"
+  | declaration_specifiers init_declarator_list ';' { declare(val[0], val[1])} # only returns type, descards of the identifier!!
+  | error ';' { return( [[val[0], {".type"=>"error"}]]) }
+
+declaration_specifiers:         # Returns a hash describing the base type and storage
+    declaration_specifiers_base { return ((val[0] == nil) || val[0].has_key?('.type') ? val[0] : 
+                                          merge_hashes(val[0], {'.type' => 'int'})) }
+
+declaration_specifiers_base:
+    storage_class_specifier			         { return(val[0])                       }
+  | storage_class_specifier declaration_specifiers_base  { return(merge_hashes(val[0], val[1])) }
+  | type_specifier				         { return(val[0])                       }
+  | type_specifier declaration_specifiers_base           { return(merge_hashes(val[0], val[1])) }
+  | type_qualifier				         { return(val[0])                       }
+  | type_qualifier declaration_specifiers_base           { return(merge_hashes(val[0], val[1])) }
+
+init_declarator_list:           # Returns an array of [identifier,HashRef] pairs (1 per identifier)
+    init_declarator 			     { return ([val[0]])            }
+  | init_declarator_list ',' init_declarator { return (val[0].push(val[2])) }
+
+init_declarator:
+    declarator			{ return(val[0]) }
+  | declarator '=' initializer	{ return([val[0][0], {'.type' => val[2]}]) } # original: return(val[0]  ;  return([val[0][0], val[2]]) 2013-07-31   ;   return([val[0][0], link_type(val[0][1], {'.type' =>'assignment', '.array_size' => val[2]})) # not working right now!
+  
+
+storage_class_specifier:        # Returns a hash (key:.storage)
+    TYPEDEF			{ return({'.storage' => val[0]}) }
+  | EXTERN			{ return({'.storage' => val[0]}) }
+  | STATIC			{ return({'.storage' => val[0]}) }
+  | AUTO			{ return({'.storage' => val[0]}) }
+  | REGISTER			{ return({'.storage' => val[0]}) }
+  
+type_specifier:                 # Returns a hash (key:.type or contructed type hash)
+    VOID 			{ return({'.type' => val[0]}) }  #type:VOID
+  | CHAR 			{ return({'.type' => val[0]}) }  #type:CHAR
+  | SHORT INT			{ return({'.type' => val[0]}) }  #type:SHORT
+  | SHORT    			{ return({'.type' => val[0]}) }  #type:SHORT
+  | INT 			{ return({'.type' => val[0]}) }  #type:INT 
+  | LONG LONG INT      		{ return({'.type' => 'longlong'}) }  #type:LONGLONG
+  | LONG LONG			{ return({'.type' => 'longlong'}) }  #type:LONGLONG
+  | LONG INT			{ return({'.type' => val[0]}) }  #type:LONG
+  | LONG    	 		{ return({'.type' => val[0]}) }  #type:LONG
+  | FLOAT 			{ return({'.type' => val[0]}) }  #type:FLOAT
+  | LONG DOUBLE 		{ return({'.type' => val[1]}) }  #type:DOUBLE
+  | DOUBLE 			{ return({'.type' => val[0]}) }  #type:DOUBLE
+  | SIGNED 			{ return({'.signed' => 'signed'})   }   # Real type will follow
+  | UNSIGNED 			{ return({'.signed' => 'unsigned'}) }   # Real type will follow
+  | struct_or_union_specifier   { return(val[0]) }  #struct or union
+  | enum_specifier              { return(val[0]) }  #enum
+  | TYPE_NAME 			{ return(get_table(@@typedef_table, val[0])) }
+  
+struct_or_union_specifier:      # Returns a hash describing the struct/union 
+    struct_or_union IDENTIFIER '{'  # Struct tag created now, in case of recursion
+              { typeval = _values[-3].clone
+                nameval = _values[-2].clone
+                @@name = nameval
+                table = (typeval['.type'].eql?'union') ? @@uniontag_table : @@structtag_table
+                insert_table(table, nameval, {}) }
+    struct_declaration_list '}'     # rest of rule
+              { table = (val[0]['.type'].eql?'union') ? @@uniontag_table : @@structtag_table
+                insert_table(table, val[1], struct_union_construct(val[0], \
+                             val[4]).merge({'.type_or_id_name' => "(Struct/Union): #{val[1]}"}))
+		c = get_table(table, val[1])
+		if c.nil?
+                  insert_table(table, val[1], {'.type' => val[0]['.type']}) 
+                end
+                fixup(@@name) # completes forward declared typedefs                
+                return c }
+  | struct_or_union '{' struct_declaration_list '}'
+              { return struct_union_construct(val[0], val[2]) }
+  | struct_or_union IDENTIFIER
+              { table = (val[0]['.type'].eql?'union') ? @@uniontag_table : @@structtag_table
+                c = get_table(table, val[1])
+                if c.nil?
+                  insert_table(table, val[1], {'.type' => val[0]['.type']}) 
+                end 
+                if c.nil? # in case of forward declared in typedef
+                  c = {'.forward_type' => val[0]['.type'], '.forward_base_name' => val[1]}
+                end
+                return c }
+
+struct_or_union:                # Returns a hash (key:.type set to UNION or STRUCT)
+    STRUCT 			{ return({'.type' => val[0]}) }  #type: STRUCT:
+  | UNION			{ return({'.type' => val[0]}) }  #type: UNION :
+   
+struct_declaration_list:        # Returns an array of [identifier, type_descr_hash]
+    struct_declaration				  { return(val[0])            }
+  | struct_declaration_list struct_declaration	 { (val[1][0][1][".type"] == "error" ? (puts " error " ) : ( val[1].each { |elem| val[0].push(elem) } ))   }  # orig: { val[1].each { |elem| val[0].push(elem) }; return val[0] } 
+  
+  
+
+
+  
+struct_declaration:             # Returns an array of [identifier, type_descr_hash]
+    specifier_qualifier_list ';'   { return(struct_union_declare(val[0][".members"][0][1], val[0][".members"])) }
+  | specifier_qualifier_list struct_declarator_list ';'  { return(struct_union_declare(val[0], val[1])) }
+  | error ';' { return( [[val[0], {".type"=>"error"}]] ) }
+    
+
+specifier_qualifier_list:       # Returns a hash describing the base type and storage
+    specifier_qualifier_list_base { return ((val[0] == nil) || val[0].has_key?('.type') ? val[0] : 
+                                             merge_hashes(val[0], {'.type' => 'int'})) }
+    #| struct_declaration_list specifier_qualifier_list_base  { return val[0] }
+    
+specifier_qualifier_list_base:
+    type_specifier specifier_qualifier_list_base  { return(merge_hashes(val[0], val[1])) }
+  | type_specifier				  { return(val[0])                       }
+  | type_qualifier specifier_qualifier_list_base  { return(merge_hashes(val[0], val[1])) }
+  | type_qualifier				  { return(val[0])                       }
+
+struct_declarator_list:         # Array containing [identifier,HashRef] pairs (1 per identifier)
+    struct_declarator				  { return([val[0]])         }
+  | struct_declarator_list ',' struct_declarator  { return(val[0].push(val[2])) }
+
+struct_declarator:              # Array containing the identifier and the type modifier descr hash (array,func, ptr)
+    declarator					  { return(val[0]) }
+  | ':' constant_expression			  # Bit field: TBD
+  | declarator ':' constant_expression		  # Bit field: TBD
+
+enum_specifier:
+    ENUM '{' enumerator_list '}'            
+	{ return({'.type' =>'enum', '.values'=> create_enum_hash(val[2])}) }
+#  | ENUM IDENTIFIER '{' enumerator_list '}' 
+#        { insert_table(@@enumtag_table, val[1], {'.type'=>'enum', '.values' => create_enum_hash(val[3]),'.type_or_id_name'=>"(enum): #{val[1]}"}) }
+
+  | ENUM IDENTIFIER '{' enumerator_list '}' 
+        { c = get_table(@@enumtag_table, val[1])
+          if c.nil?
+            c = insert_table(@@enumtag_table, val[1], {'.type'=>'enum', '.values' => create_enum_hash(val[3]),
+                                                       '.type_or_id_name'=>"(enum): #{val[1]}"}) 
+          end
+          return c}
+
+  | ENUM IDENTIFIER		 { c = get_table(@@enumtag_table, val[1])
+                                   if c.nil?
+                                     insert_table(@@enumtag_table, val[1], {})
+                                   end
+                                   return c }
+
+enumerator_list:            # Return an array of enum_constants  where an enum constant is [identifier, value]
+    enumerator				   { return([val[0]]) }
+  | enumerator_list ',' enumerator	   { return(val[0].push(val[2])) }
+   
+enumerator:                 # Return an array of 2 items: the identifier and the value (or nil): [identifier, value]
+    IDENTIFIER				   { return([val[0], nil]) }
+  | IDENTIFIER '=' constant_expression	   { return([val[0], val[2]]) }
+
+type_qualifier:
+    CONST			{ return({'.type_qualifier' => val[0]}) }
+  | VOLATILE			{ return({'.type_qualifier' => val[0]}) }
+
+declarator:                     # An array containing the identifier and the type modifier descr hash (array,func, ptr)
+    pointer direct_declarator	{ return([val[1][0], link_type(val[1][1], val[0])]) }
+  | direct_declarator		{ return(val[0]) }
+
+direct_declarator:              # An array containing the identifier and the type modifier descr hash (array,func)
+    IDENTIFIER 		 { return([val[0], nil]) }
+  | '(' declarator ')'		{ return(val[1]) }
+  | direct_declarator '[' constant_expression ']'
+                                { return [val[0][0], link_type(val[0][1], {'.type' =>'array', '.array_size' => val[2]})] }
+  | direct_declarator '[' ']'	#assume size 1 when unspecified (cant be part of signal anyway):
+                                { return [val[0][0], link_type(val[0][1], {'.type' =>'array', '.array_size' => 1})] }
+  | direct_declarator '(' parameter_type_list ')'
+                                { return [val[0][0], link_type(val[0][1], {'.type' => 'function'})] }
+  | direct_declarator '(' identifier_list ')' 
+                                { return [val[0][0], link_type(val[0][1], {'.type' => 'function'})] }
+  | direct_declarator '(' ')'   { return [val[0][0], link_type(val[0][1], {'.type' => 'function'})] }
+
+pointer:                        # A hash chain (as deep as there are pointers)
+    '*'				{ return({'.type' =>'pointer'}) }
+  | '*' type_qualifier_list	{ return(merge_hashes(val[1], {'.type' =>'pointer'})) }
+  | '*' pointer 		{ return({'.type' =>'pointer', '.subtype'  => val[1]}) }
+  | '*' type_qualifier_list pointer 
+				{ return(merge_hashes(val[1], {'.type' =>'pointer', '.subtype'  => val[2]})) }
+
+type_qualifier_list:
+    type_qualifier
+  | type_qualifier_list type_qualifier
+
+parameter_type_list:
+    parameter_list
+  | parameter_list ',' ELLIPSIS
+
+parameter_list:
+    parameter_declaration
+  | parameter_list ',' parameter_declaration
+
+parameter_declaration:
+    declaration_specifiers declarator
+  | declaration_specifiers abstract_declarator
+  | declaration_specifiers
+
+identifier_list:
+    IDENTIFIER
+  | identifier_list ',' IDENTIFIER
+
+type_name:
+    specifier_qualifier_list
+  | specifier_qualifier_list abstract_declarator
+
+abstract_declarator:
+    pointer
+  | direct_abstract_declarator
+  | pointer direct_abstract_declarator
+
+direct_abstract_declarator:
+    '(' abstract_declarator ')'
+  | '[' ']'
+  | '[' constant_expression ']'
+  | direct_abstract_declarator '[' ']'
+  | direct_abstract_declarator '[' constant_expression ']'
+  | '(' ')'
+  | '(' parameter_type_list ')'
+  | direct_abstract_declarator '(' ')'
+  | direct_abstract_declarator '(' parameter_type_list ')'
+
+initializer:
+    assignment_expression
+  | '{' initializer_list '}'
+  | '{' initializer_list ',' '}'
+
+initializer_list:
+    initializer
+  | initializer_list ',' initializer
+
+statement:
+    labeled_statement
+  | compound_statement
+  | expression_statement
+  | selection_statement
+  | iteration_statement
+  | jump_statement
+
+labeled_statement:
+    IDENTIFIER ':' statement
+  | CASE constant_expression ':' statement
+  | DEFAULT ':' statement
+
+compound_statement:
+    '{' '}'
+  | '{' statement_list '}' 
+  | '{' declaration_list '}'
+  | '{' declaration_list statement_list '}'
+
+declaration_list:
+    declaration     
+  | declaration_list declaration    { (val[1][0][1][".type"] == "error" ? (puts " error ") : (puts "no error")) }       # ONLY returns declaration_list, discards declaration. String literal in condition, if statement not valid warning.
+
+statement_list:
+    statement 
+  | statement_list statement
+  
+
+expression_statement:
+    ';'
+  | expression ';'
+
+selection_statement:
+    IF '(' expression ')' statement
+  | IF '(' expression ')' statement ELSE statement
+  | SWITCH '(' expression ')' statement
+
+iteration_statement:
+    WHILE '(' expression ')' statement
+  | DO statement WHILE '(' expression ')' ';'
+  | FOR '(' expression_statement expression_statement ')' statement
+  | FOR '(' expression_statement expression_statement expression ')' statement
+
+jump_statement:
+    GOTO IDENTIFIER ';'
+  | CONTINUE ';'
+  | BREAK ';'
+  | RETURN ';'
+  | RETURN expression ';'
+  
+translation_unit:
+    external_declaration    { [@@symbol_table, @@structtag_table, @@typedef_table, @@uniontag_table, @@enumtag_table] }
+  | translation_unit external_declaration  { [@@symbol_table, @@structtag_table, @@typedef_table, @@uniontag_table, @@enumtag_table] }
+  #| error ';'  {  puts "error #{val}" } # Added 2013-07-24
+  #| translation_unit error ';'  {  puts "error again #{val}" } # Added 2013-07-30 
+  #| error '{'
+  
+external_declaration:
+    function_definition
+  | declaration         
+
+function_definition:            #The actions specified here are for dropping declaration local to functions.
+    declaration_specifiers declarator declaration_list { push_all_table_contexts() } compound_statement { pop_all_table_contexts() }
+  | declaration_specifiers declarator { push_all_table_contexts() } compound_statement { pop_all_table_contexts() }
+  | declarator declaration_list { push_all_table_contexts() } compound_statement { pop_all_table_contexts() }
+  | declarator { push_all_table_contexts() } compound_statement { pop_all_table_contexts() }
+
+end
+
+########################################################################################
+########################################################################################
+##    
+##      C Signal to Ruby Signal Parser
+##
+########################################################################################
+######################################################################################## 
+#
+# This parser can process signal descriptions in the form of C header files, and extract
+# the pertinent information to generate a corresponding signal description in Ruby.
+#
+# The parser does not generate any file contents directly. Instead it will collect all
+# information into the 5 tables below. These tables are returned by the parser and it
+# is intended that further processing will take place to generate the actual signal 
+# description
+#
+# The tables contain info as follows:
+# Symbol table:       variables and functions.
+# Struct tag table:   tagged structs 
+# Union tag table:    tagged unions
+# Enum tag table:     tagged enums
+# Typedef table:      typedefs
+#
+# The 5 tables are structured identically: 
+# 'table_data' will hold the data as the parsing progresses. It is an array where new entries 
+# always are inserted at the end. This arrangement makes it possible to handle entering and
+# leaving local scopes correctly. Searching in the array is always done in reverse to find
+# the latest entries first.
+# Since searching an array may be time-consuming, the identifiers of all entries in 'table_data'
+# are also entered into the 'quick-look' hash.
+# 'stack' is an array onto which the number of current entries in the 'table_data' array will
+# be appended each time a block is opened and deleted when it is closed. These numbers will be
+# used to delete the correct entries from 'table_data' and 'quick_look'. 
+# 'name' holds a name identifying the table.
+
+
+---- header
+
+@@symbol_table    = { 'table_data' => [], 'quick_look' => {}, 'stack' => [], 'name' =>"SYMBOL table" }
+@@structtag_table = { 'table_data' => [], 'quick_look' => {}, 'stack' => [], 'name' =>"STRUCT TAG table" }
+@@uniontag_table  = { 'table_data' => [], 'quick_look' => {}, 'stack' => [], 'name' =>"UNION TAG table" }
+@@enumtag_table   = { 'table_data' => [], 'quick_look' => {}, 'stack' => [], 'name' =>"ENUM TAG table" }
+@@typedef_table   = { 'table_data' => [], 'quick_look' => {}, 'stack' => [], 'name' =>"TYPEDEF table" }
+
+@@latest_token = ''
+@@line_number = 1
+@@inputarr = []
+
+
+---- inner
+
+  #
+  # Parser
+  #
+  def parse(input, options)
+
+    @options = options
+    @yydebug = true
+
+    mode = "unreal"
+
+    if mode == "unreal"
+      @@inputarr = input.split(/\n/)
+      @input = input
+      do_parse
+    else
+      File.open("inputfile", "r") do |f|
+        @input = f.readlines.join
+        do_parse
+      end
+    end
+    check_undefined
+    return @@symbol_table, @@structtag_table, @@uniontag_table, @@enumtag_table, @@typedef_table
+
+  end
+
+
+  #
+  # Lexer
+  #
+  def next_token
+    a = []
+  
+    @lex_table = 
+      [
+       ['_*typedef_*\b',    :TYPEDEF],
+       ['_*extern_*\b',     :EXTERN],
+       ['_*static_*\b', 	:STATIC],
+       ['_*auto_*\b', 	:AUTO],
+       ['_*register_*\b', 	:REGISTER],
+       ['_*char_*\b', 	:CHAR],
+       ['_*short_*\b', 	:SHORT],
+       ['_*int_*\b', 	:INT],
+       #['uint32\_t\b', 	:UINT32_t], # 2013-07-20
+       ['_*long_*\b', 	:LONG],
+       ['_*signed_*\b', 	:SIGNED],
+       ['_*unsigned_*\b', 	:UNSIGNED],
+       ['_*float_*\b', 	:FLOAT],
+       ['_*double_*\b', 	:DOUBLE],
+       ['_*const_*\b', 	:CONST],
+       ['_*volatile_*\b', 	:VOLATILE],
+       ['_*void_*\b', 	:VOID], 
+       ['_*struct_*\b', 	:STRUCT],
+       ['_*union_*\b', 	:UNION],
+       ['_*enum_*\b', 	:ENUM],
+       ['\.\.\.', 	:ELLIPSIS],
+       ['_*case_*\b', 	:CASE],
+       ['_*default_*\b', 	:DEFAULT],
+       ['_*if_*\b', 	:IF],
+       ['_*else_*\b', 	:ELSE],
+       ['_*switch_*\b', 	:SWITCH],
+       ['_*while_*\b', 	:WHILE],
+       ['_*do_*\b', 	:DO],
+       ['_*for_*\b', 	:FOR],
+       ['_*goto_*\b', 	:GOTO],
+       ['_*continue_*\b', 	:CONTINUE],
+       ['_*break_*\b', 	:BREAK],
+       ['_*return_*\b', 	:RETURN],
+       ['_*sizeof_*\b', 	:SIZEOF],
+       #['__extension__\b', :EXTENSION],
+       ['0[xX][a-fA-F0-9]+',			   :CONSTANT], #hex constant
+       ['0[0-9]+',				   :CONSTANT], #octal constant 
+       ['(?=\d|\.\d)\d*(\.\d*)?([Ee]([+-]?\d+))?', :CONSTANT], #integer or floating point...
+       ['"[^"]*"', 	:STRING_LITERAL], 
+       ['->', 		:PTR_OP],
+       #['\*', 		:P_OP],
+       ['\+\+', 	:INC_OP],
+       ['--', 		:DEC_OP],
+       ['<<', 		:LEFT_OP],
+       ['>>', 		:RIGHT_OP],
+       ['<=', 		:LE_OP],
+       ['>=', 		:GE_OP],
+       ['==', 		:EQ_OP],
+       ['!=', 		:NE_OP],
+       ['&&', 		:AND_OP],
+       ['\|\|', 	:OR_OP],
+       ['\*=', 		:MUL_ASSIGN],
+       ['/=', 		:DIV_ASSIGN],
+       ['%=', 		:MOD_ASSIGN],
+       ['\+=', 		:ADD_ASSIGN],
+       ['-=', 		:SUB_ASSIGN],
+       ['<<=', 		:LEFT_ASSIGN],
+       ['>>=', 		:RIGHT_ASSIGN],
+       ['&=', 		:AND_ASSIGN],
+       ['\^=', 		:XOR_ASSIGN],
+       ['\|=', 		:OR_ASSIGN],
+       #['__builtin_va_list__\b', :EXTENSION],
+       #['__loff_t\b', :LOFF],
+       ['[_a-zA-Z]\w*', :IDENTIFIER],
+      ]
+
+    # Advance line number if a newline is seen
+    if @input.match(/\A\s*(\n)\s*/)
+      @@line_number += 1
+    end
+
+    # Discard white space and newlines
+    @input.sub!(/\A[\s\n]+/, '')
+
+    # Check for empty input and end of input
+    if @input.empty?
+      if @@latest_token == ''
+        raise ParseError, "ParseError: Empty input file, terminating"
+      else
+        puts "End of input" if @options.debug
+        return [false, false]
+      end
+    end
+    
+    @found = false
+    
+    # Scan lex table for match
+    @lex_table.each do |elem|
+      if @input.sub!(/\A(#{elem[0]})/, '')
+        a = [elem[1], $1]
+        @found = true
+        break
+      end
+    end
+      
+    # Assume token is first single char in input
+    if !@found 
+      if @input.sub!(/(\A.)/, '')
+        a = [$1, $1]
+      end
+    end
+
+    # If an identifier was found, but it is a typename defined in the 
+    # typedef_table, change the symbol from :IDENTIFIER to :TYPE_NAME.
+    # (STRUCT, UNION and ENUM can never be followed by a typename)
+
+    unless @@latest_token.eql?'STRUCT' or @@latest_token.eql?'UNION' or @@latest_token.eql?'ENUM' 
+      if a[0].is_a?(Symbol) and a[0].id2name.eql?'IDENTIFIER' and 
+         get_table(@@typedef_table, $1) and @@latest_token != 'TYPE_NAME'
+        a[0] = :TYPE_NAME
+      end
+    end
+
+    if a[0].is_a?(Symbol)
+      @@latest_token = a[0].id2name
+    else
+      @@latest_token = a[0]
+    end
+
+    return a
+
+  end
+
+  def on_error(t, val, vstack)
+    args = "parse error on value " +
+                            val.inspect + ' ' + token_to_str(t) + "\n"
+    error_report "Error near line #{@@line_number} in \'trimmedcppfile\': #{args}"
+    #puts "Error near line #{@@line_number} in \'trimmedcppfile\':"
+    #raise ParseError, sprintf("parse error on value %s (%s)",
+    #                           val.inspect, token_to_str(t) || '?')
+    #@vstack = vstack
+  end
+
+---- footer
+
+#
+# Returns number of bytes of the specified data type
+#
+def size_of(val)
+   case val 
+   when (val == 'long' )
+      return(4)
+   when (val == 'longlong' )
+      return(8)
+   when (val == 'char' )
+      return(1)
+   when (val == 'double' )
+      return(8)
+   when (val == 'float' )
+      return(4)
+   when (val == 'int' )
+      return(4)
+   when (val == 'short' )
+      return(2)
+   else
+      return(1)
+   end
+end
+
+#
+# Error report gets displayed on screen. If the parameter is omitted, will report
+# a Syntax Error and cite the offending line. Otherwise, the text given in the
+# parameter will be cited verbatim.
+#
+def error_report(text="")
+  if text.eql?""
+    puts "Syntax Error: \"#{@@inputarr[@@line_number-1]}\""
+    #if @@options.debug
+      write_error_report_to_file "Syntax Error: \"#{@@inputarr[@@line_number-1]}\""
+    #end
+  else
+    puts "#{text}"
+    #if @@options.debug
+      write_error_report_to_file "#{text}"
+    #end
+  end
+end
+
+#
+# Write all parsing errors to an error file 2013-07-26
+#
+def write_error_report_to_file(text)
+   File.open("errorfile", "a") do |er|
+      er.write "#{text}"
+   end
+end
+    
+#
+# Checks if an identifier is found in a table. Returns the value of the 
+# identifier if found, else nil. The table is searched in reverse order
+# to allow later entries to override previous entries.
+#
+def get_table(table, identifier)
+  if table['quick_look'].has_key?(identifier)
+    table['table_data'].reverse_each do |elem|
+      return elem[1] if elem[0].eql?identifier
+    end
+  end
+  return nil
+end
+
+#
+# Inserts a new entry in the given table. 
+# If the identifier already exists in the table, but its data is empty, 
+# assigns the new data to it. If it already has data, this is seen
+# as a redefinition and an error report is written, unless the previous
+# definition was a forward declaration.
+#
+def insert_table(table, identifier, data)
+  if existing_data = get_table(table, identifier)
+     if existing_data.empty? || !existing_data.has_key?('.members')
+      data.each { |key, value| existing_data[key] = value }
+      return data
+    else
+      error_report "Error in insert_table: Redefinition of #{identifier}"
+      raise ParseError
+    end
+  end
+
+  table['table_data'].push([identifier, data])
+  table['quick_look'][identifier] = 1
+  return data
+end
+
+#
+# Follows the nested chain of hashes given in hash1 until it finds the last 
+# (innermost) entry (which will not have a '.subtype' key). It creates such
+# a key for this entry, and inserts the contents of hash2 as its value, thereby
+# creating a new link in the chain, nested one level deeper.
+# Returns the modified hash1.
+#
+def link_type(hash1, hash2)
+  return hash1 if hash2.nil?
+  return hash2 if hash1.nil?
+
+  current = hash1
+
+  while current.has_key?('.subtype')
+    current = current['.subtype']
+  end
+  current['.subtype'] = hash2
+  return hash1
+end
+
+#
+# Returns a hash of enum constants, where the key is the identifier and its value
+# is the computed value, allowing for user defined enum assignments.
+# A new entry is also inserted into the symbol table for each enum constant.
+#
+def create_enum_hash(enumarray)
+  enum_value = -1
+  enumhash = {}
+
+  enumarray.each do |elem|
+    if enumhash.has_key?(elem[0])
+      error_report "Error in create_enum_list: Element redefinition: #{elem[0]}"
+      raise ParseError
+    end
+    enum_value = (elem[1] == nil) ? enum_value + 1 : elem[1].to_i
+    enumhash[elem[0]] = enum_value
+
+    insert_table(@@symbol_table, elem[0], {'.type' =>'enum_const', '.value'=>enum_value, 
+                 '.type_or_id_name' => "(Symbol): #{elem[0]}"})
+  end
+
+  return enumhash
+end
+
+#
+# Returns a new hash consisting of hash2 merged to hash1. If key-value pairs with identical
+# keys but different values exist in both hash1 and hash2, the former value will be
+# overwritten by the latter. For type qualifiers this mechanism has been modified
+# so the values are merged instead, allowing several type qualifiers to coexist.
+#
+def merge_hashes(hash1, hash2)
+  merged_hash = hash1.clone
+  return merged_hash if hash2.nil? || hash2.empty?
+
+  if merged_hash.has_key?('.type_qualifier') && hash2.has_key?('.type_qualifier')
+    hash2['.type_qualifier'] = "#{merged_hash['.type_qualifier']} #{hash2['.type_qualifier']}"
+  end
+  return merged_hash.merge!(hash2)
+end
+
+#
+# Function called when either a variable or a type is declared.
+# For each member in the declarator_list, containing [identifier, hash chain] 
+# pairs, the following is done:
+# The base type is inserted at the end of the declarator chain, and a new
+# entry is inserted into the appropriate table, either the symbol_table
+# or the typedef table.
+#
+def declare(base_type, declarator_list)
+  basetype = base_type.clone
+
+  if basetype.has_key?('.storage') and basetype['.storage'].eql?'typedef'
+    target_table = @@typedef_table
+    target_type = 'Type'
+    if basetype.has_key?('.forward_type')
+      basetype['.type'] = basetype['.forward_type']
+      basetype.delete('.forward_type')
+    end
+  else
+    target_table = @@symbol_table
+    target_type = 'Symbol'
+  end
+  basetype.delete('.storage')
+
+  declarator_list.each do |elem|
+    current = elem[1]
+    if !current.nil?
+      while current.has_key?('.subtype') 
+        current = current['.subtype']
+      end
+      current['.subtype'] = basetype
+      data = elem[1].clone
+    else
+      data = basetype.clone
+    end
+
+    identifier = elem[0].clone
+    if data.has_key?('.type_or_id_name')
+      data['.base_ref_name'] = data['.type_or_id_name']
+    end
+    data['.type_or_id_name'] = "(#{target_type}): #{identifier}"
+    insert_table(target_table, identifier, data)
+  end
+end
+
+#
+# Function called when a variable is declared inside a struct or union.
+# For each member in the declarator_list, containing [identifier, hash chain] 
+# pairs, the following is done:
+# The base type is inserted at the end of the declarator chain, and a new
+# entry is inserted into the array declare_array. This array is returned
+# when the function finishes.
+#
+def struct_union_declare(base_type, declarator_list)
+  basetype = base_type.clone
+  declare_array = []
+  
+  declarator_list.each do |elem| 
+    current = elem[1]
+
+    if !current.nil?
+      while current.has_key?('.subtype') 
+        current = current['.subtype']
+      end
+      current['.subtype'] = basetype
+      data = elem[1].clone
+    else
+      data = basetype
+    end
+    identifier = elem[0].clone
+    declare_array.push([identifier, data])
+  end
+
+  return declare_array
+end
+
+#
+# Returns a hash containing each member of a struct or union. Each
+# member is represented as a name-type pair. The type is a chained
+# hash describing a nested construct.
+#
+def struct_union_construct(base_type, member_list)
+  con_hash = {'.type' => base_type['.type'].clone}  # struct or union 
+  con_hash['.members'] = []
+
+  member_list.each do |member|
+    member_name = member[0]  # identifier
+    member_type = member[1]  # chained hash
+
+    con_hash['.members'].push([member_name, member_type])
+  end
+
+  return con_hash
+end
+
+#
+# Pushes the context of a table onto the array "stack" when entering
+# a function. What gets stored is not the actual contents of "table_data"
+# but rather the number of elements currently present in "table_data".
+# The contents of "table_data" is left unchanged.
+#
+def push_table_context(table)
+  table['stack'].push(table['table_data'].length)
+end
+
+#
+# Pushes the contexts of all tables onto their stacks
+#
+def push_all_table_contexts()
+  [@@symbol_table, @@structtag_table, @@uniontag_table, @@enumtag_table, @@typedef_table].each do |table|
+    push_table_context(table)
+  end
+end
+
+#
+# Pops the context back from "stack" when leaving a function. 
+# The number of entries formerly present in "table_data" is popped
+# off "stack", and this number of elements are then removed from
+# the beginning of "table_data", leaving the rest unchanged.
+# Since the removed elements are also present in the "quick_look"
+# hash, these have to be removed also.
+#
+def pop_table_context(table)
+  num_elem = table['stack'].pop
+  removed = table['table_data'].slice!(0..num_elem-1)
+
+  removed.each do |elem|
+    table['quick_look'].delete(elem[0])
+  end
+end
+
+#
+# Pops the contexts of all tables from their stacks
+#
+def pop_all_table_contexts()
+  [@@symbol_table, @@structtag_table, @@uniontag_table, @@enumtag_table, @@typedef_table].each do |table|
+    pop_table_context(table)
+  end
+end
+
+#
+# If a forward declared struct/union in a typedef has been previously declared, 
+# and the referenced struct/union is encountered, this routine will complete the 
+# incomplete entry in the typedef table.
+# 
+#
+def fixup(name)
+  @@typedef_table['table_data'].each do |e|
+    if e[1].has_key?('.forward_base_name') && e[1]['.forward_base_name'].eql?(name)
+      table = (e[1]['.type'].eql?'union') ? @@uniontag_table : @@structtag_table
+      table['table_data'].each do |g|
+        if g[0].eql?(name)
+          e[1]['.members'] = Marshal.load(Marshal.dump(g[1]['.members']))
+          e[1].delete('.forward_base_name')
+        end
+      end
+    end
+  end
+end
+
+#
+# Forward definitions in typedefs are allowed. Since we cannot distinguish between 
+# structs or unions defined in typedefs or defined elsewhere, we have to perform a 
+# final check that no incomplete definitions remain when parsing finishes. If this
+# is the case it means the struct or union in question has not been defined. 
+# We print an error message and terminate.
+#
+def check_undefined()
+  errors = false
+  @@typedef_table['table_data'].each do |e|
+    if e[1].has_key?('.forward_base_name')
+      etype = e[1].has_key?('.type') ? "#{e[1]['.type']} " : ""
+      error_report("Error (in check_undefined() in Crubyparse): #{etype}\'#{e[1]['.forward_base_name']}\' is undefined") 
+      errors = true
+    end
+  end
+  @@structtag_table['table_data'].each do |e|
+    if e[1].has_key?('.members')
+      e[1]['.members'].each do |g|
+        if g[1].has_key?('.forward_base_name')
+          error_report("Error (in check_undefined() in Crubyparse): #{g[1]['.forward_type']} " +
+            "\'#{g[1]['.forward_base_name']}\' is undefined")
+          errors = true
+        end
+      end
+    end
+  end
+
+  if errors
+    #puts "Terminating"  # Commented away 2013-07-26, write_to_file instead
+    #exit  # Commented away 2013-07-26, write_to_file instead
+  end
+end
+
+#
+# Prints the contents of the val array
+#
+def pv(val)
+  puts "\n*** VAL: *********************************************************"
+  val.each_index do |index|
+    puts " val[#{index}]="
+    pp val[index]
+  end
+  puts "******************************************************************"
+  puts
+end
+
+#
+# Prints the contents of the tables
+#
+def pt()
+  puts "\n*** TABLES: ******************************************************"
+  [@@symbol_table, @@structtag_table, @@uniontag_table, @@enumtag_table, @@typedef_table].each {|t| pp t; puts}
+  puts "******************************************************************"
+  puts
+end
+
+#
+# Prints the contents of the _values stack
+#
+def ps(_values)
+  puts "\n*** _VALUES: *****************************************************"
+  _values.each_index do |index|
+    puts " _values[#{index}]="
+    pp _values[index]
+  end
+  puts "******************************************************************"
+  puts
+end

@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: TestCaseBack</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./testpa/python/testcaseback_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="testpa/python/testcaseback.rb">testpa/python/testcaseback.rb</a></li>
+          
+            <li><a href="./testpa/linx4py/testcaseback_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="testpa/linx4py/testcaseback.rb">testpa/linx4py/testcaseback.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-generate_signals_sig">#generate_signals_sig</a></li>
+          
+          <li><a href="#method-i-generate_structure">#generate_structure</a></li>
+          
+          <li><a href="#method-i-generate_test_cases">#generate_test_cases</a></li>
+          
+          <li><a href="#method-i-generate_types_h">#generate_types_h</a></li>
+          
+          <li><a href="#method-i-locate_valid_test_cases">#locate_valid_test_cases</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./sigpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./sigpa/test/ref/ref_processed_cppstr_txt.html">ref_processed_cppstr.txt</a></li>
+        
+          <li class="file"><a href="./testpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/abstractTC_template_txt.html">abstractTC_template.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_abstracttestcase_txt.html">ref_abstracttestcase.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_comment_txt.html">ref_comment.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/transistion_template_txt.html">transistion_template.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./ArgumentCheck.html">ArgumentCheck</a></li>
+        
+          <li><a href="./Back.html">Back</a></li>
+        
+          <li><a href="./Consumer.html">Consumer</a></li>
+        
+          <li><a href="./Crubyparse.html">Crubyparse</a></li>
+        
+          <li><a href="./Front.html">Front</a></li>
+        
+          <li><a href="./GetRef.html">GetRef</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./ParseCommandLine.html">ParseCommandLine</a></li>
+        
+          <li><a href="./Printoptions.html">Printoptions</a></li>
+        
+          <li><a href="./ReadFile.html">ReadFile</a></li>
+        
+          <li><a href="./Regtally.html">Regtally</a></li>
+        
+          <li><a href="./SignalClass.html">SignalClass</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+          <li><a href="./SyntaxDescription.html">SyntaxDescription</a></li>
+        
+          <li><a href="./TC_Back.html">TC_Back</a></li>
+        
+          <li><a href="./TC_Emit.html">TC_Emit</a></li>
+        
+          <li><a href="./TC_Front.html">TC_Front</a></li>
+        
+          <li><a href="./TC_Linx4PyBack.html">TC_Linx4PyBack</a></li>
+        
+          <li><a href="./TC_Linx4PyEmit.html">TC_Linx4PyEmit</a></li>
+        
+          <li><a href="./TC_Linx4PySigpaUser.html">TC_Linx4PySigpaUser</a></li>
+        
+          <li><a href="./TC_Linx4PyUser.html">TC_Linx4PyUser</a></li>
+        
+          <li><a href="./TC_SigpaFront.html">TC_SigpaFront</a></li>
+        
+          <li><a href="./TC_SigpaUser.html">TC_SigpaUser</a></li>
+        
+          <li><a href="./TC_TCrubyparse.html">TC_TCrubyparse</a></li>
+        
+          <li><a href="./TC_TestCaseBack.html">TC_TestCaseBack</a></li>
+        
+          <li><a href="./TC_TestUser.html">TC_TestUser</a></li>
+        
+          <li><a href="./TC_Tree.html">TC_Tree</a></li>
+        
+          <li><a href="./TCrubyparse.html">TCrubyparse</a></li>
+        
+          <li><a href="./TestCaseBack.html">TestCaseBack</a></li>
+        
+          <li><a href="./Tree.html">Tree</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">TestCaseBack</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="generate_signals_sig-method" class="method-detail ">
+          <a name="method-i-generate_signals_sig"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_signals_sig</span><span
+              class="method-args">(input_list)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create signals.sig</p>
+            
+
+            
+            <div class="method-source-code" id="generate_signals_sig-source">
+<pre>
+<span class="ruby-comment"># File testpa/python/testcaseback.rb, line 280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_signals_sig</span>(<span class="ruby-identifier">input_list</span>)
+ 
+       <span class="ruby-comment"># Create director(ies) as needed</span>
+  <span class="ruby-identifier">outfile</span> = <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">outfile</span>
+        
+       <span class="ruby-identifier">parts</span> = <span class="ruby-identifier">outfile</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">directory</span>, <span class="ruby-identifier">test_cases_file</span> = <span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-identifier">parts</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">directory</span>, <span class="ruby-identifier">test_cases_file</span> = <span class="ruby-identifier">parts</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">parts</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">2</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;/&quot;</span>), <span class="ruby-identifier">parts</span>[<span class="ruby-value">-1</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">directory</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">directory</span>)
+  <span class="ruby-identifier">ofname</span> = <span class="ruby-node">&quot;#{directory}/signals.sig&quot;</span>
+  <span class="ruby-identifier">f</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">ofname</span>, <span class="ruby-string">&quot;w&quot;</span>)
+  <span class="ruby-identifier">i</span> = <span class="ruby-value">13121</span>;
+  
+  <span class="ruby-comment"># Write to the signals.sig file</span>
+  <span class="ruby-keyword">begin</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#ifndef _SIGNALS_SIG_\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define _SIGNALS_SIG_\n\n&quot;</span>
+
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#include &lt;linx.h&gt;\n&quot;</span>
+              <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.testing_module&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#include \&quot;signal_#{target.downcase}.h\&quot;\n&quot;</span>
+              <span class="ruby-keyword">end</span>
+              
+              <span class="ruby-comment"># Define the input signals</span>
+              <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.input&quot;</span>][<span class="ruby-string">&quot;.module&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+                      <span class="ruby-identifier">temp_signal</span> = <span class="ruby-node">&quot;/*!- SIGNO(struct #{target.downcase}_input_sig) -!*/&quot;</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\n#define #{target}_INPUT_SIG #{i} #{temp_signal}\n&quot;</span> 
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;struct #{target.downcase}_input_sig {\n&quot;</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;  LINX_SIGSELECT sig_no;\n&quot;</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  #{target}Input input;\n&quot;</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;};\n\n&quot;</span>
+                      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+              <span class="ruby-keyword">end</span>
+
+              <span class="ruby-comment"># Define the trace signals</span>
+              <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.testing_module&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+                      <span class="ruby-identifier">temp_signal</span> = <span class="ruby-node">&quot;/*!- SIGNO(struct #{target.downcase}_output_sig) -!*/&quot;</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define #{target}_OUTPUT_SIG #{i} #{temp_signal}\n&quot;</span> 
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;struct #{target.downcase}_output_sig {\n&quot;</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;  LINX_SIGSELECT sig_no;\n&quot;</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;  U32 num_states;\n&quot;</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  #{target}StateTrace states[MAX_STATES];\n&quot;</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;};\n\n&quot;</span>
+                      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+              <span class="ruby-keyword">end</span>
+
+              <span class="ruby-comment"># Define LINX_SIGNAL union</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;union LINX_SIGNAL {\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;  LINX_SIGSELECT sig_no;\n&quot;</span>
+              <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.input&quot;</span>][<span class="ruby-string">&quot;.module&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  struct #{target.downcase}_input_sig #{target.downcase}_input;\n&quot;</span>
+              <span class="ruby-keyword">end</span>
+              <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.testing_module&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  struct #{target.downcase}_output_sig #{target.downcase}_output;\n&quot;</span>
+              <span class="ruby-keyword">end</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;};\n\n&quot;</span>
+
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#endif /* _SIGNALS_SIG_ */\n&quot;</span>
+      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-comment"># Error handling of file corruption</span>
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">ofname</span>)
+    <span class="ruby-identifier">raise</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment"># For each testing modules, generate a header file for the structure</span>
+  <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.testing_module&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">generate_structure</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">input_list</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_signals_sig-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_signals_sig-method -->
+
+      
+        <div id="generate_structure-method" class="method-detail ">
+          <a name="method-i-generate_structure"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_structure</span><span
+              class="method-args">(target, input_list)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create structure file of a module</p>
+            
+
+            
+            <div class="method-source-code" id="generate_structure-source">
+<pre>
+<span class="ruby-comment"># File testpa/python/testcaseback.rb, line 202</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_structure</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">input_list</span>)
+ 
+       <span class="ruby-comment"># Create director(ies) as needed</span>
+  <span class="ruby-identifier">outfile</span> = <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">outfile</span>
+        
+       <span class="ruby-identifier">parts</span> = <span class="ruby-identifier">outfile</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">directory</span>, <span class="ruby-identifier">test_cases_file</span> = <span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-identifier">parts</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">directory</span>, <span class="ruby-identifier">test_cases_file</span> = <span class="ruby-identifier">parts</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">parts</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">2</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;/&quot;</span>), <span class="ruby-identifier">parts</span>[<span class="ruby-value">-1</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">directory</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">directory</span>)
+  <span class="ruby-identifier">ofname</span> = <span class="ruby-node">&quot;#{directory}/signal_#{target.downcase}.h&quot;</span>
+  <span class="ruby-identifier">f</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">ofname</span>, <span class="ruby-string">&quot;w&quot;</span>)
+  
+  <span class="ruby-comment"># Write to the structure file</span>
+  <span class="ruby-keyword">begin</span>
+  
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#ifndef _SIGNAL_#{target}_H_\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define _SIGNAL_#{target}_H_\n&quot;</span>
+
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#include \&quot;types.h\&quot;\n\n&quot;</span>
+
+              <span class="ruby-comment"># Define enumeration as the state of the module</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;typedef enum {\n&quot;</span>
+              <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+              <span class="ruby-identifier">@@state</span>[<span class="ruby-identifier">target</span>].<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">state</span><span class="ruby-operator">|</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;  #{state} = #{@@state[target][state]}&quot;</span> 
+                      <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">@@state</span>[<span class="ruby-identifier">target</span>].<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;,\n&quot;</span>
+                      <span class="ruby-keyword">end</span>
+                      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+              <span class="ruby-keyword">end</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\n} #{target}State;\n\n&quot;</span>
+              
+              <span class="ruby-comment"># Check if the module is an input, if yes, declare the input structure</span>
+              <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+              <span class="ruby-identifier">target_id</span> = <span class="ruby-value">-1</span>
+              <span class="ruby-keyword">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.input&quot;</span>][<span class="ruby-string">&quot;.module&quot;</span>].<span class="ruby-identifier">length</span>
+                      <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.input&quot;</span>][<span class="ruby-string">&quot;.module&quot;</span>][<span class="ruby-identifier">i</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">target</span>
+                              <span class="ruby-identifier">target_id</span> = <span class="ruby-identifier">i</span>
+                      <span class="ruby-keyword">end</span>
+                      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+              <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">if</span> (<span class="ruby-identifier">target_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">-1</span>)
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;typedef struct {\n&quot;</span>
+                      <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.input&quot;</span>][<span class="ruby-string">&quot;.signal&quot;</span>][<span class="ruby-identifier">target_id</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">input</span><span class="ruby-operator">|</span>
+                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  U32 #{input};\n&quot;</span> 
+                      <span class="ruby-keyword">end</span>
+                      
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;} #{target}Input;\n\n&quot;</span>
+                      
+              <span class="ruby-keyword">end</span> 
+                              
+              <span class="ruby-comment"># Declare the output trace structure</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;typedef struct {\n&quot;</span>
+              <span class="ruby-identifier">input_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">parameter</span><span class="ruby-operator">|</span>
+                      <span class="ruby-keyword">if</span> <span class="ruby-identifier">parameter</span>[<span class="ruby-string">&quot;.module&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">target</span>
+                              <span class="ruby-identifier">name</span> = <span class="ruby-identifier">parameter</span>[<span class="ruby-string">&quot;.parameter&quot;</span>]
+                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  U32 #{name};\n&quot;</span>
+                      <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">end</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;  U32 state;\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;} #{target}StateTrace;\n\n&quot;</span>
+
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#endif\n&quot;</span>
+      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-comment"># Error handling of file corruption</span>
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">ofname</span>)
+    <span class="ruby-identifier">raise</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_structure-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_structure-method -->
+
+      
+        <div id="generate_test_cases-method" class="method-detail ">
+          <a name="method-i-generate_test_cases"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_test_cases</span><span
+              class="method-args">(tables, comment_list)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create executable Python test cases</p>
+            
+
+            
+            <div class="method-source-code" id="generate_test_cases-source">
+<pre>
+<span class="ruby-comment"># File testpa/python/testcaseback.rb, line 357</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_test_cases</span>(<span class="ruby-identifier">tables</span>, <span class="ruby-identifier">comment_list</span>)
+
+  <span class="ruby-comment"># Extract the interesting test cases </span>
+  <span class="ruby-identifier">state_list</span>, <span class="ruby-identifier">input_list</span>, <span class="ruby-identifier">transitions_list</span>, <span class="ruby-identifier">name_list</span> = <span class="ruby-identifier">tables</span>
+  <span class="ruby-identifier">valid_state_list</span>, <span class="ruby-identifier">valid_input_list</span>, <span class="ruby-identifier">valid_transitions_list</span>, <span class="ruby-identifier">valid_name_list</span> =          <span class="ruby-identifier">locate_valid_test_cases</span>(<span class="ruby-identifier">state_list</span>, <span class="ruby-identifier">input_list</span>, <span class="ruby-identifier">transitions_list</span>, <span class="ruby-identifier">name_list</span>) 
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">valid_state_list</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;No complete test case is found&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Create director(ies) as needed</span>
+  <span class="ruby-identifier">outfile</span> = <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">outfile</span>
+
+  <span class="ruby-identifier">parts</span> = <span class="ruby-identifier">outfile</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">directory</span>, <span class="ruby-identifier">test_cases_file</span> = <span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-identifier">parts</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">directory</span>, <span class="ruby-identifier">test_cases_file</span> = <span class="ruby-identifier">parts</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">parts</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">2</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;/&quot;</span>), <span class="ruby-identifier">parts</span>[<span class="ruby-value">-1</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">directory</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">directory</span>)
+  <span class="ruby-identifier">ofname</span> = <span class="ruby-node">&quot;#{directory}/#{test_cases_file}&quot;</span>
+  <span class="ruby-identifier">f</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">ofname</span>, <span class="ruby-string">&quot;w&quot;</span>)
+  
+  <span class="ruby-comment"># Create the test cases</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-comment"># Create header of the test cases</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;# #{test_cases_file} - Test cases\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;# ----------------------------------------------------------------\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;# WARNING: Do not modify this file. It is automatically generated\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#          from abstract test cases. Any modification will be lost\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#          the next time the file is generated.\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\&quot;\&quot;\&quot;\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Test cases generated from:\n&quot;</span>
+    <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">files</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;    #{name}\n&quot;</span>}
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Generated by:\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;    #{$0}\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\&quot;\&quot;\&quot;\n\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;import sys\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;import ogre\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;import signals\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;import unittest\n&quot;</span>
+         <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;import xmlrunner\n\n&quot;</span>
+         
+    <span class="ruby-comment"># Create Linx declaration block      </span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;if (len(sys.argv) &gt; 1):\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\tLINK = sys.argv[1] + \&quot;/\&quot;\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;else:\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\tLINK = \&quot;\&quot;\n\n&quot;</span>
+    
+    <span class="ruby-identifier">valid_state_list</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.testing_module&quot;</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">a</span>[<span class="ruby-string">&quot;.module&quot;</span>])
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{a[&quot;.module&quot;]} = LINK + \&quot;#{a[&quot;.module&quot;]}Linx\&quot;\n&quot;</span>
+                      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;TESTSERVER = \&quot;TESTSERVER\&quot;\n\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;class Test(unittest.TestCase):\n\n&quot;</span>
+
+              <span class="ruby-comment"># Create setUp block of the tests</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\tdef setUp(self):\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\t\tself.linx = ogre.create(\&quot;linx\&quot;, TESTSERVER)\n\n&quot;</span>
+              
+              <span class="ruby-identifier">valid_state_list</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+                      <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.testing_module&quot;</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">a</span>[<span class="ruby-string">&quot;.module&quot;</span>])
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\t# Hunt for #{a[&quot;.module&quot;]} model\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\tself.linx.hunt(#{a[&quot;.module&quot;]})\n&quot;</span>
+                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\tself.pid_#{a[&quot;.module&quot;]} = self.linx.receive().sender()\n\n&quot;</span>
+                      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+              <span class="ruby-comment"># Create tearDown block of the tests</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\tdef tearDown(self):\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\t\tpass\n\n&quot;</span>
+
+              <span class="ruby-comment"># Create a test for each test case </span>
+              <span class="ruby-identifier">testcase_number</span> = <span class="ruby-value">0</span>
+              <span class="ruby-keyword">while</span> (<span class="ruby-identifier">testcase_number</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">valid_state_list</span>.<span class="ruby-identifier">length</span>)
+                      <span class="ruby-keyword">if</span> <span class="ruby-identifier">comment_list</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                              <span class="ruby-identifier">temp</span> = <span class="ruby-identifier">comment_list</span>[<span class="ruby-identifier">testcase_number</span>]
+                              <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+                                      <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">temp</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-node">&quot;\n#&quot;</span>, <span class="ruby-node">&quot;\n\t#&quot;</span>)  <span class="ruby-comment"># Suppress spaces</span>
+                                      <span class="ruby-keyword">break</span>
+                              <span class="ruby-keyword">end</span>
+                      <span class="ruby-keyword">end</span>
+                      
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t#{temp}&quot;</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\tdef test#{testcase_number}_#{valid_name_list[testcase_number]}(self):\n&quot;</span>
+                       
+                      <span class="ruby-comment"># For each modules specified in input of @@configuration </span>
+                      <span class="ruby-comment"># Look for the input values for the input and send the input signals</span>
+                      <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+                      <span class="ruby-keyword">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">valid_transitions_list</span>[<span class="ruby-identifier">testcase_number</span>].<span class="ruby-identifier">length</span>
+                              <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.input&quot;</span>][<span class="ruby-string">&quot;.module&quot;</span>].<span class="ruby-identifier">include?</span>(                                          <span class="ruby-identifier">valid_transitions_list</span>[<span class="ruby-identifier">testcase_number</span>][<span class="ruby-identifier">i</span>][<span class="ruby-value">0</span>][<span class="ruby-string">&quot;.module&quot;</span>]) <span class="ruby-keyword">and</span>                                          <span class="ruby-identifier">valid_transitions_list</span>[<span class="ruby-identifier">testcase_number</span>][<span class="ruby-identifier">i</span>][<span class="ruby-value">0</span>][<span class="ruby-string">&quot;.state&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Entry&quot;</span>
+
+                                      <span class="ruby-identifier">index</span> = <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.input&quot;</span>][<span class="ruby-string">&quot;.module&quot;</span>].<span class="ruby-identifier">index</span>(                                          <span class="ruby-identifier">valid_transitions_list</span>[<span class="ruby-identifier">testcase_number</span>][<span class="ruby-identifier">i</span>][<span class="ruby-value">0</span>][<span class="ruby-string">&quot;.module&quot;</span>])
+
+                                      <span class="ruby-identifier">target</span> = <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.input&quot;</span>][<span class="ruby-string">&quot;.module&quot;</span>][<span class="ruby-identifier">index</span>]
+                                      <span class="ruby-identifier">signal_list</span> = <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.input&quot;</span>][<span class="ruby-string">&quot;.signal&quot;</span>][<span class="ruby-identifier">index</span>]
+                                      
+                                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\t# Sending input signal to #{target}\n&quot;</span>
+                                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\tsig_send_#{target} = signals.#{target}_INPUT_SIG()\n&quot;</span>
+                                      
+                                      <span class="ruby-identifier">signal_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">signal</span><span class="ruby-operator">|</span>
+                                              <span class="ruby-identifier">valid_input_list</span>[<span class="ruby-identifier">testcase_number</span>][<span class="ruby-identifier">i</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+                                                      <span class="ruby-identifier">tmp_concate</span> = <span class="ruby-identifier">value</span>[<span class="ruby-string">&quot;.module&quot;</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;_&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">value</span>[<span class="ruby-string">&quot;.parameter&quot;</span>]
+                                                      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">tmp_concate</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">signal</span>)
+                                                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\tsig_send_#{target}.input.#{signal} = #{value[&quot;.value&quot;]}\n&quot;</span>
+                                                      <span class="ruby-keyword">end</span>
+                                              <span class="ruby-keyword">end</span>
+                                      <span class="ruby-keyword">end</span> 
+                                      
+                                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\tself.linx.send(sig_send_#{target}, self.pid_#{target})\n\n&quot;</span>
+                              
+                              <span class="ruby-keyword">end</span>
+                              <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                      <span class="ruby-keyword">end</span>  
+                      
+                      <span class="ruby-comment"># Receive all the signals from the targets listed in @@configuration</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\t# Receive signals from test targets\n&quot;</span>
+                      <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.testing_module&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+                              <span class="ruby-identifier">temp_signo</span> = <span class="ruby-node">&quot;[signals.#{target}_OUTPUT_SIG.SIGNO]&quot;</span>
+                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\tsig_recv_#{target} = self.linx.receive(#{temp_signo})\n&quot;</span>
+                      <span class="ruby-keyword">end</span>
+
+                      <span class="ruby-comment"># Follow the order in @@configuration and compare the results with traces</span>
+                      <span class="ruby-identifier">index_counter</span> = <span class="ruby-value">0</span>
+                      <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.testing_module&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+                              <span class="ruby-identifier">state_change</span> = []
+                              <span class="ruby-identifier">param_list</span> = []
+                              <span class="ruby-identifier">logical_expression</span> = []
+                              <span class="ruby-identifier">have_logical</span> = <span class="ruby-keyword">false</span>
+
+                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\n\t\t# Testing of #{target}\n&quot;</span>
+                              
+                              <span class="ruby-comment"># Get the list of parameter names that need comparison</span>
+                              <span class="ruby-identifier">valid_input_list</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">input</span><span class="ruby-operator">|</span>
+                                      <span class="ruby-keyword">if</span> <span class="ruby-identifier">input</span>[<span class="ruby-string">&quot;.module&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">target</span>
+                                              <span class="ruby-identifier">param_list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">input</span>[<span class="ruby-string">&quot;.parameter&quot;</span>]
+                                      <span class="ruby-keyword">end</span>
+                              <span class="ruby-keyword">end</span>                         
+                              
+                              <span class="ruby-comment"># Get the expected value from valid_input_list and expected state from </span>
+                              <span class="ruby-comment"># valid_transitions_list</span>
+                              <span class="ruby-identifier">param_value</span> = []
+                              <span class="ruby-keyword">while</span> (<span class="ruby-identifier">index_counter</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">valid_transitions_list</span>[<span class="ruby-identifier">testcase_number</span>].<span class="ruby-identifier">length</span>                                                          <span class="ruby-keyword">and</span> <span class="ruby-identifier">valid_transitions_list</span>[<span class="ruby-identifier">testcase_number</span>][<span class="ruby-identifier">index_counter</span>][<span class="ruby-value">0</span>][<span class="ruby-string">&quot;.module&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">target</span>)
+                                      
+                                      <span class="ruby-comment"># Get the state</span>
+                                      <span class="ruby-identifier">state_change</span>.<span class="ruby-identifier">push</span>(                                                          <span class="ruby-identifier">@@state</span>[<span class="ruby-identifier">target</span>][<span class="ruby-node">&quot;#{valid_transitions_list[testcase_number][index_counter][1][&quot;.state&quot;]}&quot;</span>]
+                                              )
+                                      
+                                      <span class="ruby-comment"># Get the logical expression to be checked </span>
+                                      <span class="ruby-keyword">if</span> <span class="ruby-identifier">valid_transitions_list</span>[<span class="ruby-identifier">testcase_number</span>][<span class="ruby-identifier">index_counter</span>][<span class="ruby-value">2</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+                                              <span class="ruby-identifier">have_logical</span> = <span class="ruby-keyword">true</span>
+                                      <span class="ruby-keyword">end</span>
+                                      <span class="ruby-identifier">logical_expression</span>.<span class="ruby-identifier">push</span>( 
+                                                      <span class="ruby-identifier">valid_transitions_list</span>[<span class="ruby-identifier">testcase_number</span>][<span class="ruby-identifier">index_counter</span>][<span class="ruby-value">2</span>])
+      
+      
+                                      <span class="ruby-comment"># Get the input value and store in param_value</span>
+                                      <span class="ruby-identifier">param_count</span> = <span class="ruby-value">0</span>
+                                      <span class="ruby-keyword">while</span> <span class="ruby-identifier">param_count</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">param_list</span>.<span class="ruby-identifier">length</span> <span class="ruby-keyword">do</span>
+      
+                                              <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+                                              <span class="ruby-keyword">while</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">valid_input_list</span>[<span class="ruby-identifier">testcase_number</span>][<span class="ruby-identifier">index_counter</span>].<span class="ruby-identifier">length</span>
+                                                      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">valid_input_list</span>[<span class="ruby-identifier">testcase_number</span>][<span class="ruby-identifier">index_counter</span>][<span class="ruby-identifier">j</span>][<span class="ruby-string">&quot;.parameter&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">param_list</span>[<span class="ruby-identifier">param_count</span>])                                                                  <span class="ruby-keyword">and</span> <span class="ruby-identifier">valid_input_list</span>[<span class="ruby-identifier">testcase_number</span>][<span class="ruby-identifier">index_counter</span>][<span class="ruby-identifier">j</span>][<span class="ruby-string">&quot;.module&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">target</span>
+                                                              <span class="ruby-identifier">param_value</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">valid_input_list</span>[<span class="ruby-identifier">testcase_number</span>][<span class="ruby-identifier">index_counter</span>][<span class="ruby-identifier">j</span>][<span class="ruby-string">&quot;.value&quot;</span>])
+                                                      <span class="ruby-keyword">end</span> 
+                                                      <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                                              <span class="ruby-keyword">end</span> 
+
+                                              <span class="ruby-identifier">param_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                                      <span class="ruby-keyword">end</span>
+                                      <span class="ruby-identifier">index_counter</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                              <span class="ruby-keyword">end</span> 
+                              
+                              <span class="ruby-comment"># For each paramter, extract the value from param_value </span>
+                              <span class="ruby-identifier">param_count</span> = <span class="ruby-value">0</span>
+                              <span class="ruby-keyword">while</span> <span class="ruby-identifier">param_count</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">param_list</span>.<span class="ruby-identifier">length</span>
+                                      <span class="ruby-identifier">value_list</span> = []
+                                      <span class="ruby-identifier">value_count</span> = <span class="ruby-identifier">param_list</span>.<span class="ruby-identifier">length</span> <span class="ruby-comment"># Skip the first element</span>
+                                      <span class="ruby-keyword">while</span> <span class="ruby-identifier">value_count</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">param_value</span>.<span class="ruby-identifier">length</span> <span class="ruby-keyword">do</span>
+                                              <span class="ruby-keyword">if</span> <span class="ruby-identifier">value_count</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">param_list</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">param_count</span>
+                                                      <span class="ruby-identifier">value_list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">param_value</span>[<span class="ruby-identifier">value_count</span>])
+                                              <span class="ruby-keyword">end</span>
+                                              <span class="ruby-identifier">value_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                                      <span class="ruby-keyword">end</span>
+                                      
+                                      <span class="ruby-comment"># Create expected results in test cases</span>
+                                      <span class="ruby-keyword">if</span> <span class="ruby-identifier">value_list</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+                                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;\t\t#{target}_#{param_list[param_count]} = [#{value_list[1]}&quot;</span>
+                                              <span class="ruby-identifier">i</span> = <span class="ruby-value">2</span>
+                                              <span class="ruby-keyword">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">value_list</span>.<span class="ruby-identifier">length</span>
+                                                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;, #{value_list[i]}&quot;</span>
+                                                      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                                              <span class="ruby-keyword">end</span>
+                                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;]\n&quot;</span>     
+                                      <span class="ruby-keyword">end</span>        
+                                      <span class="ruby-identifier">param_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                              <span class="ruby-keyword">end</span>
+              
+                              <span class="ruby-comment"># Create expected states in test cases</span>
+                              <span class="ruby-keyword">if</span> <span class="ruby-identifier">state_change</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+                                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;\t\t#{target}_state = [#{state_change[1]}&quot;</span>
+                                      <span class="ruby-identifier">i</span> = <span class="ruby-value">2</span>
+                                      <span class="ruby-keyword">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">state_change</span>.<span class="ruby-identifier">length</span>
+                                              <span class="ruby-keyword">if</span> <span class="ruby-identifier">state_change</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">!=</span> <span class="ruby-identifier">@@state</span>[<span class="ruby-identifier">target</span>][<span class="ruby-string">&quot;idle&quot;</span>]
+                                                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;, #{state_change[i]}&quot;</span>
+                                              <span class="ruby-keyword">end</span>
+                                              <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                                      <span class="ruby-keyword">end</span>
+                                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;]\n&quot;</span>      
+                              <span class="ruby-keyword">end</span> 
+                              
+                              <span class="ruby-comment"># Compare the received data with expected values</span>
+                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\tfor i in range(sig_recv_#{target}.num_states):\n&quot;</span>
+                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\t\t\tprint \&quot;Transition %d:\&quot; %(i+1)&quot;</span>
+                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\t\tself.assertEqual(sig_recv_#{target}.states[i].state, #{target}_state[i])\n&quot;</span>
+                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\t\tprint \&quot;\tstate = %d\&quot; %sig_recv_#{target}.states[i].state&quot;</span>
+                              <span class="ruby-identifier">param_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">variable</span><span class="ruby-operator">|</span>
+                                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\t\tself.assertEqual(sig_recv_#{target}.states[i].#{variable}, #{target}_#{variable}[i])\n&quot;</span>
+                                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\t\tprint \&quot;\t#{variable} = %d\&quot; %sig_recv_#{target}.states[i].#{variable}&quot;</span>
+                              <span class="ruby-keyword">end</span>
+
+                              <span class="ruby-comment"># Generate logical comparison</span>
+                              <span class="ruby-keyword">if</span> <span class="ruby-identifier">have_logical</span>
+                                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\n\t\t# Check if the logical requirements are fulfilled&quot;</span>
+                                      <span class="ruby-identifier">i</span> = <span class="ruby-value">1</span>
+                                      <span class="ruby-keyword">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">logical_expression</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+                                              <span class="ruby-keyword">if</span> <span class="ruby-identifier">logical_expression</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+                                                      <span class="ruby-identifier">logical_expression</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span>
+                                                              <span class="ruby-identifier">operator</span> = <span class="ruby-identifier">element</span>[<span class="ruby-string">&quot;.operator&quot;</span>]
+
+                                                              <span class="ruby-keyword">if</span> <span class="ruby-identifier">operator</span>.<span class="ruby-identifier">eql?</span> <span class="ruby-string">&quot;:=&quot;</span>
+                                                                      <span class="ruby-identifier">operator</span> = <span class="ruby-string">&quot;==&quot;</span>
+                                                              <span class="ruby-keyword">end</span>
+                                                              
+                                                              <span class="ruby-identifier">temp_param</span> = <span class="ruby-node">&quot;#{element[&quot;.parameter&quot;]}&quot;</span>
+                                                              <span class="ruby-identifier">temp_rest</span> = <span class="ruby-node">&quot;#{operator} #{element[&quot;.value&quot;]}&quot;</span>
+                                                              <span class="ruby-identifier">temp_signal</span> = <span class="ruby-node">&quot;sig_recv_#{target}.states[#{i}].#{element[&quot;.parameter&quot;]}&quot;</span>
+                                                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\tprint \&quot;check if #{temp_param} #{temp_rest} at tranistion #{i}\&quot;\n&quot;</span>
+                                                              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\tself.assertTrue(#{temp_signal} #{temp_rest})\n&quot;</span>
+                                                              
+                                                      <span class="ruby-keyword">end</span>
+                                              <span class="ruby-keyword">end</span>
+                                              <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                                      <span class="ruby-keyword">end</span> 
+                              <span class="ruby-keyword">end</span>                         
+                                      
+                      <span class="ruby-keyword">end</span>
+                      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\t\tprint \n\n&quot;</span>
+                      <span class="ruby-identifier">testcase_number</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+              <span class="ruby-keyword">end</span> 
+              
+              <span class="ruby-comment"># Create the XML generation block</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;if __name__ == '__main__':&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\tdel sys.argv[1:]&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\tunittest.main(testRunner=xmlrunner.XMLTestRunner(output=\&quot;unittests\&quot;))\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\n# End of file\n&quot;</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+    
+  <span class="ruby-comment"># Error handling of file corruption</span>
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">ofname</span>)
+    <span class="ruby-identifier">raise</span>
+  <span class="ruby-keyword">end</span>
+        
+        
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_test_cases-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_test_cases-method -->
+
+      
+        <div id="generate_types_h-method" class="method-detail ">
+          <a name="method-i-generate_types_h"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_types_h</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create types.h</p>
+            
+
+            
+            <div class="method-source-code" id="generate_types_h-source">
+<pre>
+<span class="ruby-comment"># File testpa/python/testcaseback.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_types_h</span>()
+ 
+       <span class="ruby-comment"># Create director(ies) as needed</span>
+  <span class="ruby-identifier">outfile</span> = <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">outfile</span>
+        
+       <span class="ruby-identifier">parts</span> = <span class="ruby-identifier">outfile</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">directory</span>, <span class="ruby-identifier">test_cases_file</span> = <span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-identifier">parts</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">directory</span>, <span class="ruby-identifier">test_cases_file</span> = <span class="ruby-identifier">parts</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">parts</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">2</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;/&quot;</span>), <span class="ruby-identifier">parts</span>[<span class="ruby-value">-1</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">directory</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">directory</span>)
+  <span class="ruby-identifier">ofname</span> = <span class="ruby-node">&quot;#{directory}/types.h&quot;</span>
+  <span class="ruby-identifier">f</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">ofname</span>, <span class="ruby-string">&quot;w&quot;</span>)
+  
+  <span class="ruby-comment"># Write to the file</span>
+  <span class="ruby-keyword">begin</span>
+  
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;/*\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot; * File: types.h\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot; *\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot; */\n\n&quot;</span>
+
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#ifndef __TYPES_H__\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define __TYPES_H__\n\n&quot;</span>
+
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define MAX_STATES  10\n\n&quot;</span>
+
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#ifndef TRUE\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;# define TRUE     (1U)\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#endif\n\n&quot;</span>
+
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#ifndef FALSE\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;# define FALSE    (0U)\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#endif\n\n&quot;</span>
+
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;/* Data types */\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;typedef signed char    S8;\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;typedef unsigned char  U8;\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;typedef short          S16;\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;typedef unsigned short U16;\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;typedef int            S32;\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;typedef unsigned int   U32;\n\n&quot;</span>
+
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;/* Min and max values for data types */\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define MAX_S8       ((S8)(127))\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define MIN_S8       ((S8)(-128))\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define MAX_U8       ((U8)(255U))\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define MIN_U8       ((U8)(0U))\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define MAX_S16      ((S16)(32767))\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define MIN_S16      ((S16)(-32768))\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define MAX_U16      ((U16)(65535U))\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define MIN_U16      ((U16)(0U))\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define MAX_S32      ((S32)(2147483647))\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define MIN_S32      ((S32)(-2147483647-1))\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define MAX_U32      ((U32)(0xFFFFFFFFU))\n&quot;</span>
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#define MIN_U32      ((U32)(0U))\n\n&quot;</span>
+
+              <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#endif  /* __TYPES_H__ */\n&quot;</span>
+
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+    
+  <span class="ruby-comment"># Error handling of file corruption</span>
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">ofname</span>)
+    <span class="ruby-identifier">raise</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_types_h-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_types_h-method -->
+
+      
+        <div id="locate_valid_test_cases-method" class="method-detail ">
+          <a name="method-i-locate_valid_test_cases"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">locate_valid_test_cases</span><span
+              class="method-args">(state_list, input_list, transitions_list, name_list)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Extract the interesting test cases and remove unnecessary states</p>
+            
+
+            
+            <div class="method-source-code" id="locate_valid_test_cases-source">
+<pre>
+<span class="ruby-comment"># File testpa/python/testcaseback.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">locate_valid_test_cases</span>(<span class="ruby-identifier">state_list</span>, <span class="ruby-identifier">input_list</span>, <span class="ruby-identifier">transitions_list</span>, <span class="ruby-identifier">name_list</span>)
+       
+       <span class="ruby-comment"># Declare three returning arrays</span>
+  <span class="ruby-identifier">return_transitions_list</span> = []
+  <span class="ruby-identifier">return_state_list</span> = []
+  <span class="ruby-identifier">return_input_list</span> = []
+  <span class="ruby-identifier">return_name_list</span> = []
+  
+  <span class="ruby-identifier">start_index</span> = <span class="ruby-value">-1</span>
+  <span class="ruby-identifier">flag</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">exit_count</span> = <span class="ruby-value">0</span>;
+  
+  <span class="ruby-comment"># Iterate on the transition list and find the beginnings and endings of tests</span>
+  <span class="ruby-comment"># Push the state between the beginning and ending trunk to the arrays</span>
+  <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">module_name</span> = <span class="ruby-string">&quot;&quot;</span>
+   
+  <span class="ruby-keyword">while</span> (<span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">transitions_list</span>.<span class="ruby-identifier">length</span>)
+      <span class="ruby-identifier">a</span> = <span class="ruby-identifier">transitions_list</span>[<span class="ruby-identifier">i</span>]
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">a</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>))
+         <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.input&quot;</span>][<span class="ruby-string">&quot;.module&quot;</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>][<span class="ruby-string">&quot;.module&quot;</span>])                                <span class="ruby-keyword">and</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>][<span class="ruby-string">&quot;.state&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;idle&quot;</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">flag</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+                            <span class="ruby-identifier">module_name</span> = <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>][<span class="ruby-string">&quot;.module&quot;</span>]
+                    <span class="ruby-keyword">end</span>
+                    <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.testing_module&quot;</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>][<span class="ruby-string">&quot;.module&quot;</span>])                                <span class="ruby-keyword">and</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>][<span class="ruby-string">&quot;.state&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;idle&quot;</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">flag</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+                            <span class="ruby-identifier">flag</span> = <span class="ruby-value">1</span>
+                            <span class="ruby-identifier">start_index</span> = <span class="ruby-identifier">i</span>
+                    <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.output&quot;</span>][<span class="ruby-string">&quot;.module&quot;</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">module_name</span>)                  <span class="ruby-keyword">and</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;.empty&quot;</span>)
+              
+              <span class="ruby-identifier">exit_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+              <span class="ruby-identifier">module_name</span> = <span class="ruby-string">&quot;&quot;</span>
+              
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">exit_count</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.output&quot;</span>][<span class="ruby-string">&quot;.module&quot;</span>].<span class="ruby-identifier">length</span>
+                      <span class="ruby-identifier">return_transitions_list</span>.<span class="ruby-identifier">push</span>( <span class="ruby-identifier">transitions_list</span>[<span class="ruby-identifier">start_index</span><span class="ruby-operator">..</span><span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>])
+                      <span class="ruby-identifier">return_state_list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">state_list</span>[<span class="ruby-identifier">start_index</span><span class="ruby-operator">..</span><span class="ruby-identifier">i</span>])
+                      <span class="ruby-identifier">return_input_list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">input_list</span>[<span class="ruby-identifier">start_index</span><span class="ruby-operator">..</span><span class="ruby-identifier">i</span>])
+                      <span class="ruby-identifier">return_name_list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">name_list</span>[<span class="ruby-identifier">start_index</span>])
+                      
+                      <span class="ruby-identifier">flag</span> = <span class="ruby-value">0</span>
+                      <span class="ruby-identifier">exit_count</span> = <span class="ruby-value">0</span>
+              <span class="ruby-keyword">end</span>
+                        
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>   
+
+  <span class="ruby-comment"># Clean the list of states</span>
+       <span class="ruby-identifier">test_index</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span> (<span class="ruby-identifier">test_index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">return_transitions_list</span>.<span class="ruby-identifier">length</span>)
+      <span class="ruby-identifier">current_test</span> = <span class="ruby-identifier">return_transitions_list</span>[<span class="ruby-identifier">test_index</span>]
+      <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+      <span class="ruby-identifier">del_list</span> = []
+      
+      <span class="ruby-comment"># Locate any state that is not done by any of the test targets</span>
+      <span class="ruby-keyword">while</span> (<span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">current_test</span>.<span class="ruby-identifier">length</span>)
+              <span class="ruby-keyword">if</span>  <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.testing_module&quot;</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">current_test</span>[<span class="ruby-identifier">i</span>][<span class="ruby-value">0</span>][<span class="ruby-string">&quot;.module&quot;</span>])                          <span class="ruby-keyword">or</span> <span class="ruby-identifier">@@configuration</span>[<span class="ruby-string">&quot;.testing_module&quot;</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">current_test</span>[<span class="ruby-identifier">i</span>][<span class="ruby-value">1</span>][<span class="ruby-string">&quot;.module&quot;</span>])
+                      
+                      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+              <span class="ruby-keyword">else</span>
+                      <span class="ruby-identifier">del_list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">i</span>)
+                      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+              <span class="ruby-keyword">end</span>       
+
+      <span class="ruby-keyword">end</span>
+
+              <span class="ruby-comment"># Remove the states located in above loop</span>
+      <span class="ruby-identifier">del_list</span>.<span class="ruby-identifier">reverse_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+              <span class="ruby-identifier">return_transitions_list</span>[<span class="ruby-identifier">test_index</span>].<span class="ruby-identifier">delete_at</span>(<span class="ruby-identifier">index</span>)
+              <span class="ruby-identifier">return_state_list</span>[<span class="ruby-identifier">test_index</span>].<span class="ruby-identifier">delete_at</span>(<span class="ruby-identifier">index</span>)
+              <span class="ruby-identifier">return_input_list</span>[<span class="ruby-identifier">test_index</span>].<span class="ruby-identifier">delete_at</span>(<span class="ruby-identifier">index</span>)
+      <span class="ruby-keyword">end</span>
+      
+      <span class="ruby-identifier">test_index</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">return_tables</span> = <span class="ruby-identifier">return_state_list</span>, <span class="ruby-identifier">return_input_list</span>, <span class="ruby-identifier">return_transitions_list</span>, <span class="ruby-identifier">return_name_list</span>
+  <span class="ruby-identifier">return_tables</span>
+  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- locate_valid_test_cases-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- locate_valid_test_cases-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,64 @@
+[SHORTNAME=BBW_ABS_func_component_sliprate_1]
+
+#############################################
+# [TestCaseSpecification]
+# BBW_ABS_func_component_sliprate_1
+# 
+# [RequirementSpecification]
+# BBW.ABS.func_1 E<>(5*(v-w*R)>v and brake==0)
+# 
+# [Purpose]
+# Slip rate
+# 
+# [Description]
+# Verify if the slip rate is larger than 0.2, the brake torque should be equal to zero
+# 
+# [Type]
+# Functionality
+# 
+# [Level]
+# Structural component
+# 
+# [ActionEvent]
+# A1 Send in a signal such that v is larger than 0 and slip rate is larger than 0.2.
+# E1 The module should goes into CalSlipRate state.
+# E2 The brake torque should be set to zero.
+# E3 The module should goes into Exit state.
+# E4 A signal is sent from the module to the test scripts.
+# 
+# [PassCriteria]
+# PASS if parameter values in the return signal are the same as the expected values.
+# 
+# [EnvironmentRequirement]
+# Perform the test using signal communication on Linux.
+# 
+# [Comment]
+# N/A
+# 
+# 
+#############################################
+
+State:(ABSFL.idle)
+ABSFL.w=0 ABSFL.wheelABS=0 ABSFL.torqueABS=-1 ABSFL.v=0 ABSFL.R=1 
+
+Transitions: ABSFL.idle->ABSFL.Entry { w:= 8, wheelABS:= 1, v:= 12}
+
+State:(ABSFL.Entry)
+ABSFL.w=8 ABSFL.wheelABS=1 ABSFL.torqueABS=-1 ABSFL.v=12 ABSFL.R=1 
+
+Transitions:
+  ABSFL.Entry->ABSFL.CalcSlipRate { v > 0}
+
+State:(ABSFL.CalcSlipRate)
+ABSFL.w=8 ABSFL.wheelABS=1 ABSFL.torqueABS=0 ABSFL.v=12 ABSFL.R=1 
+
+Transitions: ABSFL.CalcSlipRate->ABSFL.Exit { v < 5 * (v - w * R / 2), torqueABS:= 0 }
+
+State: (ABSFL.Exit)
+ABSFL.w=8 ABSFL.wheelABS=1 ABSFL.torqueABS=0 ABSFL.v=12 ABSFL.R=1 
+
+Transitions: ABSFL.Exit->ABSFL.idle { }
+
+State:(ABSFL.idle)
+ABSFL.w=8 ABSFL.wheelABS=1 ABSFL.torqueABS=0 ABSFL.v=12 ABSFL.R=1 
+

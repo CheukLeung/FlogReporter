@@ -1,0 +1,5 @@
+/* osemain.con fragment for ogre_func - start. */
+
+PRI_PROC(ogre_proc_exec, ogre_proc_exec, 1024, 25, DEFAULT, 0, NULL)
+
+/* osemain.con fragment for ogre_func - end. */

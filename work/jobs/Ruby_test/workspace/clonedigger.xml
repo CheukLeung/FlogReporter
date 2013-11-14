@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+<duplication lines="5" tokens="27">
+<file line="112" path="/home/cheuk/servern/farkle/sigpa/test/ref/ref_atc_signals/signals.py"/>
+<file line="45" path="/home/cheuk/servern/farkle/sigpa/test/ref/ref_atc_signals/signals.py"/>
+<codefragment>
+<![CDATA[
+        self.torqueABS = reader.readU32()
+        self.v = reader.readU32()
+        self.R = reader.readU32()
+        self.state = reader.readU32()
+        reader.align(4)
+]]>
+</codefragment>
+</duplication>
+<duplication lines="5" tokens="27">
+<file line="109" path="/home/cheuk/servern/farkle/sigpa/test/ref/ref_atc_signals/signals.py"/>
+<file line="44" path="/home/cheuk/servern/farkle/sigpa/test/ref/ref_atc_signals/signals.py"/>
+<codefragment>
+<![CDATA[
+        reader.align(4)
+        self.w = reader.readU32()
+        self.wheelABS = reader.readU32()
+        self.torqueABS = reader.readU32()
+        self.v = reader.readU32()
+]]>
+</codefragment>
+</duplication>
+<duplication lines="5" tokens="24">
+<file line="29" path="/home/cheuk/servern/farkle/sigpa/test/ref/ref_atc_signals/signals.py"/>
+<file line="90" path="/home/cheuk/servern/farkle/sigpa/test/ref/ref_atc_signals/signals.py"/>
+<codefragment>
+<![CDATA[
+        ogre.Struct.__init__(self)
+        self.ABSFL_w = 0
+        self.ABSFL_v = 0
+        self.ABSFL_wheelABS = 0
+        self.ABSFL_R = 0
+]]>
+</codefragment>
+</duplication>
+<duplication lines="5" tokens="19">
+<file line="102" path="/home/cheuk/servern/farkle/sigpa/test/ref/ref_atc_signals/signals.py"/>
+<file line="37" path="/home/cheuk/servern/farkle/sigpa/test/ref/ref_atc_signals/signals.py"/>
+<codefragment>
+<![CDATA[
+        writer.writeU32(self.torqueABS)
+        writer.writeU32(self.v)
+        writer.writeU32(self.R)
+        writer.writeU32(self.state)
+        writer.align(4)
+]]>
+</codefragment>
+</duplication>
+<duplication lines="5" tokens="19">
+<file line="36" path="/home/cheuk/servern/farkle/sigpa/test/ref/ref_atc_signals/signals.py"/>
+<file line="99" path="/home/cheuk/servern/farkle/sigpa/test/ref/ref_atc_signals/signals.py"/>
+<codefragment>
+<![CDATA[
+        writer.align(4)
+        writer.writeU32(self.ABSFL_w)
+        writer.writeU32(self.ABSFL_v)
+        writer.writeU32(self.ABSFL_wheelABS)
+        writer.writeU32(self.ABSFL_R)
+]]>
+</codefragment>
+</duplication>
+</pmd-cpd>

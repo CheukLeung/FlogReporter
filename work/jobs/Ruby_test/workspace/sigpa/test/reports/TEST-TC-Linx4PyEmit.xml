@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TC_Linx4PyEmit" tests="23" time="0.026189666" failures="0" errors="0" skipped="0" assertions="60">
+  <testcase name="test_regtally" time="0.000626948" assertions="3">
+  </testcase>
+  <testcase name="test_signalclass_generateattrlist" time="0.000588692" assertions="1">
+  </testcase>
+  <testcase name="test_signalclass_generateconstructor" time="0.000605727" assertions="1">
+  </testcase>
+  <testcase name="test_signalclass_generateprelude" time="0.000502984" assertions="2">
+  </testcase>
+  <testcase name="test_signalclass_generatesignalclass" time="0.000551522" assertions="2">
+  </testcase>
+  <testcase name="test_signalclass_guessdynarray_1" time="0.000626392" assertions="1">
+  </testcase>
+  <testcase name="test_signalclass_guessdynarray_2" time="0.000625589" assertions="2">
+  </testcase>
+  <testcase name="test_signalclass_ind" time="0.00055754" assertions="2">
+  </testcase>
+  <testcase name="test_signalclass_initialize" time="0.000743328" assertions="9">
+  </testcase>
+  <testcase name="test_signalclass_makehash" time="0.000616368" assertions="1">
+  </testcase>
+  <testcase name="test_signalclass_pathfromroot" time="0.000579293" assertions="3">
+  </testcase>
+  <testcase name="test_signalclass_s" time="0.000512713" assertions="1">
+  </testcase>
+  <testcase name="test_signalclass_visitarray_1" time="0.000586801" assertions="2">
+  </testcase>
+  <testcase name="test_signalclass_visitarray_2" time="0.008553824" assertions="3">
+  </testcase>
+  <testcase name="test_signalclass_visitenum" time="0.000567405" assertions="2">
+  </testcase>
+  <testcase name="test_signalclass_visitnode_1" time="0.000645201" assertions="3">
+  </testcase>
+  <testcase name="test_signalclass_visitnode_2" time="0.000798354" assertions="4">
+  </testcase>
+  <testcase name="test_signalclass_visitnode_3" time="0.000690215" assertions="3">
+  </testcase>
+  <testcase name="test_signalclass_visitnode_4" time="0.003102674" assertions="3">
+  </testcase>
+  <testcase name="test_signalclass_visitnode_5" time="0.000684444" assertions="3">
+  </testcase>
+  <testcase name="test_signalclass_visitnumeric" time="0.000727072" assertions="4">
+  </testcase>
+  <testcase name="test_signalclass_visitstruct" time="0.0007033" assertions="4">
+  </testcase>
+  <testcase name="test_string_up" time="0.000513416" assertions="1">
+  </testcase>
+  <system-out>
+  </system-out>
+  <system-err>
+  </system-err>
+</testsuite>

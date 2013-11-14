@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<?jelly escape-by-default='true'?>
+<!-- TODO add taglibs such as: xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" -->
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:i="jelly:fmt" xmlns:l="/lib/layout">
+    <l:layout norefresh="true">
+        <st:include it="${it.owner}" page="sidepanel.jelly"/>
+        <l:main-panel>
+            <h1>Flog Results</h1>
+            <h2>${%Trend}</h2>
+            <img src="graph" width="500px" height="200px" />
+            <table class="pane sortable">
+                <tr>
+                    <td class="pane-header">Source</td>
+                    <td class="pane-header">Lines</td>  
+                    <td class="pane-header">Class</td>
+                    <td class="pane-header">Subclass</td>  
+                    <td class="pane-header">Message</td>                 
+                </tr>
+                <tbody>
+                    <j:forEach var="elt" items="${it.flogReports}">
+                        <tr>
+                            <td class="pane">
+                                <a href="source.${elt.getSource().replaceAll(&quot;/&quot;, &quot;=&quot;)}"> ${elt.getSource()} </a>
+                                
+                            </td>
+                            <td class="pane">
+                                <j:if test="${elt.lines.size() &lt;= 3}">
+                                    <j:forEach var="line" items="${elt.lines}" end="2" >
+                                        <a href="source.${elt.getSource().replaceAll(&quot;/&quot;, &quot;=&quot;)}#${line}">
+                                            ${line} 
+                                        </a>
+                                        ${" "}
+                                    </j:forEach>
+                                </j:if>
+                                <j:if test="${elt.lines.size() &gt; 3}">
+                                    <div class='healthReport' onmouseover="turnHover()" onmouseout="turnOffHover()">
+                                        <j:forEach var="line" items="${elt.lines}" end="1" >
+                                            <a href="source.${elt.getSource().replaceAll(&quot;/&quot;, &quot;=&quot;)}#${line}">
+                                                <u>${line}</u>
+                                            </a>
+                                            ${" "}
+                                        </j:forEach>
+                                        ...
+                                        <div class='healthReportDetails' style="background-color: #f0f0f0">
+                                            <j:forEach var="line" items="${elt.lines}">
+                                                <a href="source.${elt.getSource().replaceAll(&quot;/&quot;, &quot;=&quot;)}#${line}">
+                                                    ${line} 
+                                                </a>
+                                                ${" "}
+                                            </j:forEach>
+                                        </div>
+                                    </div>
+                                </j:if>
+                            </td>
+                            <td class="pane">
+                                ${elt.getSmellClass()}
+                            </td>
+                            <td class="pane">
+                                <div class='healthReport' onmouseover="turnHover()" onmouseout="turnOffHover()">
+                                    <a href= "http://rdoc.info/github/troessner/flog/Flog/Smells/${elt.getSubClass()}" target="_blank">
+                                        ${elt.getSubClass()}
+                                    </a>
+                                    <div class='healthReportDetails' style="background-color: #f0f0f0">
+                                        <div>Documentation from RubyDoc.info:</div>
+                                        <embed src="http://rdoc.info/github/troessner/flog/Flog/Smells/${elt.getSubClass()}" width="600" height="400"/>       
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="pane">
+                                ${elt.getMessage()}
+                            </td>
+                        </tr>
+                    </j:forEach>
+                </tbody>
+            </table>
+        </l:main-panel>
+    </l:layout>
+    
+    <script>
+    function turnHover()
+    {
+        this.className='healthReport hover';return true;
+    }
+    function turnOffHover()
+    {
+        this.className='healthReport';return true;
+    }
+    </script>
+</j:jelly>

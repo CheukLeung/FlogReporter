@@ -1,0 +1,20 @@
+The function parser can be run with the following command:
+
+ruby pyogre/func/lib/funcpa.rb -o outputFileName inputFile
+
+or for example
+
+ruby pyogre/func/lib/funcpa.rb -o pyorge/func/module/ogre_func/src/ogre_func init.h
+
+----------
+
+The 'inputFile' (init.h) will be parsed and two files will be created. The output files
+are named outputFileName.sig and outputFileName.c
+(pyorge/func/module/ogre_func/src/ogre_func.sig and
+pyorge/func/module/ogre_func/src/ogre_func.sig)
+
+The generated signal file can be used as input to the signal parser.
+
+An OSE image for the target has to be built i order to be able to execute
+function on the target. The generated .sig and .c files shall be used to
+create a module. This module has to be included in the image.

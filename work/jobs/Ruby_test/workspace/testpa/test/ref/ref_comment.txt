@@ -1,0 +1,37 @@
+#############################################
+# [TestCaseSpecification]
+# BBW_ABS_func_component_sliprate_1
+# 
+# [RequirementSpecification]
+# BBW.ABS.func_1 E<>(5*(v-w*R)>v and brake==0)
+# 
+# [Purpose]
+# Slip rate
+# 
+# [Description]
+# Verify if the slip rate is larger than 0.2, the brake torque should be equal to zero
+# 
+# [Type]
+# Functionality
+# 
+# [Level]
+# Structural component
+# 
+# [ActionEvent]
+# A1 Send in a signal such that v is larger than 0 and slip rate is larger than 0.2.
+# E1 The module should goes into CalSlipRate state.
+# E2 The brake torque should be set to zero.
+# E3 The module should goes into Exit state.
+# E4 A signal is sent from the module to the test scripts.
+# 
+# [PassCriteria]
+# PASS if parameter values in the return signal are the same as the expected values.
+# 
+# [EnvironmentRequirement]
+# Perform the test using signal communication on Linux.
+# 
+# [Comment]
+# N/A
+# 
+# 
+#############################################

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TC_SigpaFront" tests="3" time="9.606945088" failures="0" errors="0" skipped="0" assertions="7">
+  <testcase name="test_sigpafront_atcsignals_1" time="5.368571745" assertions="3">
+  </testcase>
+  <testcase name="test_sigpafront_atcsignals_2" time="4.2272409" assertions="1">
+  </testcase>
+  <testcase name="test_sigpafront_processheaderfiles" time="0.010633701" assertions="3">
+  </testcase>
+  <system-out>
+End of input
+Parsing OK
+  </system-out>
+  <system-err>
+Constant: _SIGNALS_SIG_ has no value (ignored)
+
+Constant: _SIGNALS_SIG_ has no value (ignored)
+
+Constant: _SIGNALS_SIG_ has no value (ignored)
+
+  </system-err>
+</testsuite>

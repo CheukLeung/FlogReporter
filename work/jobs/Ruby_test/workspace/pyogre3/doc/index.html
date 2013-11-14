@@ -1,0 +1,271 @@
+<html>
+<head>
+<title>Ogre for Python</title>
+<link rel="STYLESHEET" href="main.css" type="text/css">
+</head>
+
+<body bgcolor="#ffffff">
+
+<br>
+<h1>Ogre for Python</h1>
+
+<h2>Abstract</h2>
+
+<p>
+This document describes the Python interface to Ogre. 
+The Python interface to Ogre is a Python package that 
+enables Python programs to communicate with OSE programs 
+running on a Cello node.</p>
+
+<h3>Example</h3>
+<p>
+Here is a Python script that
+hunts a remote process running on CPP target node, sends a request
+signal and receives a reply signal:</p>
+
+<p>
+<div class="example">
+<pre>
+# Load Ogre for Python
+import ogre
+
+# Load signal definitions
+from test_signals import *
+
+# Connect to the Cello node
+gw = ogre.create('tcp://172.17.226.207:22001', 'demo')
+
+# Hunt for the remote process 
+gw.hunt('target/000600/test_proc')
+pid = gw.receive().sender()
+print 'Found process: %d' % (pid)
+
+# Allocate signal, assign values to signal attributes and finally send it
+requestsig = TestReq()
+requestsig.a = 1
+requestsig.b = 2
+requestsig.c = 3
+
+print 'Sending signal:' + requestsig
+gw.send(requestsig, pid)
+
+# Wait for a reply and print the received signal
+replysig = gw.receive()
+print 'Received signal:', replysig
+print 'Finished.'
+</pre>
+</div>   
+</p>
+
+<h3>API Reference</h3>
+
+<p>
+Documentation generated from pyogre source code is here:
+<a href="api/ogre.html" target="_blank">package ogre</a>.
+The API contains following classes:
+
+<ul>
+<li><a href="api/ogre.osegw.html#Osegw">Osegw</a> - OSE Gateway communication protocol
+<li><a href="api/ogre.linx.html#Linx">Linx</a> - Linx communication protocol
+<li><a href="api/ogre.process.html#Process">Process</a> - Target process
+<li><a href="api/ogre.signal.html#Signal">Signal</a> - Signal definition
+</ul>
+</p>
+
+<p>
+And a helper module:
+
+<ul>
+<li><a href="api/ogre.constraints.html" target="api">constraints</a>
+</ul>
+</p>
+
+<p>
+You can also use <code>pydoc</code> command line utility to query 
+online documentation.</p>
+
+
+<h3>Defining OSE Signals in Python</h3>
+
+<p>
+Before being able to send and receive OSE signals the signal structure
+definition must be converted to Python. Lets assume following signal
+in C language:
+</p>
+
+<p>
+<div class="example">
+<pre>
+#define TEST_REQ (1234) /*!- SIGNO(TestReq) -!*/
+
+typedef struct
+{
+  SIGSELECT sigNo;
+  U16 a;
+  U32 b;
+  U8 c;
+} TestReq;
+</pre>
+</div>
+</p>
+
+<p>
+OSE signal is a block of memory - an array of bytes. First 4 bytes always
+constitute the signal number (<code>sigNo</code> in the example) which is
+used to identify the type of the signal.
+In C the data is accessed through C union or by typecasting it directly
+to the C structure. 
+In Python signals are defined as classes and signal data is represented 
+as objects attributes. 
+</p>
+
+<p>
+In C the user defines new signal by defining the data structure.
+In Python user defines a new class that inheriths from 
+<code>ogre.Signal</code> base class and overrides at least two methods: 
+<code>serialize()</code> and <code>unserialize()</code>.
+</p>
+
+The responsibility of <code>serialize()</code> is to know how the
+attributes of the signal are converted into array of bytes.
+The responsibility of <code>unserialize()</code> is to know how to
+convert array of bytes into attributes.
+</p>
+
+<p>
+When <code>_toStringBuffer()</code> method is called (defined in 
+<code>ogre.Signal</code> base class) the base class will call 
+<code>serialize()</code> which return an array of bytes.
+Base class will allocate new OSE signal buffer and copy the array of
+bytes as the data in the new signal.
+</p>
+
+<p>
+When user calls <code>receive()</code> function the system will
+get the next signal from signal queue and look for the first 4 bytes
+of the signal data: the signal number.
+It then instantiates the signal class and calls 
+<code>unserialize()</code> on it, providing the rest of the signal
+data to the method as an array of bytes.
+</p>
+
+<p>
+To be able to unserialize received signal data, the system must know which 
+signal class to instantiate.
+Therefore user must register the signal classes into the system to
+establish signal number -> signal class mapping.
+When OSE signal is received the <code>receive()</code> function will
+find out the signal number by looking for the first 4 bytes of signal
+data and then see if the user has registered a signal class with 
+matching signal number. Assuming the class is found it is instantiated
+and <code>unserialize()</code> is called. If class does not
+exist, then system instantiates a default
+class which does not contain <code>unserialize()</code> method at all.
+</p>
+
+<p>
+These conversions will happen automatically.
+Serialization methods in signal classes are the only place where user
+sees a hint what happens behind the scenes.
+The signal class definition of TestReq looks like in the example below.
+</p>
+
+<p>
+<div class="example">
+<pre>
+class TestReq(ogre.Signal):
+
+    SIGNO = 1234
+
+    def __init__(self):
+        ogre.Signal.__init__(self, self.SIGNO)
+        self.a = None
+        self.b = None
+        self.c = None
+
+    def serialize(self, abi):
+        abi.writeU16(self.a)
+        abi.writeU32(self.b)
+        abi.writeU8(self.c)
+
+    def unserialize(self, abi):
+        self.a = abi.readU16()
+        self.b = abi.readU32()
+        self.c = abi.readU8()
+</pre>
+</div>
+<p>
+
+<div class="note">
+<b>Note</b> that since C compiler does word alignment by default
+the <code>abi</code> objects also do this:
+if for example 32 bit word is written at address which is not 32 bit aligned,
+pad bytes will be added automatically until the next 32 bit aligned address
+is reached.
+</div>
+<p>
+
+Converting <code>.sig</code> files into Python is usually quite
+straightforward. There is a tool called <code>pysigge</code> included
+which parses signal files and generates Python
+code automatically.<p>
+
+
+<h3>Logging</h3>
+
+Python Ogre supports automatic tracing of basic events like sending and
+receiving signals. It also traces the attribute values automatically.
+<p>
+
+The tracing is implemented with a <i>logging</i> package which is part of
+Python standard library. Logging is similar to CPP Trace & Error 
+system, but instead of trace groups it uses severity levels that are: 
+DEBUG, INFO, WARN, ERROR, CRITICAL. 
+User can select which levels are logged. For example if INFO
+is selected, then levels INFO, WARN, ERROR and CRITICAL are logged
+and DEBUG is discarded.<p>
+
+Logs can be forwarded to screen, written to file or even sent to 
+remote system for further processing.<p>
+
+You can use <a href="logging.ini">logging.ini</a> to get CPP-like 
+formatting for the log messages. As an example of logs generated by the
+system, see the following logs:
+
+<ul>
+<li><a href="test.log">test.log</a>
+</ul>
+
+<h3>Process</h3>
+
+The package includes a helper class
+<a href="api/ogre.process.html#Process">Process</a>, which takes care of
+the hunt and attach handling.
+
+Here is an example how to send a OSE signal directly from 
+the Python shell using
+the Process class
+
+<div class="example">
+<pre>
+&gt;python
+Python 2.5.1 (r251:54863, Mar  3 2008, 16:21:50) 
+[GCC 3.4.6] on sunos5
+Type "help", "copyright", "credits" or "license" for more information.
+&gt&gt&gt import ogre
+&gt;&gt;&gt; from signals import *
+&gt;&gt;&gt; sig = SyncReq()
+&gt;&gt;&gt; sig.t1 = 10
+&gt;&gt;&gt; print sig
+&lt;OSESIG SyncReq(sigNo=12001): { t4=0 sigNo=12001 t2=0 t3=0 t1=10 sender_pid=0 data= }&gt;
+&gt;&gt;&gt; p = ogre.Process('tcp://172.17.226.207:22001', 'ogre_echo')
+&gt;&gt;&gt; p.send(sig)
+&gt;&gt;&gt; print = p.receive()
+&lt;OSESIG SyncReq(sigNo=12001): { t4=0 sigNo=12001 t2=0 t3=0 t1=10 sender_pid=983586 data= }&gt;
+</pre>
+</div>
+
+
+
+</body>
+</html>

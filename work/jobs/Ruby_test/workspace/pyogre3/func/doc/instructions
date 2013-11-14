@@ -1,0 +1,71 @@
+This guide assumes that the user has access to the OSE5-VOB (/vobs/ose5)
+
+--------------------
+
+* The pyOGRE package is needed. See the 'OGRE Test Tool User's Guide - Python
+  version' for installation instructions.
+
+* The function parser can be run with the following command (assuming that the
+  user is in the doc/ directory):
+
+  ruby ../lib/funcpa.rb -o ../module/ogre_func/src/ogre_func -I /vobs/ose5/system/include/ ../init.h 
+ 
+  The output should be something like:
+  
+  PHASE 1: Constant processing 
+  Now running  /usr/bin/cpp -I/vobs/ose5/system/include/ tmp.29563
+  Finished
+  PHASE 2: C header file parsing
+  Parsing OK
+  Finished
+  PHASE 3: C function file
+  Finished
+
+* The header file(s) specified in init.h (only ose.h) have now been parsed
+  and two files have been created in the ../module/ogre_func/src directory
+  (ogre_func.c and ogre_func.sig)
+ 
+* The signal parser can now be ran with the generated .sig file as input.
+
+* An OSE image for the target has to be built. The generated module has to 
+  be included in the image.
+  
+  - copy the generated module to the ose module folder:
+
+  cp -r ../module/ogre_func /vobs/ose5/system/refsys/modules/ogre_func 
+
+  - Build the image (stand in /vobs/ose5/system/test/bin folder):
+  ./build_refsys_images.sh -t cds8548 -c gcc-gcc -v rtose-debug -a "override MODS+=ogre_func" 
+ 
+* The image shall then be placed on the board (I have tested with cds8548-4 and cds8548-5) 
+ 
+* Once the image is loaded to the board, three environment variables has to beset up on the host 
+  export OGRE_COMM="tcp" 
+  export OGRE_NODE="172.24.31.163" 
+  export OGRE_PORT="21768" 
+
+  The IP and port number shall point to the target 
+  The port number that shall be used is the OSE Gateway port on the target 
+  It can be found with the following command on the target: 
+  rtose@cds8548> setenv -p ose_gws 
+ 
+* The Python test scripts shall now be possible to run (in the func/test/ folder):
+  
+  python suite.py
+
+  The output should look like:
+  test_get_systime (test_target.TestTarget) ... ok
+  test_get_ticks (test_target.TestTarget) ... ok
+  test_semaphore (test_target.TestTarget) ... ok
+  test_print (test_print.TestPrint) ...
+  <---- Printout from function execution: ---->
+  first line
+  This is print_test_function using printf() to write to stdout!
+  Some printout from the function.
+  last line
+  <---- End of printout ---->
+  ok
+  test_envvar (test_envvar.TestEnvvar) ... ok
+  ----------------------------------------------------------------------
+  Ran 5 tests in 0.053s
+  OK

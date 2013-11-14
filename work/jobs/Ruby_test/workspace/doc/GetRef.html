@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: GetRef</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./sigpa/test/GetRef_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/test/GetRef.rb">sigpa/test/GetRef.rb</a></li>
+          
+            <li><a href="./testpa/test/GetTCRef_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="testpa/test/GetTCRef.rb">testpa/test/GetTCRef.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-getATableRef">#getATableRef</a></li>
+          
+          <li><a href="#method-i-getATableRef_2">#getATableRef_2</a></li>
+          
+          <li><a href="#method-i-getArrayTableRef">#getArrayTableRef</a></li>
+          
+          <li><a href="#method-i-getCTableRef">#getCTableRef</a></li>
+          
+          <li><a href="#method-i-getCTableRef_2">#getCTableRef_2</a></li>
+          
+          <li><a href="#method-i-getCTableRef_3">#getCTableRef_3</a></li>
+          
+          <li><a href="#method-i-getCannotGuessRef">#getCannotGuessRef</a></li>
+          
+          <li><a href="#method-i-getCommentListRef">#getCommentListRef</a></li>
+          
+          <li><a href="#method-i-getConstructorRef">#getConstructorRef</a></li>
+          
+          <li><a href="#method-i-getCppStrRef">#getCppStrRef</a></li>
+          
+          <li><a href="#method-i-getGeneratedTablesRef">#getGeneratedTablesRef</a></li>
+          
+          <li><a href="#method-i-getHashRef">#getHashRef</a></li>
+          
+          <li><a href="#method-i-getHelpRef">#getHelpRef</a></li>
+          
+          <li><a href="#method-i-getHelpRefLinx4Py">#getHelpRefLinx4Py</a></li>
+          
+          <li><a href="#method-i-getOptionsRef">#getOptionsRef</a></li>
+          
+          <li><a href="#method-i-getParsedStringRef">#getParsedStringRef</a></li>
+          
+          <li><a href="#method-i-getSignalRootClassRef">#getSignalRootClassRef</a></li>
+          
+          <li><a href="#method-i-getSignalRootClassRefLinx4Py">#getSignalRootClassRefLinx4Py</a></li>
+          
+          <li><a href="#method-i-getSignalStructClassRef">#getSignalStructClassRef</a></li>
+          
+          <li><a href="#method-i-getSignalStructClassRefLinx4Py">#getSignalStructClassRefLinx4Py</a></li>
+          
+          <li><a href="#method-i-getTCRef">#getTCRef</a></li>
+          
+          <li><a href="#method-i-getTablesRef">#getTablesRef</a></li>
+          
+          <li><a href="#method-i-getTreePrintOutRef">#getTreePrintOutRef</a></li>
+          
+          <li><a href="#method-i-getVisitNodeUnionRecstr">#getVisitNodeUnionRecstr</a></li>
+          
+          <li><a href="#method-i-getVisitNodeUnionRecstrLinx4Py">#getVisitNodeUnionRecstrLinx4Py</a></li>
+          
+          <li><a href="#method-i-getVisitNodeUnionSendstr">#getVisitNodeUnionSendstr</a></li>
+          
+          <li><a href="#method-i-getVisitNodeUnionSendstrLinx4Py">#getVisitNodeUnionSendstrLinx4Py</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./sigpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./sigpa/test/ref/ref_processed_cppstr_txt.html">ref_processed_cppstr.txt</a></li>
+        
+          <li class="file"><a href="./testpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/abstractTC_template_txt.html">abstractTC_template.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_abstracttestcase_txt.html">ref_abstracttestcase.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_comment_txt.html">ref_comment.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/transistion_template_txt.html">transistion_template.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./ArgumentCheck.html">ArgumentCheck</a></li>
+        
+          <li><a href="./Back.html">Back</a></li>
+        
+          <li><a href="./Consumer.html">Consumer</a></li>
+        
+          <li><a href="./Crubyparse.html">Crubyparse</a></li>
+        
+          <li><a href="./Front.html">Front</a></li>
+        
+          <li><a href="./GetRef.html">GetRef</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./ParseCommandLine.html">ParseCommandLine</a></li>
+        
+          <li><a href="./Printoptions.html">Printoptions</a></li>
+        
+          <li><a href="./ReadFile.html">ReadFile</a></li>
+        
+          <li><a href="./Regtally.html">Regtally</a></li>
+        
+          <li><a href="./SignalClass.html">SignalClass</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+          <li><a href="./SyntaxDescription.html">SyntaxDescription</a></li>
+        
+          <li><a href="./TC_Back.html">TC_Back</a></li>
+        
+          <li><a href="./TC_Emit.html">TC_Emit</a></li>
+        
+          <li><a href="./TC_Front.html">TC_Front</a></li>
+        
+          <li><a href="./TC_Linx4PyBack.html">TC_Linx4PyBack</a></li>
+        
+          <li><a href="./TC_Linx4PyEmit.html">TC_Linx4PyEmit</a></li>
+        
+          <li><a href="./TC_Linx4PySigpaUser.html">TC_Linx4PySigpaUser</a></li>
+        
+          <li><a href="./TC_Linx4PyUser.html">TC_Linx4PyUser</a></li>
+        
+          <li><a href="./TC_SigpaFront.html">TC_SigpaFront</a></li>
+        
+          <li><a href="./TC_SigpaUser.html">TC_SigpaUser</a></li>
+        
+          <li><a href="./TC_TCrubyparse.html">TC_TCrubyparse</a></li>
+        
+          <li><a href="./TC_TestCaseBack.html">TC_TestCaseBack</a></li>
+        
+          <li><a href="./TC_TestUser.html">TC_TestUser</a></li>
+        
+          <li><a href="./TC_Tree.html">TC_Tree</a></li>
+        
+          <li><a href="./TCrubyparse.html">TCrubyparse</a></li>
+        
+          <li><a href="./TestCaseBack.html">TestCaseBack</a></li>
+        
+          <li><a href="./Tree.html">Tree</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">GetRef</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="getATableRef-method" class="method-detail ">
+          <a name="method-i-getATableRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getATableRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getATableRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2709</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getATableRef</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_atable</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getATableRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getATableRef-method -->
+
+      
+        <div id="getATableRef_2-method" class="method-detail ">
+          <a name="method-i-getATableRef_2"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getATableRef_2</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getATableRef_2-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2712</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getATableRef_2</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_atable_2</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getATableRef_2-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getATableRef_2-method -->
+
+      
+        <div id="getArrayTableRef-method" class="method-detail ">
+          <a name="method-i-getArrayTableRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getArrayTableRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getArrayTableRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2706</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getArrayTableRef</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_arraytable</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getArrayTableRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getArrayTableRef-method -->
+
+      
+        <div id="getCTableRef-method" class="method-detail ">
+          <a name="method-i-getCTableRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getCTableRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getCTableRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2715</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCTableRef</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_ctable</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getCTableRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getCTableRef-method -->
+
+      
+        <div id="getCTableRef_2-method" class="method-detail ">
+          <a name="method-i-getCTableRef_2"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getCTableRef_2</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getCTableRef_2-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2718</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCTableRef_2</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_ctable_2</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getCTableRef_2-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getCTableRef_2-method -->
+
+      
+        <div id="getCTableRef_3-method" class="method-detail ">
+          <a name="method-i-getCTableRef_3"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getCTableRef_3</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getCTableRef_3-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2721</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCTableRef_3</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_ctable_3</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getCTableRef_3-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getCTableRef_3-method -->
+
+      
+        <div id="getCannotGuessRef-method" class="method-detail ">
+          <a name="method-i-getCannotGuessRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getCannotGuessRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getCannotGuessRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2757</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCannotGuessRef</span>()      
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_warning_cannotguess</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getCannotGuessRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getCannotGuessRef-method -->
+
+      
+        <div id="getCommentListRef-method" class="method-detail ">
+          <a name="method-i-getCommentListRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getCommentListRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getCommentListRef-source">
+<pre>
+<span class="ruby-comment"># File testpa/test/GetTCRef.rb, line 264</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCommentListRef</span>()      
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@comment_list</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getCommentListRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getCommentListRef-method -->
+
+      
+        <div id="getConstructorRef-method" class="method-detail ">
+          <a name="method-i-getConstructorRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getConstructorRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getConstructorRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2754</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getConstructorRef</span>()      
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_constructor</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getConstructorRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getConstructorRef-method -->
+
+      
+        <div id="getCppStrRef-method" class="method-detail ">
+          <a name="method-i-getCppStrRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getCppStrRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getCppStrRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2724</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCppStrRef</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_cpp_str</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getCppStrRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getCppStrRef-method -->
+
+      
+        <div id="getGeneratedTablesRef-method" class="method-detail ">
+          <a name="method-i-getGeneratedTablesRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getGeneratedTablesRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getGeneratedTablesRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2773</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getGeneratedTablesRef</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_generate_tables</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getGeneratedTablesRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getGeneratedTablesRef-method -->
+
+      
+        <div id="getHashRef-method" class="method-detail ">
+          <a name="method-i-getHashRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getHashRef</span><span
+              class="method-args">(index)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getHashRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2730</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getHashRef</span>(<span class="ruby-identifier">index</span>)
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_hash</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getHashRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getHashRef-method -->
+
+      
+        <div id="getHelpRef-method" class="method-detail ">
+          <a name="method-i-getHelpRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getHelpRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getHelpRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2736</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getHelpRef</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_help</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getHelpRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getHelpRef-method -->
+
+      
+        <div id="getHelpRefLinx4Py-method" class="method-detail ">
+          <a name="method-i-getHelpRefLinx4Py"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getHelpRefLinx4Py</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getHelpRefLinx4Py-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2739</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getHelpRefLinx4Py</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_help_linx4py</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getHelpRefLinx4Py-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getHelpRefLinx4Py-method -->
+
+      
+        <div id="getOptionsRef-method" class="method-detail ">
+          <a name="method-i-getOptionsRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getOptionsRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getOptionsRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2733</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getOptionsRef</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_option_output</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getOptionsRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getOptionsRef-method -->
+
+      
+        <div id="getParsedStringRef-method" class="method-detail ">
+          <a name="method-i-getParsedStringRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getParsedStringRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getParsedStringRef-source">
+<pre>
+<span class="ruby-comment"># File testpa/test/GetTCRef.rb, line 267</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getParsedStringRef</span>()     
+   <span class="ruby-identifier">str</span> = <span class="ruby-string">&quot;&quot;</span>
+   <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">@@ref_parsed_string</span>
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">str</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getParsedStringRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getParsedStringRef-method -->
+
+      
+        <div id="getSignalRootClassRef-method" class="method-detail ">
+          <a name="method-i-getSignalRootClassRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getSignalRootClassRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getSignalRootClassRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2742</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getSignalRootClassRef</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_signalroot_class</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getSignalRootClassRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getSignalRootClassRef-method -->
+
+      
+        <div id="getSignalRootClassRefLinx4Py-method" class="method-detail ">
+          <a name="method-i-getSignalRootClassRefLinx4Py"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getSignalRootClassRefLinx4Py</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getSignalRootClassRefLinx4Py-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2745</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getSignalRootClassRefLinx4Py</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_signalroot_class_linx4py</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getSignalRootClassRefLinx4Py-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getSignalRootClassRefLinx4Py-method -->
+
+      
+        <div id="getSignalStructClassRef-method" class="method-detail ">
+          <a name="method-i-getSignalStructClassRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getSignalStructClassRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getSignalStructClassRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2748</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getSignalStructClassRef</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_signalstruct_class</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getSignalStructClassRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getSignalStructClassRef-method -->
+
+      
+        <div id="getSignalStructClassRefLinx4Py-method" class="method-detail ">
+          <a name="method-i-getSignalStructClassRefLinx4Py"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getSignalStructClassRefLinx4Py</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getSignalStructClassRefLinx4Py-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2751</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getSignalStructClassRefLinx4Py</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_signalstruct_class_linx4py</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getSignalStructClassRefLinx4Py-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getSignalStructClassRefLinx4Py-method -->
+
+      
+        <div id="getTCRef-method" class="method-detail ">
+          <a name="method-i-getTCRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getTCRef</span><span
+              class="method-args">(index)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getTCRef-source">
+<pre>
+<span class="ruby-comment"># File testpa/test/GetTCRef.rb, line 254</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getTCRef</span>(<span class="ruby-identifier">index</span>)  
+   <span class="ruby-keyword">case</span> <span class="ruby-identifier">index</span>
+   <span class="ruby-keyword">when</span> <span class="ruby-value">0</span> 
+       <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_state_list_0</span>, <span class="ruby-identifier">@@ref_input_list_0</span>, <span class="ruby-identifier">@@ref_transitions_list_0</span>, <span class="ruby-identifier">@@ref_name_list_0</span>
+   <span class="ruby-keyword">when</span> <span class="ruby-value">1</span> 
+       <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_state_list_1</span>, <span class="ruby-identifier">@@ref_input_list_1</span>, <span class="ruby-identifier">@@ref_transitions_list_1</span>, <span class="ruby-identifier">@@ref_name_list_1</span>
+   <span class="ruby-keyword">when</span> <span class="ruby-value">2</span> 
+       <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_state_list_2</span>, <span class="ruby-identifier">@@ref_input_list_2</span>, <span class="ruby-identifier">@@ref_transitions_list_2</span>, <span class="ruby-identifier">@@ref_name_list_2</span>
+   <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getTCRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getTCRef-method -->
+
+      
+        <div id="getTablesRef-method" class="method-detail ">
+          <a name="method-i-getTablesRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getTablesRef</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getTablesRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2727</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getTablesRef</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_tables</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getTablesRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getTablesRef-method -->
+
+      
+        <div id="getTreePrintOutRef-method" class="method-detail ">
+          <a name="method-i-getTreePrintOutRef"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getTreePrintOutRef</span><span
+              class="method-args">(index)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getTreePrintOutRef-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2703</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getTreePrintOutRef</span>(<span class="ruby-identifier">index</span>)
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_treeprintout</span>.<span class="ruby-identifier">copy</span>[<span class="ruby-identifier">index</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getTreePrintOutRef-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getTreePrintOutRef-method -->
+
+      
+        <div id="getVisitNodeUnionRecstr-method" class="method-detail ">
+          <a name="method-i-getVisitNodeUnionRecstr"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getVisitNodeUnionRecstr</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getVisitNodeUnionRecstr-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2760</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getVisitNodeUnionRecstr</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_visit_node_union_recstr</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getVisitNodeUnionRecstr-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getVisitNodeUnionRecstr-method -->
+
+      
+        <div id="getVisitNodeUnionRecstrLinx4Py-method" class="method-detail ">
+          <a name="method-i-getVisitNodeUnionRecstrLinx4Py"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getVisitNodeUnionRecstrLinx4Py</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getVisitNodeUnionRecstrLinx4Py-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2766</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getVisitNodeUnionRecstrLinx4Py</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_visit_node_union_recstr_linx4py</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getVisitNodeUnionRecstrLinx4Py-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getVisitNodeUnionRecstrLinx4Py-method -->
+
+      
+        <div id="getVisitNodeUnionSendstr-method" class="method-detail ">
+          <a name="method-i-getVisitNodeUnionSendstr"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getVisitNodeUnionSendstr</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getVisitNodeUnionSendstr-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2763</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getVisitNodeUnionSendstr</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_visit_node_union_sendstr</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getVisitNodeUnionSendstr-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getVisitNodeUnionSendstr-method -->
+
+      
+        <div id="getVisitNodeUnionSendstrLinx4Py-method" class="method-detail ">
+          <a name="method-i-getVisitNodeUnionSendstrLinx4Py"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getVisitNodeUnionSendstrLinx4Py</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getVisitNodeUnionSendstrLinx4Py-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/GetRef.rb, line 2769</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getVisitNodeUnionSendstrLinx4Py</span>()
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ref_visit_node_union_sendstr_linx4py</span>.<span class="ruby-identifier">copy</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getVisitNodeUnionSendstrLinx4Py-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getVisitNodeUnionSendstrLinx4Py-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

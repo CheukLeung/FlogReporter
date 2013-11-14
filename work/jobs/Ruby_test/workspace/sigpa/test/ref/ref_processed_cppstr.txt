@@ -1,0 +1,612 @@
+typedef signed char int8_t;
+typedef short int int16_t;
+typedef int int32_t;
+typedef long long int int64_t;
+typedef unsigned char uint8_t;
+typedef unsigned short int uint16_t;
+typedef unsigned int uint32_t;
+typedef unsigned long long int uint64_t;
+typedef signed char int_least8_t;
+typedef short int int_least16_t;
+typedef int int_least32_t;
+typedef long long int int_least64_t;
+typedef unsigned char uint_least8_t;
+typedef unsigned short int uint_least16_t;
+typedef unsigned int uint_least32_t;
+typedef unsigned long long int uint_least64_t;
+typedef signed char int_fast8_t;
+typedef int int_fast16_t;
+typedef int int_fast32_t;
+typedef long long int int_fast64_t;
+typedef unsigned char uint_fast8_t;
+typedef unsigned int uint_fast16_t;
+typedef unsigned int uint_fast32_t;
+typedef unsigned long long int uint_fast64_t;
+typedef int intptr_t;
+typedef unsigned int uintptr_t;
+typedef long long int intmax_t;
+typedef unsigned long long int uintmax_t;
+typedef unsigned char __u_char;
+typedef unsigned short int __u_short;
+typedef unsigned int __u_int;
+typedef unsigned long int __u_long;
+typedef signed char __int8_t;
+typedef unsigned char __uint8_t;
+typedef signed short int __int16_t;
+typedef unsigned short int __uint16_t;
+typedef signed int __int32_t;
+typedef unsigned int __uint32_t;
+typedef signed long long int __int64_t;
+typedef unsigned long long int __uint64_t;
+typedef long long int __quad_t;
+typedef unsigned long long int __u_quad_t;
+typedef __u_quad_t __dev_t;
+typedef unsigned int __uid_t;
+typedef unsigned int __gid_t;
+typedef unsigned long int __ino_t;
+typedef __u_quad_t __ino64_t;
+typedef unsigned int __mode_t;
+typedef unsigned int __nlink_t;
+typedef long int __off_t;
+typedef __quad_t __off64_t;
+typedef int __pid_t;
+typedef struct { int __val[2]; } __fsid_t;
+typedef long int __clock_t;
+typedef unsigned long int __rlim_t;
+typedef __u_quad_t __rlim64_t;
+typedef unsigned int __id_t;
+typedef long int __time_t;
+typedef unsigned int __useconds_t;
+typedef long int __suseconds_t;
+typedef int __daddr_t;
+typedef long int __swblk_t;
+typedef int __key_t;
+typedef int __clockid_t;
+typedef void * __timer_t;
+typedef long int __blksize_t;
+typedef long int __blkcnt_t;
+typedef __quad_t __blkcnt64_t;
+typedef unsigned long int __fsblkcnt_t;
+typedef __u_quad_t __fsblkcnt64_t;
+typedef unsigned long int __fsfilcnt_t;
+typedef __u_quad_t __fsfilcnt64_t;
+typedef int __ssize_t;
+typedef __off64_t __loff_t;
+typedef __quad_t *__qaddr_t;
+typedef char *__caddr_t;
+typedef int __intptr_t;
+typedef unsigned int __socklen_t;
+typedef __u_char u_char;
+typedef __u_short u_short;
+typedef __u_int u_int;
+typedef __u_long u_long;
+typedef __quad_t quad_t;
+typedef __u_quad_t u_quad_t;
+typedef __fsid_t fsid_t;
+typedef __loff_t loff_t;
+typedef __ino_t ino_t;
+typedef __dev_t dev_t;
+typedef __gid_t gid_t;
+typedef __mode_t mode_t;
+typedef __nlink_t nlink_t;
+typedef __uid_t uid_t;
+typedef __off_t off_t;
+typedef __pid_t pid_t;
+typedef __id_t id_t;
+typedef __ssize_t ssize_t;
+typedef __daddr_t daddr_t;
+typedef __caddr_t caddr_t;
+typedef __key_t key_t;
+typedef __clock_t clock_t;
+typedef __time_t time_t;
+typedef __clockid_t clockid_t;
+typedef __timer_t timer_t;
+typedef unsigned int size_t;
+typedef unsigned long int ulong;
+typedef unsigned short int ushort;
+typedef unsigned int uint;
+typedef unsigned int u_int8_t ;
+typedef unsigned int u_int16_t ;
+typedef unsigned int u_int32_t ;
+typedef unsigned int u_int64_t ;
+typedef int register_t ;
+typedef int __sig_atomic_t;
+typedef struct
+{
+unsigned long int __val[(1024 / (8 * sizeof (unsigned long int)))];
+} __sigset_t;
+typedef __sigset_t sigset_t;
+struct timespec
+{
+__time_t tv_sec;
+long int tv_nsec;
+};
+struct timeval
+{
+__time_t tv_sec;
+__suseconds_t tv_usec;
+};
+typedef __suseconds_t suseconds_t;
+typedef long int __fd_mask;
+typedef struct
+{
+__fd_mask __fds_bits[1024 / (8 * (int) sizeof (__fd_mask))];
+} fd_set;
+typedef __fd_mask fd_mask;
+extern int select (int __nfds, fd_set * __readfds,
+fd_set * __writefds,
+fd_set * __exceptfds,
+struct timeval * __timeout);
+extern int pselect (int __nfds, fd_set * __readfds,
+fd_set * __writefds,
+fd_set * __exceptfds,
+const struct timespec * __timeout,
+const __sigset_t * __sigmask);
+extern unsigned int gnu_dev_major (unsigned long long int __dev)
+;
+extern unsigned int gnu_dev_minor (unsigned long long int __dev)
+;
+extern unsigned long long int gnu_dev_makedev (unsigned int __major,
+unsigned int __minor)
+;
+typedef __blksize_t blksize_t;
+typedef __blkcnt_t blkcnt_t;
+typedef __fsblkcnt_t fsblkcnt_t;
+typedef __fsfilcnt_t fsfilcnt_t;
+typedef unsigned long int pthread_t;
+typedef union
+{
+char __size[36];
+long int __align;
+} pthread_attr_t;
+typedef struct __pthread_internal_slist
+{
+struct __pthread_internal_slist *__next;
+} __pthread_slist_t;
+typedef union
+{
+struct __pthread_mutex_s
+{
+int __lock;
+unsigned int __count;
+int __owner;
+int __kind;
+unsigned int __nusers;
+union
+{
+int __spins;
+__pthread_slist_t __list;
+};
+} __data;
+char __size[24];
+long int __align;
+} pthread_mutex_t;
+typedef union
+{
+char __size[4];
+long int __align;
+} pthread_mutexattr_t;
+typedef union
+{
+struct
+{
+int __lock;
+unsigned int __futex;
+unsigned long long int __total_seq;
+unsigned long long int __wakeup_seq;
+unsigned long long int __woken_seq;
+void *__mutex;
+unsigned int __nwaiters;
+unsigned int __broadcast_seq;
+} __data;
+char __size[48];
+long long int __align;
+} pthread_cond_t;
+typedef union
+{
+char __size[4];
+long int __align;
+} pthread_condattr_t;
+typedef unsigned int pthread_key_t;
+typedef int pthread_once_t;
+typedef union
+{
+struct
+{
+int __lock;
+unsigned int __nr_readers;
+unsigned int __readers_wakeup;
+unsigned int __writer_wakeup;
+unsigned int __nr_readers_queued;
+unsigned int __nr_writers_queued;
+unsigned char __flags;
+unsigned char __shared;
+unsigned char __pad1;
+unsigned char __pad2;
+int __writer;
+} __data;
+char __size[32];
+long int __align;
+} pthread_rwlock_t;
+typedef union
+{
+char __size[8];
+long int __align;
+} pthread_rwlockattr_t;
+typedef volatile int pthread_spinlock_t;
+typedef union
+{
+char __size[20];
+long int __align;
+} pthread_barrier_t;
+typedef union
+{
+char __size[4];
+int __align;
+} pthread_barrierattr_t;
+typedef int LINX_OSBUFSIZE;
+typedef uint32_t LINX_SPID;
+typedef int LINX_OSBOOLEAN;
+typedef uint32_t LINX_SIGSELECT;
+typedef uint32_t LINX_OSTIME;
+typedef uint32_t LINX_OSATTREF;
+typedef uint32_t LINX_RLNH;
+typedef uint32_t LINX_OSTMOREF;
+typedef uint32_t LINX_NLREF;
+typedef uint32_t LINX_NLTOKEN;
+typedef struct LINX_IPC LINX;
+struct linx_new_link {
+LINX_SIGSELECT signo;
+LINX_NLTOKEN token;
+int name;
+int attr;
+char buf[1];
+};
+typedef __signed__ char __s8;
+typedef unsigned char __u8;
+typedef __signed__ short __s16;
+typedef unsigned short __u16;
+typedef __signed__ int __s32;
+typedef unsigned int __u32;
+typedef __signed__ long long __s64;
+typedef unsigned long long __u64;
+typedef unsigned short umode_t;
+typedef struct {
+unsigned long fds_bits [(1024/(8 * sizeof(unsigned long)))];
+} __kernel_fd_set;
+typedef void (*__kernel_sighandler_t)(int);
+typedef int __kernel_key_t;
+typedef int __kernel_mqd_t;
+typedef unsigned long __kernel_ino_t;
+typedef unsigned short __kernel_mode_t;
+typedef unsigned short __kernel_nlink_t;
+typedef long __kernel_off_t;
+typedef int __kernel_pid_t;
+typedef unsigned short __kernel_ipc_pid_t;
+typedef unsigned short __kernel_uid_t;
+typedef unsigned short __kernel_gid_t;
+typedef unsigned int __kernel_size_t;
+typedef int __kernel_ssize_t;
+typedef int __kernel_ptrdiff_t;
+typedef long __kernel_time_t;
+typedef long __kernel_suseconds_t;
+typedef long __kernel_clock_t;
+typedef int __kernel_timer_t;
+typedef int __kernel_clockid_t;
+typedef int __kernel_daddr_t;
+typedef char * __kernel_caddr_t;
+typedef unsigned short __kernel_uid16_t;
+typedef unsigned short __kernel_gid16_t;
+typedef unsigned int __kernel_uid32_t;
+typedef unsigned int __kernel_gid32_t;
+typedef unsigned short __kernel_old_uid_t;
+typedef unsigned short __kernel_old_gid_t;
+typedef unsigned short __kernel_old_dev_t;
+typedef long long __kernel_loff_t;
+typedef struct {
+int val[2];
+} __kernel_fsid_t;
+typedef __u16 __le16;
+typedef __u16 __be16;
+typedef __u32 __le32;
+typedef __u32 __be32;
+typedef __u64 __le64;
+typedef __u64 __be64;
+typedef __u16 __sum16;
+typedef __u32 __wsum;
+struct linx_hunt_param {
+LINX_OSBUFSIZE sigsize;
+union LINX_SIGNAL *sig;
+LINX_SPID from;
+size_t namelen;
+char *name;
+};
+struct linx_attach_param {
+LINX_SPID spid;
+LINX_OSBUFSIZE sigsize;
+union LINX_SIGNAL *sig;
+LINX_OSATTREF attref;
+};
+struct linx_detach_param {
+LINX_OSATTREF attref;
+};
+struct linx_receive_filter_param {
+LINX_SPID from;
+LINX_OSBUFSIZE sigselect_size;
+const LINX_SIGSELECT *sigselect;
+};
+struct linx_sender_param {
+LINX_SPID from;
+};
+struct linx_tmo_param {
+LINX_OSTIME tmo;
+LINX_OSBUFSIZE sigsize;
+union LINX_SIGNAL *sig;
+LINX_OSTMOREF tmoref;
+};
+struct linx_new_link_param {
+uint32_t token;
+uint32_t new_link_ref;
+};
+struct linx_info_signal {
+LINX_SIGSELECT signo;
+int size;
+LINX_SPID from;
+};
+struct linx_info_signal_2 {
+LINX_SIGSELECT signo;
+int size;
+LINX_SPID from;
+uint32_t flags;
+};
+struct linx_info_attach {
+LINX_SPID spid;
+LINX_OSATTREF attref;
+struct linx_info_signal attach_signal;
+};
+struct linx_info_hunt {
+struct linx_info_signal hunt_signal;
+LINX_SPID owner;
+char *hunt_name;
+};
+struct linx_info_tmo {
+LINX_OSTIME tmo;
+LINX_OSTMOREF tmoref;
+struct linx_info_signal tmo_signal;
+};
+struct linx_info_summary {
+int no_of_local_sockets;
+int no_of_remote_sockets;
+int no_of_link_sockets;
+int no_of_pend_attach;
+int no_of_pend_hunt;
+int no_of_pend_tmo;
+int no_of_queued_signals;
+};
+struct linx_info_sockets {
+LINX_OSBOOLEAN local;
+LINX_OSBOOLEAN remote;
+LINX_OSBOOLEAN link;
+int buffer_size;
+int no_of_sockets;
+LINX_SPID *buffer;
+};
+struct linx_info_name {
+LINX_SPID spid;
+int namelen;
+char *name;
+};
+struct linx_info_type {
+LINX_SPID spid;
+int type;
+};
+struct linx_info_state {
+LINX_SPID spid;
+int state;
+};
+struct linx_info_filters {
+LINX_SPID spid;
+LINX_SPID from_filter;
+int buffer_size;
+int no_of_sigselect;
+LINX_SIGSELECT *buffer;
+};
+struct linx_info_recv_queue {
+LINX_SPID spid;
+int buffer_size;
+int no_of_signals;
+struct linx_info_signal *buffer;
+};
+struct linx_info_pend_attach {
+LINX_SPID spid;
+int from_or_to;
+int buffer_size;
+int no_of_attaches;
+struct linx_info_attach *buffer;
+};
+struct linx_info_pend_hunt {
+LINX_SPID spid;
+int buffer_size;
+int strings_offset;
+int no_of_hunts;
+struct linx_info_hunt *buffer;
+};
+struct linx_info_signal_payload {
+LINX_SPID spid;
+int buffer_size;
+struct linx_info_signal signal;
+int payload_size;
+char *buffer;
+};
+struct linx_info_owner {
+LINX_SPID spid;
+pid_t owner;
+};
+struct linx_info_stat {
+LINX_SPID spid;
+uint64_t no_sent_local_signals;
+uint64_t no_recv_local_signals;
+uint64_t no_sent_local_bytes;
+uint64_t no_recv_local_bytes;
+uint64_t no_sent_remote_signals;
+uint64_t no_recv_remote_signals;
+uint64_t no_sent_remote_bytes;
+uint64_t no_recv_remote_bytes;
+uint64_t no_sent_signals;
+uint64_t no_recv_signals;
+uint64_t no_sent_bytes;
+uint64_t no_recv_bytes;
+uint64_t no_queued_bytes;
+uint64_t no_queued_signals;
+};
+struct linx_info_pend_tmo {
+LINX_SPID spid;
+int buffer_size;
+int no_of_timeouts;
+struct linx_info_tmo *buffer;
+};
+struct linx_info_recv_queue_2 {
+LINX_SPID spid;
+int buffer_size;
+int no_of_signals;
+char *buffer;
+};
+struct linx_info {
+int type;
+void *type_spec;
+};
+struct linx_huntname {
+LINX_SPID spid;
+size_t namelen;
+char *name;
+};
+struct linx_sndrcv_param {
+__u32 from;
+__u32 to;
+__u32 size;
+__u32 sig_attr;
+__u32 sigselect_size;
+__u32 tmo;
+__u64 sigselect;
+__u64 buffer;
+__u64 real_buf;
+};
+struct Link {
+struct Link *next;
+struct Link *prev;
+};
+struct LINXSigAdm;
+struct LINX_IPC {
+struct Link owned_sig;
+uint32_t magic;
+int socket;
+LINX_SPID spid;
+struct LINXSigAdm *free_buffer;
+};
+typedef struct LINX_IPC LINX;
+struct LINXSigAdm {
+struct Link link;
+LINX *owner;
+LINX_OSBUFSIZE true_size;
+struct linx_sndrcv_param sndrcv;
+};
+struct linx_sndrcv_legacy_param {
+__u32 from;
+__u32 to;
+__u32 size;
+__u32 sig_attr;
+__u32 sigselect_size;
+__u32 tmo;
+__u64 sigselect;
+__u64 buffer;
+};
+union LINX_SIGNAL;
+LINX *linx_open(const char *name, uint32_t options, void *arg);
+int linx_close(LINX * linx);
+int linx_get_descriptor(LINX * linx);
+union LINX_SIGNAL *linx_alloc(LINX * linx, LINX_OSBUFSIZE size,
+LINX_SIGSELECT sig_no);
+int linx_free_buf(LINX * linx, union LINX_SIGNAL **sig);
+int linx_send(LINX * linx, union LINX_SIGNAL **sig, LINX_SPID to);
+int
+linx_send_w_s(LINX * linx, union LINX_SIGNAL **sig, LINX_SPID from,
+LINX_SPID to);
+int
+linx_send_w_opt(LINX * linx, union LINX_SIGNAL **sig, LINX_SPID from,
+LINX_SPID to, int32_t *taglist);
+int
+linx_sigattr(const LINX *linx, const union LINX_SIGNAL **sig,
+uint32_t attr, void **value);
+int
+linx_receive(LINX * linx, union LINX_SIGNAL **sig,
+const LINX_SIGSELECT * sig_sel);
+int
+linx_receive_w_tmo(LINX * linx, union LINX_SIGNAL **sig,
+LINX_OSTIME tmo, const LINX_SIGSELECT * sig_sel);
+int
+linx_receive_from(LINX * linx, union LINX_SIGNAL **sig,
+LINX_OSTIME tmo, const LINX_SIGSELECT * sig_sel,
+LINX_SPID from);
+LINX_SPID linx_sender(LINX * linx, union LINX_SIGNAL **sig);
+LINX_OSBUFSIZE linx_sigsize(LINX * linx, union LINX_SIGNAL **sig);
+int
+linx_set_sigsize(LINX * linx, union LINX_SIGNAL **sig, LINX_OSBUFSIZE sigsize);
+int linx_hunt(LINX * linx, const char *name, union LINX_SIGNAL **hunt_sig);
+int
+linx_hunt_from(LINX * linx, const char *name,
+union LINX_SIGNAL **hunt_sig, LINX_SPID from);
+LINX_OSATTREF linx_attach(LINX * linx, union LINX_SIGNAL **sig, LINX_SPID spid);
+int linx_detach(LINX * linx, LINX_OSATTREF * attref);
+LINX_SPID linx_get_spid(LINX * linx);
+int linx_get_name(LINX * linx, LINX_SPID spid, char **name);
+int linx_free_name(LINX * linx, char **name);
+pid_t linx_get_owner(LINX *linx, LINX_SPID spid);
+int linx_get_stat(LINX * linx, LINX_SPID spid, struct linx_info_stat **stat);
+int linx_free_stat(LINX * linx, struct linx_info_stat **stat);
+LINX_OSTMOREF
+linx_request_tmo(LINX * linx, LINX_OSTIME tmo, union LINX_SIGNAL **sig);
+int linx_cancel_tmo(LINX * linx, LINX_OSTMOREF * tmoref);
+int linx_modify_tmo(LINX * linx, LINX_OSTMOREF * tmoref, LINX_OSTIME tmo);
+LINX_NLREF linx_request_new_link(LINX * linx, LINX_NLTOKEN token);
+int linx_cancel_new_link(LINX * linx, LINX_NLREF *nlref);
+int linx_get_version(char *buf);
+typedef signed char S8;
+typedef unsigned char U8;
+typedef short S16;
+typedef unsigned short U16;
+typedef int S32;
+typedef unsigned int U32;
+typedef enum {
+idle = -1,
+Entry = 0,
+CalcSlipRate = 1,
+Exit = 2
+} ABSFLState;
+typedef struct {
+U32 ABSFL_w;
+U32 ABSFL_v;
+U32 ABSFL_wheelABS;
+U32 ABSFL_R;
+} ABSFLInput;
+typedef struct {
+U32 w;
+U32 wheelABS;
+U32 torqueABS;
+U32 v;
+U32 R;
+U32 state;
+} ABSFLStateTrace;
+struct absfl_input_sig {
+LINX_SIGSELECT sig_no;
+ABSFLInput input;
+};
+struct absfl_output_sig {
+LINX_SIGSELECT sig_no;
+U32 num_states;
+ABSFLStateTrace states[10];
+};
+union LINX_SIGNAL {
+LINX_SIGSELECT sig_no;
+struct absfl_input_sig absfl_input;
+struct absfl_output_sig absfl_output;
+};

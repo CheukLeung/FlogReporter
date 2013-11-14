@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: TC_Linx4PyBack</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./sigpa/test/tc_linx4pyback_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="sigpa/test/tc_linx4pyback.rb">sigpa/test/tc_linx4pyback.rb</a></li>
+          
+            <li><a href="./testpa/test/tc_linx4pyback_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="testpa/test/tc_linx4pyback.rb">testpa/test/tc_linx4pyback.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Test::Unit::TestCase</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-setup">#setup</a></li>
+          
+          <li><a href="#method-i-teardown">#teardown</a></li>
+          
+          <li><a href="#method-i-test_back_atcsignals">#test_back_atcsignals</a></li>
+          
+          <li><a href="#method-i-test_back_baserefname">#test_back_baserefname</a></li>
+          
+          <li><a href="#method-i-test_back_deepcopy">#test_back_deepcopy</a></li>
+          
+          <li><a href="#method-i-test_back_generatesignaldescription">#test_back_generatesignaldescription</a></li>
+          
+          <li><a href="#method-i-test_back_getanonext">#test_back_getanonext</a></li>
+          
+          <li><a href="#method-i-test_back_isnumeric">#test_back_isnumeric</a></li>
+          
+          <li><a href="#method-i-test_back_itembasetype">#test_back_itembasetype</a></li>
+          
+          <li><a href="#method-i-test_back_itemname">#test_back_itemname</a></li>
+          
+          <li><a href="#method-i-test_back_itemtype">#test_back_itemtype</a></li>
+          
+          <li><a href="#method-i-test_backend_atc">#test_backend_atc</a></li>
+          
+          <li><a href="#method-i-test_backend_output">#test_backend_output</a></li>
+          
+          <li><a href="#method-i-test_backend_signal">#test_backend_signal</a></li>
+          
+          <li><a href="#method-i-test_backend_type_h">#test_backend_type_h</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./sigpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./sigpa/test/ref/ref_processed_cppstr_txt.html">ref_processed_cppstr.txt</a></li>
+        
+          <li class="file"><a href="./testpa/Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/abstractTC_template_txt.html">abstractTC_template.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_abstracttestcase_txt.html">ref_abstracttestcase.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/ref_comment_txt.html">ref_comment.txt</a></li>
+        
+          <li class="file"><a href="./testpa/test/ref/transistion_template_txt.html">transistion_template.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./ArgumentCheck.html">ArgumentCheck</a></li>
+        
+          <li><a href="./Back.html">Back</a></li>
+        
+          <li><a href="./Consumer.html">Consumer</a></li>
+        
+          <li><a href="./Crubyparse.html">Crubyparse</a></li>
+        
+          <li><a href="./Front.html">Front</a></li>
+        
+          <li><a href="./GetRef.html">GetRef</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./ParseCommandLine.html">ParseCommandLine</a></li>
+        
+          <li><a href="./Printoptions.html">Printoptions</a></li>
+        
+          <li><a href="./ReadFile.html">ReadFile</a></li>
+        
+          <li><a href="./Regtally.html">Regtally</a></li>
+        
+          <li><a href="./SignalClass.html">SignalClass</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+          <li><a href="./SyntaxDescription.html">SyntaxDescription</a></li>
+        
+          <li><a href="./TC_Back.html">TC_Back</a></li>
+        
+          <li><a href="./TC_Emit.html">TC_Emit</a></li>
+        
+          <li><a href="./TC_Front.html">TC_Front</a></li>
+        
+          <li><a href="./TC_Linx4PyBack.html">TC_Linx4PyBack</a></li>
+        
+          <li><a href="./TC_Linx4PyEmit.html">TC_Linx4PyEmit</a></li>
+        
+          <li><a href="./TC_Linx4PySigpaUser.html">TC_Linx4PySigpaUser</a></li>
+        
+          <li><a href="./TC_Linx4PyUser.html">TC_Linx4PyUser</a></li>
+        
+          <li><a href="./TC_SigpaFront.html">TC_SigpaFront</a></li>
+        
+          <li><a href="./TC_SigpaUser.html">TC_SigpaUser</a></li>
+        
+          <li><a href="./TC_TCrubyparse.html">TC_TCrubyparse</a></li>
+        
+          <li><a href="./TC_TestCaseBack.html">TC_TestCaseBack</a></li>
+        
+          <li><a href="./TC_TestUser.html">TC_TestUser</a></li>
+        
+          <li><a href="./TC_Tree.html">TC_Tree</a></li>
+        
+          <li><a href="./TCrubyparse.html">TCrubyparse</a></li>
+        
+          <li><a href="./TestCaseBack.html">TestCaseBack</a></li>
+        
+          <li><a href="./Tree.html">Tree</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">TC_Linx4PyBack</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="setup-method" class="method-detail ">
+          <a name="method-i-setup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">setup</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="setup-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_linx4pyback.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+    <span class="ruby-ivar">@pythonback</span> = <span class="ruby-constant">Back</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">@@grove</span> = {}
+    <span class="ruby-identifier">@@anonext</span> = <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- setup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- setup-method -->
+
+      
+        <div id="teardown-method" class="method-detail ">
+          <a name="method-i-teardown"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">teardown</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="teardown-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_linx4pyback.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">teardown</span>
+    <span class="ruby-comment"># Nothing really</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- teardown-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- teardown-method -->
+
+      
+        <div id="test_back_atcsignals-method" class="method-detail ">
+          <a name="method-i-test_back_atcsignals"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_back_atcsignals</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_back_atcsignals-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_linx4pyback.rb, line 108</span>
+ <span class="ruby-keyword">def</span> <span class="ruby-identifier">test_back_atcsignals</span>
+     <span class="ruby-identifier">@@options</span> = <span class="ruby-constant">OpenStruct</span>.<span class="ruby-identifier">new</span>
+     <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">header_files</span> = [<span class="ruby-string">&quot;test/tc_back.rb&quot;</span>]
+     <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">outfile</span> = <span class="ruby-string">&quot;test/signals.py&quot;</span>
+     <span class="ruby-identifier">atable</span> = {<span class="ruby-string">&quot;ARRAY_SIZE&quot;</span>=<span class="ruby-operator">&gt;</span>[],
+<span class="ruby-string">&quot;DENSE_UNION&quot;</span>=<span class="ruby-operator">&gt;</span>[],
+<span class="ruby-string">&quot;SELECTOR_MAPPING&quot;</span>=<span class="ruby-operator">&gt;</span>[],
+<span class="ruby-string">&quot;UNION_SELECTOR&quot;</span>=<span class="ruby-operator">&gt;</span>[]}
+     
+     <span class="ruby-identifier">ctable</span> = {<span class="ruby-string">&quot;ABSFL_INPUT_SIG&quot;</span>=<span class="ruby-operator">&gt;</span>{<span class="ruby-string">&quot;struct&quot;</span>=<span class="ruby-operator">&gt;</span>[<span class="ruby-string">&quot;absfl_input_sig&quot;</span>], <span class="ruby-string">&quot;value&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">13121</span>},
+<span class="ruby-string">&quot;ABSFL_OUTPUT_SIG&quot;</span>=<span class="ruby-operator">&gt;</span>{<span class="ruby-string">&quot;struct&quot;</span>=<span class="ruby-operator">&gt;</span>[<span class="ruby-string">&quot;absfl_output_sig&quot;</span>], <span class="ruby-string">&quot;value&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">13122</span>}}
+
+     <span class="ruby-identifier">tables</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getGeneratedTablesRef</span>()
+     <span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">generate_signal_description</span>(<span class="ruby-identifier">atable</span>, <span class="ruby-identifier">ctable</span>, <span class="ruby-identifier">tables</span>)
+     <span class="ruby-identifier">ref_signals</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/ref/ref_atc_signals/signals_linx4py.py&quot;</span>)
+     <span class="ruby-identifier">signals</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/signals.py&quot;</span>)
+     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_signals</span>, <span class="ruby-identifier">signals</span>)
+     <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;test/signals.py&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;test/signals.py&quot;</span>)
+ <span class="ruby-keyword">end</span></pre>
+            </div><!-- test_back_atcsignals-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_back_atcsignals-method -->
+
+      
+        <div id="test_back_baserefname-method" class="method-detail ">
+          <a name="method-i-test_back_baserefname"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_back_baserefname</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_back_baserefname-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_linx4pyback.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_back_baserefname</span>
+    <span class="ruby-identifier">test_elem</span> = [<span class="ruby-string">&quot;&quot;</span>, {<span class="ruby-string">&quot;.base_ref_name&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;(test): test_elem_base_ref&quot;</span>}]
+    <span class="ruby-identifier">baserefname</span> = <span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">baseref_name</span>(<span class="ruby-identifier">test_elem</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;test_elem_base_ref&quot;</span>, <span class="ruby-identifier">baserefname</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_back_baserefname-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_back_baserefname-method -->
+
+      
+        <div id="test_back_deepcopy-method" class="method-detail ">
+          <a name="method-i-test_back_deepcopy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_back_deepcopy</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_back_deepcopy-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_linx4pyback.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_back_deepcopy</span>
+    <span class="ruby-identifier">ref_test</span> = [<span class="ruby-string">&quot;testing&quot;</span>]
+    <span class="ruby-identifier">test</span> = <span class="ruby-identifier">ref_test</span>.<span class="ruby-identifier">deepcopy</span>
+    <span class="ruby-identifier">test</span>[<span class="ruby-value">0</span>] = <span class="ruby-string">&quot;changed&quot;</span>
+    <span class="ruby-identifier">assert_not_equal</span>(<span class="ruby-identifier">ref_test</span>, <span class="ruby-identifier">test</span>)
+    <span class="ruby-identifier">assert_not_same</span>(<span class="ruby-identifier">ref_test</span>, <span class="ruby-identifier">test</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_back_deepcopy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_back_deepcopy-method -->
+
+      
+        <div id="test_back_generatesignaldescription-method" class="method-detail ">
+          <a name="method-i-test_back_generatesignaldescription"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_back_generatesignaldescription</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_back_generatesignaldescription-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_linx4pyback.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_back_generatesignaldescription</span>
+    <span class="ruby-identifier">@@options</span> = <span class="ruby-constant">OpenStruct</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">header_files</span> = [<span class="ruby-string">&quot;test/tc_back.rb&quot;</span>]
+    <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">outfile</span> = <span class="ruby-string">&quot;test/signals.py&quot;</span>
+    <span class="ruby-identifier">atable</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getATableRef</span>
+    <span class="ruby-identifier">ctable</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getCTableRef</span>
+    <span class="ruby-identifier">tables</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getTablesRef</span>
+    <span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">generate_signal_description</span>(<span class="ruby-identifier">atable</span>, <span class="ruby-identifier">ctable</span>, <span class="ruby-identifier">tables</span>)
+    
+    <span class="ruby-identifier">ref_signals</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/ref/ref_signals_linx4py.py&quot;</span>)
+    <span class="ruby-identifier">signals</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/signals.py&quot;</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_signals</span>, <span class="ruby-identifier">signals</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;test/signals.py&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;test/signals.py&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_back_generatesignaldescription-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_back_generatesignaldescription-method -->
+
+      
+        <div id="test_back_getanonext-method" class="method-detail ">
+          <a name="method-i-test_back_getanonext"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_back_getanonext</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_back_getanonext-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_linx4pyback.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_back_getanonext</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-constant">Back</span>.<span class="ruby-identifier">class_eval</span>(<span class="ruby-string">&quot;@@anonext&quot;</span>))
+    <span class="ruby-identifier">anonext</span> = <span class="ruby-identifier">get_anon_ext</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;1&quot;</span>, <span class="ruby-identifier">anonext</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>, <span class="ruby-constant">Back</span>.<span class="ruby-identifier">class_eval</span>(<span class="ruby-string">&quot;@@anonext&quot;</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_back_getanonext-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_back_getanonext-method -->
+
+      
+        <div id="test_back_isnumeric-method" class="method-detail ">
+          <a name="method-i-test_back_isnumeric"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_back_isnumeric</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_back_isnumeric-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_linx4pyback.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_back_isnumeric</span>
+    <span class="ruby-identifier">test_elem_0</span> = [<span class="ruby-string">&quot;&quot;</span>, {<span class="ruby-string">&quot;.type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;char&quot;</span>}]
+    <span class="ruby-identifier">test_elem_1</span> = [<span class="ruby-string">&quot;&quot;</span>, {<span class="ruby-string">&quot;.type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;short&quot;</span>}]
+    <span class="ruby-identifier">test_elem_2</span> = [<span class="ruby-string">&quot;&quot;</span>, {<span class="ruby-string">&quot;.type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;int&quot;</span>}]
+    <span class="ruby-identifier">test_elem_3</span> = [<span class="ruby-string">&quot;&quot;</span>, {<span class="ruby-string">&quot;.type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;long&quot;</span>}]
+    <span class="ruby-identifier">test_elem_4</span> = [<span class="ruby-string">&quot;&quot;</span>, {<span class="ruby-string">&quot;.type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;longlong&quot;</span>}]
+    <span class="ruby-identifier">test_elem_5</span> = [<span class="ruby-string">&quot;&quot;</span>, {<span class="ruby-string">&quot;.type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;String&quot;</span>}]
+    
+    <span class="ruby-identifier">assert</span>(<span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">is_numeric?</span>(<span class="ruby-identifier">test_elem_0</span>))
+    <span class="ruby-identifier">assert</span>(<span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">is_numeric?</span>(<span class="ruby-identifier">test_elem_1</span>))
+    <span class="ruby-identifier">assert</span>(<span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">is_numeric?</span>(<span class="ruby-identifier">test_elem_2</span>))
+    <span class="ruby-identifier">assert</span>(<span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">is_numeric?</span>(<span class="ruby-identifier">test_elem_3</span>))
+    <span class="ruby-identifier">assert</span>(<span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">is_numeric?</span>(<span class="ruby-identifier">test_elem_4</span>))
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">is_numeric?</span>(<span class="ruby-identifier">test_elem_5</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_back_isnumeric-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_back_isnumeric-method -->
+
+      
+        <div id="test_back_itembasetype-method" class="method-detail ">
+          <a name="method-i-test_back_itembasetype"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_back_itembasetype</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_back_itembasetype-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_linx4pyback.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_back_itembasetype</span>
+    <span class="ruby-identifier">test_elem</span> = [<span class="ruby-string">&quot;&quot;</span>, {<span class="ruby-string">&quot;.type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;int&quot;</span>}]
+    <span class="ruby-identifier">basetype</span> = <span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">item_basetype</span>(<span class="ruby-identifier">test_elem</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;c_int&quot;</span>, <span class="ruby-identifier">basetype</span>)
+    
+    <span class="ruby-identifier">test_elem</span> = [<span class="ruby-string">&quot;&quot;</span>, {<span class="ruby-string">&quot;.type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;int&quot;</span>, <span class="ruby-string">&quot;.signed&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;unsigned&quot;</span>}]
+    <span class="ruby-identifier">basetype</span> = <span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">item_basetype</span>(<span class="ruby-identifier">test_elem</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;c_uint&quot;</span>, <span class="ruby-identifier">basetype</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_back_itembasetype-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_back_itembasetype-method -->
+
+      
+        <div id="test_back_itemname-method" class="method-detail ">
+          <a name="method-i-test_back_itemname"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_back_itemname</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_back_itemname-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_linx4pyback.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_back_itemname</span>
+    <span class="ruby-identifier">test_elem</span> = [<span class="ruby-string">&quot;&quot;</span>, {}]
+    <span class="ruby-identifier">name</span> = <span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">item_name</span>(<span class="ruby-identifier">test_elem</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;__ANON__&quot;</span>, <span class="ruby-identifier">name</span>)
+    
+    <span class="ruby-identifier">test_elem</span> = [<span class="ruby-string">&quot;&quot;</span>, {<span class="ruby-string">&quot;.type_or_id_name&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;(test): test_elem_1&quot;</span>}]
+    <span class="ruby-identifier">name</span> = <span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">item_name</span>(<span class="ruby-identifier">test_elem</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;test_elem_1&quot;</span>, <span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_back_itemname-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_back_itemname-method -->
+
+      
+        <div id="test_back_itemtype-method" class="method-detail ">
+          <a name="method-i-test_back_itemtype"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_back_itemtype</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_back_itemtype-source">
+<pre>
+<span class="ruby-comment"># File sigpa/test/tc_linx4pyback.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_back_itemtype</span>
+    <span class="ruby-identifier">test_elem</span> = [<span class="ruby-string">&quot;&quot;</span>, {<span class="ruby-string">&quot;.type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;testing&quot;</span>}]
+    <span class="ruby-identifier">type</span> = <span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">item_type</span>(<span class="ruby-identifier">test_elem</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;testing&quot;</span>, <span class="ruby-identifier">type</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_back_itemtype-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_back_itemtype-method -->
+
+      
+        <div id="test_backend_atc-method" class="method-detail ">
+          <a name="method-i-test_backend_atc"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_backend_atc</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_backend_atc-source">
+<pre>
+<span class="ruby-comment"># File testpa/test/tc_linx4pyback.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_backend_atc</span>
+    <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">outfile</span> = <span class="ruby-string">&quot;test/testcase_linx4py.py&quot;</span>
+    <span class="ruby-identifier">tables</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getTCRef</span>(<span class="ruby-value">2</span>)
+    <span class="ruby-identifier">ref_comment_list</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getCommentListRef</span>() 
+    <span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">generate_test_cases</span>(<span class="ruby-identifier">tables</span>, <span class="ruby-identifier">ref_comment_list</span>)
+    <span class="ruby-identifier">ref_output</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/ref/ref_testcase_linx4py.py&quot;</span>)
+    <span class="ruby-identifier">output</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/testcase_linx4py.py&quot;</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_output</span>, <span class="ruby-identifier">output</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;test/testcase_linx4py.py&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;test/testcase_linx4py.py&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_backend_atc-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_backend_atc-method -->
+
+      
+        <div id="test_backend_output-method" class="method-detail ">
+          <a name="method-i-test_backend_output"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_backend_output</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_backend_output-source">
+<pre>
+<span class="ruby-comment"># File testpa/test/tc_linx4pyback.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_backend_output</span>
+    <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">outfile</span> = <span class="ruby-string">&quot;test/output_linx4py.py&quot;</span>
+    <span class="ruby-identifier">tables</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getTCRef</span>(<span class="ruby-value">2</span>)
+    <span class="ruby-identifier">comment_list</span> = []
+    <span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">generate_test_cases</span>(<span class="ruby-identifier">tables</span>, <span class="ruby-identifier">comment_list</span>)
+    <span class="ruby-identifier">ref_output</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/ref/ref_output_linx4py.py&quot;</span>)
+    <span class="ruby-identifier">output</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/output_linx4py.py&quot;</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_output</span>, <span class="ruby-identifier">output</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;test/output_linx4py.py&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;test/output_linx4py.py&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_backend_output-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_backend_output-method -->
+
+      
+        <div id="test_backend_signal-method" class="method-detail ">
+          <a name="method-i-test_backend_signal"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_backend_signal</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_backend_signal-source">
+<pre>
+<span class="ruby-comment"># File testpa/test/tc_linx4pyback.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_backend_signal</span>
+    <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">outfile</span> = <span class="ruby-string">&quot;test/output.py&quot;</span>
+    <span class="ruby-identifier">ref_state_list</span>, <span class="ruby-identifier">ref_input_list</span>, <span class="ruby-identifier">ref_transitions_list</span>, <span class="ruby-identifier">ref_name_list</span> = <span class="ruby-constant">GetRef</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">getTCRef</span>(<span class="ruby-value">2</span>)
+    <span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">generate_signals_sig</span>(<span class="ruby-identifier">ref_input_list</span>[<span class="ruby-value">0</span>])
+    <span class="ruby-identifier">ref_output_sig</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/ref/ref_signals.sig&quot;</span>)
+    <span class="ruby-identifier">ref_output_header</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/ref/ref_signal_absfl.h&quot;</span>)
+    <span class="ruby-identifier">output_sig</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/signals.sig&quot;</span>)
+    <span class="ruby-identifier">output_header</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/signal_absfl.h&quot;</span>)
+
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_output_sig</span>, <span class="ruby-identifier">output_sig</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_output_header</span>, <span class="ruby-identifier">output_header</span>)
+    
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;test/signals.sig&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;test/signals.sig&quot;</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;test/signal_absfl.h&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;test/signal_absfl.h&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_backend_signal-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_backend_signal-method -->
+
+      
+        <div id="test_backend_type_h-method" class="method-detail ">
+          <a name="method-i-test_backend_type_h"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_backend_type_h</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_backend_type_h-source">
+<pre>
+<span class="ruby-comment"># File testpa/test/tc_linx4pyback.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_backend_type_h</span>
+    <span class="ruby-identifier">@@options</span>.<span class="ruby-identifier">outfile</span> = <span class="ruby-string">&quot;test/output.py&quot;</span>
+    <span class="ruby-ivar">@pythonback</span>.<span class="ruby-identifier">generate_types_h</span>()
+    <span class="ruby-identifier">ref_output</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/ref/ref_types.h&quot;</span>)
+    <span class="ruby-identifier">output</span> = <span class="ruby-constant">ReadFile</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">readInTC</span>(<span class="ruby-string">&quot;test/types.h&quot;</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">ref_output</span>, <span class="ruby-identifier">output</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;test/types.h&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;test/types.h&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_backend_type_h-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_backend_type_h-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
